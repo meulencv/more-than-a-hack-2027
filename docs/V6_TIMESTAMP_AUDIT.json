@@ -1,0 +1,37 @@
+[
+  {
+    "file": "DFL_04_03_positions_raw_observed_DFL-COM-000001_DFL-MAT-J03WMX.xml",
+    "intervals": 145965,
+    "non_25hz_intervals": 0
+  },
+  {
+    "file": "DFL_04_03_positions_raw_observed_DFL-COM-000001_DFL-MAT-J03WN1.xml",
+    "intervals": 141559,
+    "non_25hz_intervals": 0
+  },
+  {
+    "file": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WOH.xml",
+    "intervals": 137212,
+    "non_25hz_intervals": 0
+  },
+  {
+    "file": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WOY.xml",
+    "intervals": 142534,
+    "non_25hz_intervals": 0
+  },
+  {
+    "file": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WPY.xml",
+    "intervals": 146209,
+    "non_25hz_intervals": 0
+  },
+  {
+    "file": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WQQ.xml",
+    "intervals": 142343,
+    "non_25hz_intervals": 0
+  },
+  {
+    "file": "DFL_04_03_positions_raw_observed_DFL-COM-000002_DFL-MAT-J03WR9.xml",
+    "intervals": 146808,
+    "non_25hz_intervals": 0
+  }
+]

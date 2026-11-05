@@ -1,3 +1,5 @@
+> Actualización V6: hay una familia nueva con mejoras externas, pero su comprobación pública da 0,6595 frente a 0,7067 del candidato conservado. No se presenta como mejora demostrada del concurso. Ver [EXPERIMENTOS_V6.md](EXPERIMENTOS_V6.md). Ambos CSV se preservan.
+
 # Estado actual: candidato por calidad de observación
 
 El candidato actual es `evaluation/results/sequence_quality_gated.csv`, congelado

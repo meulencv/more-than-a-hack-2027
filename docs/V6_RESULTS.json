@@ -1,0 +1,455 @@
+{
+  "models": [
+    {
+      "family": "baseline",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.509123399759046,
+      "worst_spell_f1": 0.42016806722689076,
+      "mean_macro_f1": 0.8424112849046378
+    },
+    {
+      "family": "hgb_native",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.5883087281220329,
+      "worst_spell_f1": 0.4847001223990208,
+      "mean_macro_f1": 0.9011740837491156
+    },
+    {
+      "family": "hgb_mixed",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.5778848106398619,
+      "worst_spell_f1": 0.4766169154228857,
+      "mean_macro_f1": 0.8980171951688557
+    },
+    {
+      "family": "tcn_global",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.5780818412193047,
+      "worst_spell_f1": 0.4888324873096447,
+      "mean_macro_f1": 0.896312923734419
+    },
+    {
+      "family": "tcn_local",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.5889159661650828,
+      "worst_spell_f1": 0.5065989847715736,
+      "mean_macro_f1": 0.8980272545321853
+    },
+    {
+      "family": "tcn_segment",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.6193158465379133,
+      "worst_spell_f1": 0.5322391559202815,
+      "mean_macro_f1": 0.8975001789098316
+    },
+    {
+      "family": "tcn_boundary",
+      "decoder": "boundary",
+      "mean_spell_f1": 0.631736851174155,
+      "worst_spell_f1": 0.5739514348785872,
+      "mean_macro_f1": 0.9000622413841709
+    },
+    {
+      "family": "tcn_boundary",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.6279987940858375,
+      "worst_spell_f1": 0.5595294117647059,
+      "mean_macro_f1": 0.899579809765178
+    },
+    {
+      "family": "tcn_multistage",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.59681228715472,
+      "worst_spell_f1": 0.5134253450439148,
+      "mean_macro_f1": 0.9002137771292029
+    },
+    {
+      "family": "tcn_mixed",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.5672859443519704,
+      "worst_spell_f1": 0.45773732119635896,
+      "mean_macro_f1": 0.8902782366476267
+    },
+    {
+      "family": "physics_hgb",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.5922527296495022,
+      "worst_spell_f1": 0.5034146341463414,
+      "mean_macro_f1": 0.9033959940393945
+    },
+    {
+      "family": "physics_tcn",
+      "decoder": "boundary",
+      "mean_spell_f1": 0.6378102324529206,
+      "worst_spell_f1": 0.5538461538461539,
+      "mean_macro_f1": 0.9037175306825694
+    },
+    {
+      "family": "physics_tcn",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.6406031009319496,
+      "worst_spell_f1": 0.5524663677130045,
+      "mean_macro_f1": 0.9045068848144704
+    },
+    {
+      "family": "tcn_ballfree",
+      "decoder": "fixed",
+      "mean_spell_f1": 0.46897555932856644,
+      "worst_spell_f1": 0.3616133518776078,
+      "mean_macro_f1": null
+    }
+  ],
+  "ensembles": [
+    {
+      "family": "boundary_physics",
+      "decoder": "boundary",
+      "spell_f1_mean": 0.6453392944402769,
+      "worst_spell_f1": 0.5897937024972855,
+      "macro_f1": 0.907249516736572
+    },
+    {
+      "family": "boundary_physics",
+      "decoder": "fixed",
+      "spell_f1_mean": 0.6444850642252786,
+      "worst_spell_f1": 0.5712952158693115,
+      "macro_f1": 0.907344552434378
+    },
+    {
+      "family": "geometric_hgb_boundary",
+      "decoder": "boundary",
+      "spell_f1_mean": 0.6419810374364826,
+      "worst_spell_f1": 0.5621247113163973,
+      "macro_f1": 0.9114622075277317
+    },
+    {
+      "family": "physics_segment_boundary",
+      "decoder": "boundary",
+      "spell_f1_mean": 0.6419182016240307,
+      "worst_spell_f1": 0.5840354767184037,
+      "macro_f1": 0.9057275104283851
+    },
+    {
+      "family": "uncertainty_hgb_boundary",
+      "decoder": "boundary",
+      "spell_f1_mean": 0.6390974576948012,
+      "worst_spell_f1": 0.5618390804597702,
+      "macro_f1": 0.91120559656129
+    },
+    {
+      "family": "boundary_multistage",
+      "decoder": "boundary",
+      "spell_f1_mean": 0.6388031545299528,
+      "worst_spell_f1": 0.5708333333333333,
+      "macro_f1": 0.9055593806527755
+    },
+    {
+      "family": "physics_segment_boundary",
+      "decoder": "fixed",
+      "spell_f1_mean": 0.6365305766288076,
+      "worst_spell_f1": 0.5639344262295081,
+      "macro_f1": 0.9054020109432912
+    },
+    {
+      "family": "median_committee",
+      "decoder": "boundary",
+      "spell_f1_mean": 0.6345799452913099,
+      "worst_spell_f1": 0.5768278965129359,
+      "macro_f1": 0.9038523569810444
+    },
+    {
+      "family": "ballfree_in_occlusion",
+      "decoder": "boundary",
+      "spell_f1_mean": 0.6331950331507057,
+      "worst_spell_f1": 0.5624713958810068,
+      "macro_f1": 0.9027753325653703
+    },
+    {
+      "family": "boundary_segment",
+      "decoder": "boundary",
+      "spell_f1_mean": 0.6315812320310066,
+      "worst_spell_f1": 0.579171332586786,
+      "macro_f1": 0.8999083658856093
+    },
+    {
+      "family": "median_committee",
+      "decoder": "fixed",
+      "spell_f1_mean": 0.6295706895180415,
+      "worst_spell_f1": 0.5543529411764706,
+      "macro_f1": 0.9038883055885916
+    },
+    {
+      "family": "boundary_segment",
+      "decoder": "fixed",
+      "spell_f1_mean": 0.6256536993950852,
+      "worst_spell_f1": 0.5506493506493506,
+      "macro_f1": 0.8996267310087005
+    },
+    {
+      "family": "uncertainty_hgb_boundary",
+      "decoder": "fixed",
+      "spell_f1_mean": 0.6248523795822176,
+      "worst_spell_f1": 0.5231515151515151,
+      "macro_f1": 0.9089068574119185
+    },
+    {
+      "family": "geometric_hgb_boundary",
+      "decoder": "fixed",
+      "spell_f1_mean": 0.622655645725226,
+      "worst_spell_f1": 0.5195625759416769,
+      "macro_f1": 0.9088658789963568
+    },
+    {
+      "family": "ballfree_in_occlusion",
+      "decoder": "fixed",
+      "spell_f1_mean": 0.6223079830184035,
+      "worst_spell_f1": 0.5274939172749391,
+      "macro_f1": 0.900515284018874
+    },
+    {
+      "family": "boundary_multistage",
+      "decoder": "fixed",
+      "spell_f1_mean": 0.6187806377563665,
+      "worst_spell_f1": 0.5248157248157248,
+      "macro_f1": 0.9037767899076581
+    },
+    {
+      "family": "quality_hgb_boundary",
+      "decoder": "boundary",
+      "spell_f1_mean": 0.6163010634754122,
+      "worst_spell_f1": 0.5509174311926606,
+      "macro_f1": 0.906840493505558
+    },
+    {
+      "family": "quality_hgb_boundary",
+      "decoder": "fixed",
+      "spell_f1_mean": 0.6027853386683736,
+      "worst_spell_f1": 0.5258261933904529,
+      "macro_f1": 0.9050992977159174
+    }
+  ],
+  "second_initialization": {
+    "pair_2027": {
+      "spell_f1_mean": 0.6453392944402769,
+      "worst_spell_f1": 0.5897937024972855
+    },
+    "pair_2028": {
+      "spell_f1_mean": 0.6320292111552576,
+      "worst_spell_f1": 0.5574660633484163
+    },
+    "four_model_mean": {
+      "spell_f1_mean": 0.6439253968347924,
+      "worst_spell_f1": 0.5775280898876405
+    }
+  },
+  "confirmation": {
+    "selection": {
+      "name": "V6 boundary + physical-control temporal pair, seed2027",
+      "decision_basis": "expanded external development only; best mean spellF1 and worst-case among predefined ensembles; simpler two-model bundle beats four-model mean",
+      "development_score": {
+        "spell_f1_mean": 0.6453392944402769,
+        "worst_spell_f1": 0.5897937024972855
+      },
+      "replication_seed2028": {
+        "spell_f1_mean": 0.6320292111552576,
+        "worst_spell_f1": 0.5574660633484163
+      },
+      "four_model_alternative": {
+        "spell_f1_mean": 0.6439253968347924,
+        "worst_spell_f1": 0.5775280898876405
+      },
+      "native_train": [
+        "J03WMX",
+        "J03WOH",
+        "J03WOY"
+      ],
+      "confirmation_status": "locked and not loaded before this selection",
+      "challenge_public_used_for_selection": false,
+      "decoder": {
+        "kind": "boundary-conditioned Viterbi",
+        "costs": [
+          [
+            0,
+            4,
+            2.5
+          ],
+          [
+            4,
+            0,
+            2.5
+          ],
+          [
+            2.5,
+            2.5,
+            0
+          ]
+        ],
+        "edge_cost_reduction": 0.85,
+        "hard_min_steps": 1,
+        "step_frames": 5
+      },
+      "components": [
+        {
+          "path": "data/work/v6/tcn_boundary/model.pt",
+          "sha256": "08148bcf6e96e2720d8f114d6d8a51fc82c449d7ed59710a19c7a46e60301c68",
+          "physics": false,
+          "boundary_head": true,
+          "probability_weight": 0.5
+        },
+        {
+          "path": "data/work/v6/physics_tcn/model.pt",
+          "sha256": "d6278aed368340f1a1d66141284998f178dd3e00b3a928a2668b4db2e5dd9fa9",
+          "physics": true,
+          "boundary_head": false,
+          "probability_weight": 0.5
+        }
+      ]
+    },
+    "device": "mps",
+    "rows": [
+      {
+        "game": "J03WR9",
+        "mode": "clean",
+        "method": "frozen_previous",
+        "macro_f1": 0.9008735798399249,
+        "spell_f1_mean": 0.568659127625202,
+        "spell_f1_headline": 0.5621970920840065,
+        "accuracy": 0.9109393093113548,
+        "alive_dead_f1": 0.9565805755527245,
+        "n_pred_spells": 249,
+        "n_gt_spells": 370,
+        "mean_spell_duration_s": 12.648192771084336,
+        "gt_mean_spell_duration_s": 9.22335135135135
+      },
+      {
+        "game": "J03WR9",
+        "mode": "clean",
+        "method": "v6_selected",
+        "macro_f1": 0.9520359437984428,
+        "spell_f1_mean": 0.746368715083799,
+        "spell_f1_headline": 0.770949720670391,
+        "accuracy": 0.9593420066752946,
+        "alive_dead_f1": 0.9948692747365896,
+        "n_pred_spells": 346,
+        "n_gt_spells": 370,
+        "mean_spell_duration_s": 9.897687861271677,
+        "gt_mean_spell_duration_s": 9.22335135135135
+      },
+      {
+        "game": "J03WR9",
+        "mode": "moderate",
+        "method": "frozen_previous",
+        "macro_f1": 0.8336629547863925,
+        "spell_f1_mean": 0.5384126984126983,
+        "spell_f1_headline": 0.5460317460317461,
+        "accuracy": 0.8414140726108575,
+        "alive_dead_f1": 0.8843391036006725,
+        "n_pred_spells": 260,
+        "n_gt_spells": 370,
+        "mean_spell_duration_s": 10.754615384615386,
+        "gt_mean_spell_duration_s": 9.22335135135135
+      },
+      {
+        "game": "J03WR9",
+        "mode": "moderate",
+        "method": "v6_selected",
+        "macro_f1": 0.9044227121016624,
+        "spell_f1_mean": 0.6574202496532594,
+        "spell_f1_headline": 0.665742024965326,
+        "accuracy": 0.9136162386758395,
+        "alive_dead_f1": 0.9609409464309134,
+        "n_pred_spells": 351,
+        "n_gt_spells": 370,
+        "mean_spell_duration_s": 9.393732193732195,
+        "gt_mean_spell_duration_s": 9.22335135135135
+      },
+      {
+        "game": "J03WR9",
+        "mode": "stress",
+        "method": "frozen_previous",
+        "macro_f1": 0.7972200294201658,
+        "spell_f1_mean": 0.45488958990536277,
+        "spell_f1_headline": 0.444794952681388,
+        "accuracy": 0.8028472174919965,
+        "alive_dead_f1": 0.8751337872292735,
+        "n_pred_spells": 264,
+        "n_gt_spells": 370,
+        "mean_spell_duration_s": 14.111969696969698,
+        "gt_mean_spell_duration_s": 9.22335135135135
+      },
+      {
+        "game": "J03WR9",
+        "mode": "stress",
+        "method": "v6_selected",
+        "macro_f1": 0.9044443918536714,
+        "spell_f1_mean": 0.626923076923077,
+        "spell_f1_headline": 0.6373626373626374,
+        "accuracy": 0.9149104284449289,
+        "alive_dead_f1": 0.9675908076595049,
+        "n_pred_spells": 358,
+        "n_gt_spells": 370,
+        "mean_spell_duration_s": 9.594413407821229,
+        "gt_mean_spell_duration_s": 9.22335135135135
+      }
+    ],
+    "no_training_on_confirmation": true,
+    "challenge_labels_read": false
+  },
+  "public_check": [
+    {
+      "rank": 1,
+      "submission": "v6_selected",
+      "status": "scored",
+      "reason": null,
+      "macro_f1": 0.864127,
+      "spell_f1_mean": 0.659459,
+      "poss": 20,
+      "dur": 13.06,
+      "n_gt_spells": 17,
+      "gt_mean_spell_duration_s": 14.190588,
+      "spell_count_error": 3,
+      "spell_f1_at_headline": 0.702703,
+      "spell_iou_headline": 0.5,
+      "spell_bootstrap_low": null,
+      "spell_bootstrap_high": null,
+      "bootstrap_low": null,
+      "bootstrap_high": null,
+      "kappa": 0.811451,
+      "accuracy": 0.883467,
+      "f1_H": 0.90657,
+      "f1_A": 0.894504,
+      "f1_D": 0.791308,
+      "precision_H": 0.878155,
+      "recall_H": 0.936885,
+      "precision_A": 0.852373,
+      "recall_A": 0.941017,
+      "precision_D": 0.994845,
+      "recall_D": 0.656909,
+      "alive_dead_f1": 0.959478,
+      "team_acc_gt_alive": 0.93865,
+      "team_acc_both_alive": 0.939429,
+      "gt_home_share": 0.572708,
+      "pred_home_share": 0.564319,
+      "share_err": 0.008389,
+      "share_defined": 1,
+      "mean_latency": 3.1,
+      "median_latency": 4.5,
+      "mean_abs_latency": 10.9,
+      "p90_abs_latency": 19.5,
+      "n_matched": 10,
+      "n_missed": 10,
+      "n_spurious": 12,
+      "n_ambiguous": 0,
+      "n_gt_segments": 21,
+      "n_pred_segments": 23,
+      "fragmentation": 1.095238,
+      "n_graded": 7500,
+      "n_abstain_on_graded": 0,
+      "trans_f1_12": 0.238095,
+      "trans_precision_12": 0.227273,
+      "trans_recall_12": 0.25,
+      "trans_f1_25": 0.47619,
+      "trans_precision_25": 0.454545,
+      "trans_recall_25": 0.5
+    }
+  ]
+}
