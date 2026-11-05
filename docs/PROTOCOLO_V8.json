@@ -1,0 +1,15 @@
+{
+  "purpose": "Optimize temporal possession objects, rather than only frame classification",
+  "native_train": ["J03WMX", "J03WOH", "J03WOY"],
+  "native_development": ["J03WN1", "J03WPY", "J03WQQ"],
+  "native_confirmation": "No intact native confirmation remains. J03WR9 is not reopened for tuning or new confirmation claims.",
+  "planned_losses": ["inverse segment length CE plus boundary", "soft temporal IoU over complete H/A training runs and their immediate neighboring runs", "focal CE plus soft temporal IoU", "same seeds and 800 updates as the original physics expert"],
+  "inputs": "Same 156 position/motion features as V6 physics expert, no new challenge-derived labels",
+  "decoder": "Pre-existing fixed decoder and frozen boundary-conditioned Viterbi; no transition cost search",
+  "ensembles": "Equal average with frozen V6 pair; boundary heads compared own vs original, no fitted blending weights",
+  "criterion": "Mean official spellF1 across nine native development conditions, with per-game and worst-case reported. Do not count correlated noise conditions as independent games.",
+  "selection_uncertainty": "Development is repeatedly used, so improvements there are exploratory. Repeat a promising method with seed2028. Do not claim an unbiased test improvement without new intact native games.",
+  "public_policy": "No public competition GT opened or scored in V8, including after selection",
+  "paid_services": false,
+  "upload_data": false
+}
