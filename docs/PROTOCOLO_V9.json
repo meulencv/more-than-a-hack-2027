@@ -1,0 +1,13 @@
+{
+  "hypothesis": "Last reliable player control has memory across ball flight and tracking gaps; nearest player and last seen ball are insufficient representations",
+  "native_train": ["J03WMX", "J03WOH", "J03WOY"],
+  "native_development": ["J03WN1", "J03WPY", "J03WQQ"],
+  "confirmation": "No intact native match remains; exploratory development results only; never reopen J03WR9 or competition labels",
+  "anchor_parameters_fixed_before_training": {"distance_scale_m": 2, "relative_speed_scale_m_s": 4, "minimum_control_score": 0.55, "minimum_score_margin": 0.25, "minimum_streak_frames": 6, "velocity_lag_frames": 5, "time_cap_seconds": 60},
+  "features": ["last and next stable controller team", "age of last and next control anchor", "control anchor agreement across occlusion", "last stable player identity and proximity", "ball flight time and continuity"],
+  "models": ["HGB", "temporal boundary network, 800 updates, seed2027", "equal mixture with frozen V6 pair"],
+  "criterion": "Mean official spellF1 over the same nine native development cases, report worst-case and game-level change. Repeat new neural features with seed2028 if promising. No challenge-public tuning or checking.",
+  "anchors_are_features": "Anchor heuristics are not truth or corrections; learned model may reject them. They use no labels or match-specific frame constants. No control anchor is interpreted as dead ball.",
+  "paid_services": false,
+  "upload_data": false
+}
