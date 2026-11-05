@@ -62,3 +62,6 @@ __pycache__/
 venv/
 env/
 .DS_Store
+
+# Local multimodal experiment environment
+.venv-vision/

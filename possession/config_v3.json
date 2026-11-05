@@ -1,0 +1,30 @@
+{
+  "seed": 2027,
+  "degrade": {
+    "sigma_range": [0.8, 1.4],
+    "p_live_range": [0.25, 0.40]
+  },
+  "training_seeds": [101, 102],
+  "model": {
+    "max_iter": 180,
+    "max_leaf_nodes": 24,
+    "learning_rate": 0.08,
+    "min_samples_leaf": 40,
+    "l2_regularization": 1.0,
+    "class_weight": "balanced"
+  },
+  "decoder": {
+    "min_steps": [7, 7, 7],
+    "cost_turnover": 3.0,
+    "cost_to_dead": 1.5,
+    "cost_to_live": 1.5,
+    "emission_weight": 1.0
+  },
+  "stage2": {
+    "enabled": true,
+    "max_turnover_duration_s": 3.0,
+    "turnover_conviction_threshold": 0.70,
+    "max_dead_duration_s": 2.5,
+    "dead_conviction_threshold": 0.65
+  }
+}

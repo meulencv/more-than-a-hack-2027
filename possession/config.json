@@ -1,0 +1,12 @@
+{
+  "fps": 25,
+  "step_frames": 5,
+  "max_interpolation_frames": 15,
+  "max_ball_speed_mps": 45.0,
+  "control_radius_m": 3.0,
+  "minimum_state_steps": [3, 3, 4],
+  "switch_cost": 3.0,
+  "team_evidence_weight": 1.5,
+  "tag_evidence_weight": 0.9,
+  "stationary_speed_mps": 0.4
+}
