@@ -1,0 +1,72 @@
+{
+  "csv_path": "evaluation/results/v6_selected.csv",
+  "csv_sha256": "fd002b4fe859c36f1b608b2483b9bccbd0f80c425d0b241ddf67ef2f592e20e1",
+  "selection_commit": "fa13d90",
+  "selection": {
+    "name": "V6 boundary + physical-control temporal pair, seed2027",
+    "decision_basis": "expanded external development only; best mean spellF1 and worst-case among predefined ensembles; simpler two-model bundle beats four-model mean",
+    "development_score": {
+      "spell_f1_mean": 0.6453392944402769,
+      "worst_spell_f1": 0.5897937024972855
+    },
+    "replication_seed2028": {
+      "spell_f1_mean": 0.6320292111552576,
+      "worst_spell_f1": 0.5574660633484163
+    },
+    "four_model_alternative": {
+      "spell_f1_mean": 0.6439253968347924,
+      "worst_spell_f1": 0.5775280898876405
+    },
+    "native_train": [
+      "J03WMX",
+      "J03WOH",
+      "J03WOY"
+    ],
+    "confirmation_status": "locked and not loaded before this selection",
+    "challenge_public_used_for_selection": false,
+    "decoder": {
+      "kind": "boundary-conditioned Viterbi",
+      "costs": [
+        [
+          0,
+          4,
+          2.5
+        ],
+        [
+          4,
+          0,
+          2.5
+        ],
+        [
+          2.5,
+          2.5,
+          0
+        ]
+      ],
+      "edge_cost_reduction": 0.85,
+      "hard_min_steps": 1,
+      "step_frames": 5
+    },
+    "components": [
+      {
+        "path": "data/work/v6/tcn_boundary/model.pt",
+        "sha256": "08148bcf6e96e2720d8f114d6d8a51fc82c449d7ed59710a19c7a46e60301c68",
+        "physics": false,
+        "boundary_head": true,
+        "probability_weight": 0.5
+      },
+      {
+        "path": "data/work/v6/physics_tcn/model.pt",
+        "sha256": "d6278aed368340f1a1d66141284998f178dd3e00b3a928a2668b4db2e5dd9fa9",
+        "physics": true,
+        "boundary_head": false,
+        "probability_weight": 0.5
+      }
+    ]
+  },
+  "confirmation_completed": true,
+  "public_evaluation_status": "not executed for this candidate",
+  "public_used_for_training_or_selection": false,
+  "reproduction": "CPU and MPS inference exact; compared byte-for-byte",
+  "preserved_previous_csv": "evaluation/results/sequence_quality_gated.csv"
+}
