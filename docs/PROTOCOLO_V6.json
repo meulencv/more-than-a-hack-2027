@@ -1,0 +1,29 @@
+{
+  "candidate_baseline_sha256": "793075ee994c33296e138f632116e136b306393702f37408262da87d29837d99",
+  "native_train": [
+    "J03WMX",
+    "J03WOH",
+    "J03WOY"
+  ],
+  "native_development": [
+    "J03WN1",
+    "J03WPY",
+    "J03WQQ"
+  ],
+  "native_confirmation_locked": [
+    "J03WR9"
+  ],
+  "metrica_training": "three external Metrica games; corrected and legacy interpretations identified per experiment",
+  "criterion": "mean official spellF1 over development games and observation regimes; report per-game and worst-case; no challenge-public selection",
+  "confirmation_policy": "evaluate locked game only after configuration and candidate family are frozen; do not tune after confirmation",
+  "public_policy": "no public ground truth in optimization; previous 0.7067 remains historical check, not an optimization target",
+  "planned_families": [
+    "more native data; native-only vs mixed labels",
+    "local-channel normalization vs sequence-global normalization",
+    "boundary-aware and segment-balanced temporal training",
+    "multiscale refinement and ensembling",
+    "learned boundaries vs rigid minimum duration"
+  ],
+  "paid_services": false,
+  "upload_data": false
+}
