@@ -1,0 +1,422 @@
+{
+  "new_training_variants": 9,
+  "new_configuration_comparisons": 37,
+  "native_development_games": 3,
+  "regimes_per_game": 3,
+  "native_independent_confirmation_used": false,
+  "challenge_labels_read": false,
+  "new_submission_exported": false,
+  "baseline_v6": {
+    "spell_f1_mean": 0.6453392944402769,
+    "worst_spell_f1": 0.5897937024972855
+  },
+  "runs": {
+    "data/work/v7/all": {
+      "results_path": "data/work/v7/all/results.json",
+      "results_sha256": "9cf7f7fe883b1bdd677d969900709196a829dcb32b07ba2239ae76e0b9d1c998",
+      "summary": {
+        "0.25": {
+          "spell_f1_mean": 0.6483753129681814,
+          "worst_spell_f1": 0.5722794959908362,
+          "macro_f1": 0.909940745302639
+        },
+        "0.5": {
+          "spell_f1_mean": 0.5805946296731068,
+          "worst_spell_f1": 0.4926157697121402,
+          "macro_f1": 0.9009681974854752
+        },
+        "1.0": {
+          "spell_f1_mean": 0.4049925249685399,
+          "worst_spell_f1": 0.30743801652892566,
+          "macro_f1": 0.8451802672189479
+        }
+      },
+      "teacher_rows": [
+        {
+          "game": 1959846,
+          "detected": false,
+          "coverage": 0.5308047155304971,
+          "conditional_accuracy": 0.844856443929445,
+          "teacher_only": true
+        },
+        {
+          "game": 1959846,
+          "detected": true,
+          "coverage": 0.5308047155304971,
+          "conditional_accuracy": 0.834556456804429,
+          "teacher_only": true
+        },
+        {
+          "game": 1986691,
+          "detected": false,
+          "coverage": 0.5428813272388692,
+          "conditional_accuracy": 0.8510041162529625,
+          "teacher_only": true
+        },
+        {
+          "game": 1986691,
+          "detected": true,
+          "coverage": 0.5428813272388692,
+          "conditional_accuracy": 0.8360982911313459,
+          "teacher_only": true
+        }
+      ],
+      "model_path": "data/work/v7/all/model.pt",
+      "model_sha256": "920ed27f3760adc3b84a501fa738c1e88c8f7c3453ad2c044482ff15a1448f8a"
+    },
+    "data/work/v7/detected": {
+      "results_path": "data/work/v7/detected/results.json",
+      "results_sha256": "c315cea09015967a2ffbb165d160dfbebf50c7e566f2d74681d165a47e9810ae",
+      "summary": {
+        "0.25": {
+          "spell_f1_mean": 0.6459257985814223,
+          "worst_spell_f1": 0.5800453514739229,
+          "macro_f1": 0.908551208742563
+        },
+        "0.5": {
+          "spell_f1_mean": 0.5995484392502131,
+          "worst_spell_f1": 0.49495694956949565,
+          "macro_f1": 0.9016228034990476
+        },
+        "1.0": {
+          "spell_f1_mean": 0.437291959946725,
+          "worst_spell_f1": 0.32357043235704325,
+          "macro_f1": 0.86213595083797
+        }
+      },
+      "teacher_rows": [
+        {
+          "game": 1959846,
+          "detected": false,
+          "coverage": 0.5308047155304971,
+          "conditional_accuracy": 0.8444058194927256,
+          "teacher_only": true
+        },
+        {
+          "game": 1959846,
+          "detected": true,
+          "coverage": 0.5308047155304971,
+          "conditional_accuracy": 0.8465945667567916,
+          "teacher_only": true
+        },
+        {
+          "game": 1986691,
+          "detected": false,
+          "coverage": 0.5428813272388692,
+          "conditional_accuracy": 0.8443931645253836,
+          "teacher_only": true
+        },
+        {
+          "game": 1986691,
+          "detected": true,
+          "coverage": 0.5428813272388692,
+          "conditional_accuracy": 0.8582387426718224,
+          "teacher_only": true
+        }
+      ],
+      "model_path": "data/work/v7/detected/model.pt",
+      "model_sha256": "95feb0b3e4d1e6f7c4745c5ccf2139b63522ea3d696cd4932ba740271d9102aa"
+    },
+    "data/work/v7/mixed": {
+      "results_path": "data/work/v7/mixed/results.json",
+      "results_sha256": "8b606cb14b6b74dd5ec457510091b16e060c408cb8a4a7b6bef9e8de38a1b1d2",
+      "summary": {
+        "0.25": {
+          "spell_f1_mean": 0.6512256648256292,
+          "worst_spell_f1": 0.5867861142217244,
+          "macro_f1": 0.9098802627707546
+        },
+        "0.5": {
+          "spell_f1_mean": 0.6307410807257672,
+          "worst_spell_f1": 0.5577596266044342,
+          "macro_f1": 0.9079206685424973
+        },
+        "1.0": {
+          "spell_f1_mean": 0.566501713789055,
+          "worst_spell_f1": 0.48,
+          "macro_f1": 0.8986804687508639
+        }
+      },
+      "teacher_rows": [
+        {
+          "game": 1959846,
+          "detected": false,
+          "coverage": 0.5308047155304971,
+          "conditional_accuracy": 0.8398352002059998,
+          "teacher_only": true
+        },
+        {
+          "game": 1959846,
+          "detected": true,
+          "coverage": 0.5308047155304971,
+          "conditional_accuracy": 0.8456289429638213,
+          "teacher_only": true
+        },
+        {
+          "game": 1986691,
+          "detected": false,
+          "coverage": 0.5428813272388692,
+          "conditional_accuracy": 0.8502557066234252,
+          "teacher_only": true
+        },
+        {
+          "game": 1986691,
+          "detected": true,
+          "coverage": 0.5428813272388692,
+          "conditional_accuracy": 0.8567419234127479,
+          "teacher_only": true
+        }
+      ],
+      "model_path": "data/work/v7/mixed/model.pt",
+      "model_sha256": "73c34d1a2da4040fe5a73562f78a60a86dc09afcf05eb24eec5ea11f9bbc1f57"
+    },
+    "data/work/v7/mixed_seed2028": {
+      "results_path": "data/work/v7/mixed_seed2028/results.json",
+      "results_sha256": "bb2c548452766e88c908c64ca029f230177699397f2cd3af8babbf006693310b",
+      "summary": {
+        "0.25": {
+          "spell_f1_mean": 0.64439621954959,
+          "worst_spell_f1": 0.5792474344355758,
+          "macro_f1": 0.9093863739245793
+        },
+        "0.5": {
+          "spell_f1_mean": 0.6131215193148556,
+          "worst_spell_f1": 0.5270531400966183,
+          "macro_f1": 0.905842083639597
+        },
+        "1.0": {
+          "spell_f1_mean": 0.5415512775279896,
+          "worst_spell_f1": 0.4583979328165375,
+          "macro_f1": 0.8947866025455744
+        }
+      },
+      "teacher_rows": [
+        {
+          "game": 1959846,
+          "detected": false,
+          "coverage": 0.5308047155304971,
+          "conditional_accuracy": 0.8447920690099138,
+          "teacher_only": true
+        },
+        {
+          "game": 1959846,
+          "detected": true,
+          "coverage": 0.5308047155304971,
+          "conditional_accuracy": 0.8471095661130423,
+          "teacher_only": true
+        },
+        {
+          "game": 1986691,
+          "detected": false,
+          "coverage": 0.5428813272388692,
+          "conditional_accuracy": 0.8493201945865037,
+          "teacher_only": true
+        },
+        {
+          "game": 1986691,
+          "detected": true,
+          "coverage": 0.5428813272388692,
+          "conditional_accuracy": 0.8500686042160409,
+          "teacher_only": true
+        }
+      ],
+      "model_path": "data/work/v7/mixed_seed2028/model.pt",
+      "model_sha256": "e3778a9a5a089faa808296bf97f76b6a6e9d57dfca455175abfee203fa5bd539"
+    },
+    "data/work/v8/focal_iou_2027": {
+      "results_path": "data/work/v8/focal_iou_2027/results.json",
+      "results_sha256": "4380955a24317a8e38e62619b9bb181edf2f01d302dcb6c6ed7386c4d1825ac7",
+      "summary": {
+        "own_fixed": {
+          "spell_f1_mean": 0.6409184513137994,
+          "worst_spell_f1": 0.5464167585446527,
+          "macro_f1": 0.9036062207106674
+        },
+        "own_boundary": {
+          "spell_f1_mean": 0.6360280401774341,
+          "worst_spell_f1": 0.5541922290388548,
+          "macro_f1": 0.9017249975421038
+        },
+        "own_original_edge": {
+          "spell_f1_mean": 0.6360694064124481,
+          "worst_spell_f1": 0.5594232749742534,
+          "macro_f1": 0.902200761915273
+        },
+        "average_own_edge": {
+          "spell_f1_mean": 0.646487747799322,
+          "worst_spell_f1": 0.579047619047619,
+          "macro_f1": 0.9064891121282772
+        },
+        "average_original_edge": {
+          "spell_f1_mean": 0.6467075586211549,
+          "worst_spell_f1": 0.5834333733493398,
+          "macro_f1": 0.9070509930606209
+        },
+        "average_both_edges": {
+          "spell_f1_mean": 0.6458256083612913,
+          "worst_spell_f1": 0.5839914621131269,
+          "macro_f1": 0.9067738149719167
+        }
+      },
+      "model_path": "data/work/v8/focal_iou_2027/model.pt",
+      "model_sha256": "86622068619da59186c74364d51771b51f1f814f7d70315e13627cdead27ad11"
+    },
+    "data/work/v8/inverse_2027": {
+      "results_path": "data/work/v8/inverse_2027/results.json",
+      "results_sha256": "6cd14eeed8da300163030ef5b359d69befc7f84bc29c8aa8610498606049bbe2",
+      "summary": {
+        "own_fixed": {
+          "spell_f1_mean": 0.5965404097895164,
+          "worst_spell_f1": 0.5095088819226751,
+          "macro_f1": 0.8780746927187435
+        },
+        "own_boundary": {
+          "spell_f1_mean": 0.5728588481131298,
+          "worst_spell_f1": 0.4970072239422085,
+          "macro_f1": 0.874773909347956
+        },
+        "own_original_edge": {
+          "spell_f1_mean": 0.5750593798294121,
+          "worst_spell_f1": 0.4981366459627329,
+          "macro_f1": 0.8753380796106345
+        },
+        "average_own_edge": {
+          "spell_f1_mean": 0.6227881184574469,
+          "worst_spell_f1": 0.5574380165289256,
+          "macro_f1": 0.8969146425327028
+        },
+        "average_original_edge": {
+          "spell_f1_mean": 0.6253341394194392,
+          "worst_spell_f1": 0.5586708203530633,
+          "macro_f1": 0.8975784985334995
+        },
+        "average_both_edges": {
+          "spell_f1_mean": 0.6242499489393212,
+          "worst_spell_f1": 0.5563409563409564,
+          "macro_f1": 0.89734988273746
+        }
+      },
+      "model_path": "data/work/v8/inverse_2027/model.pt",
+      "model_sha256": "2f7b88a7e82b9cdecc47b1ecc0bba80737b2c271870c8eb6bd0497e5e2e490ff"
+    },
+    "data/work/v8/iou_2027": {
+      "results_path": "data/work/v8/iou_2027/results.json",
+      "results_sha256": "8ae2daee50a6bf2ffdf466a21fa2f3f86c7e271490c3fd79d87a3145789dbd36",
+      "summary": {
+        "own_fixed": {
+          "spell_f1_mean": 0.6413493798477808,
+          "worst_spell_f1": 0.5508125677139761,
+          "macro_f1": 0.9041045368856833
+        },
+        "own_boundary": {
+          "spell_f1_mean": 0.6350473965184249,
+          "worst_spell_f1": 0.5565217391304348,
+          "macro_f1": 0.9035780763937016
+        },
+        "own_original_edge": {
+          "spell_f1_mean": 0.6407123879488115,
+          "worst_spell_f1": 0.559918200408998,
+          "macro_f1": 0.9046056683527723
+        },
+        "average_own_edge": {
+          "spell_f1_mean": 0.6460444315774633,
+          "worst_spell_f1": 0.5764337851929092,
+          "macro_f1": 0.9072856462076158
+        },
+        "average_original_edge": {
+          "spell_f1_mean": 0.6475473640577476,
+          "worst_spell_f1": 0.5802757158006362,
+          "macro_f1": 0.9075226085886459
+        },
+        "average_both_edges": {
+          "spell_f1_mean": 0.6466347215222894,
+          "worst_spell_f1": 0.576890756302521,
+          "macro_f1": 0.9072931996413198
+        }
+      },
+      "model_path": "data/work/v8/iou_2027/model.pt",
+      "model_sha256": "8ed3e4eaf8c1fdb3f48928e75138eb39d1efb717233c1454ec0a014321f70bc0"
+    },
+    "data/work/v9/hgb_2027": {
+      "results_path": "data/work/v9/hgb_2027/results.json",
+      "results_sha256": "408557ca4405ff492f74105ae20c69b13d5b3f7659a90aee8a64c65e54f1ac94",
+      "summary": {
+        "spell_f1_mean": 0.5944737486191082,
+        "worst_spell_f1": 0.5007371007371008
+      },
+      "model_path": "data/work/v9/hgb_2027/model.joblib",
+      "model_sha256": "3a3931b91bfe34d4e4f7d1aa465ec32f86f82fcf591db7e1aa6ccd492970f40a"
+    },
+    "data/work/v9/tcn_2027": {
+      "results_path": "data/work/v9/tcn_2027/results.json",
+      "results_sha256": "e692e150c8f5313aa24768692fa9e6274d166b54a051a3c0ef6eb68452df2e16",
+      "summary": {
+        "own_fixed": {
+          "spell_f1_mean": 0.633366884115904,
+          "worst_spell_f1": 0.5266821345707657,
+          "macro_f1": 0.9039862737911785
+        },
+        "own_boundary": {
+          "spell_f1_mean": 0.6332014906317385,
+          "worst_spell_f1": 0.5584245076586434,
+          "macro_f1": 0.9034074600209008
+        },
+        "own_original_edge": {
+          "spell_f1_mean": 0.6331502683770024,
+          "worst_spell_f1": 0.5578947368421052,
+          "macro_f1": 0.9038224924735808
+        },
+        "average_own_edge": {
+          "spell_f1_mean": 0.6419555886349788,
+          "worst_spell_f1": 0.5763813651137595,
+          "macro_f1": 0.9069762163176693
+        },
+        "average_original_edge": {
+          "spell_f1_mean": 0.6437530354568319,
+          "worst_spell_f1": 0.5826086956521739,
+          "macro_f1": 0.9071598680020766
+        },
+        "average_both_edges": {
+          "spell_f1_mean": 0.6430729977712918,
+          "worst_spell_f1": 0.5752173913043479,
+          "macro_f1": 0.9071768581184279
+        }
+      },
+      "model_path": "data/work/v9/tcn_2027/model.pt",
+      "model_sha256": "d6872b031bea48c3a8695be5bcbc0c49d90742468c3f9396d6d8d10590aa2a75"
+    }
+  },
+  "broadcast_frozen_v6_teacher_agreement": [
+    {
+      "game": 1959846,
+      "detected": false,
+      "teacher_coverage": 0.5308047155304971,
+      "conditional_accuracy": 0.811960860048925
+    },
+    {
+      "game": 1959846,
+      "detected": true,
+      "teacher_coverage": 0.5308047155304971,
+      "conditional_accuracy": 0.7985065018668727
+    },
+    {
+      "game": 1986691,
+      "detected": false,
+      "teacher_coverage": 0.5428813272388692,
+      "conditional_accuracy": 0.8125857552700512
+    },
+    {
+      "game": 1986691,
+      "detected": true,
+      "teacher_coverage": 0.5428813272388692,
+      "conditional_accuracy": 0.8074716228015467
+    }
+  ],
+  "development_only_oracle_diagnostics": {
+    "warning": "Counterfactual external labels supplied to decoder only for diagnosis. Not candidate predictions, not challenge data. Effects are not independent causal decompositions.",
+    "baseline": 0.6453392944402769,
+    "oracle_dead_probability": 0.686523607193335,
+    "oracle_team_conditional": 0.9178794096377592,
+    "oracle_transition_evidence": 0.6954679090784042
+  }
+}

@@ -105,11 +105,12 @@ def train(xs,ys,kind,seed=2027,steps=800,device='mps'):
     return net.eval(),norm
 
 
-def evaluate(net,norm,root,device='mps'):
+def evaluate(net,norm,root,device='mps',feature_root=None):
     rows=[];cfg=load_config(Path('possession/config_external_selected.json'))
+    feature_root=PHYSICS if feature_root is None else feature_root
     for game in v6_data.protocol()['native_development']:
         for mode in ('clean','moderate','stress'):
-            r=joblib.load(PHYSICS/f'development_{game}_{mode}.joblib')
+            r=joblib.load(feature_root/f'development_{game}_{mode}.joblib')
             q,e=predict(net,norm,subsequences(r['direct'],r['slices']),device)
             qm,em=predict(net,norm,subsequences(r['mirror'],r['slices']),device)
             p=(np.concatenate(q)+np.concatenate(qm)[:,[1,0,2]])/2

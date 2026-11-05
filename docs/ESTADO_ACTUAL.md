@@ -1,3 +1,5 @@
+> Actualización V7–V9: nueve entrenamientos y 37 comparaciones adicionales. La transferencia, las pérdidas por intervalos y la memoria de control no aportan una ventaja estable frente a V6. No se han usado nuevas comprobaciones públicas ni se han sustituido los CSV congelados. Ver [EXPERIMENTOS_V7_V9.md](EXPERIMENTOS_V7_V9.md).
+
 > Actualización V6: hay una familia nueva con mejoras externas, pero su comprobación pública da 0,6595 frente a 0,7067 del candidato conservado. No se presenta como mejora demostrada del concurso. Ver [EXPERIMENTOS_V6.md](EXPERIMENTOS_V6.md). Ambos CSV se preservan.
 
 # Estado actual: candidato por calidad de observación

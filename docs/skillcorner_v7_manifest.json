@@ -1,0 +1,106 @@
+{
+  "commit": "4340d274572876239c154c90bc507a9b3250a656",
+  "files": [
+    {
+      "path": "data/external/skillcorner_v7/1874553/1874553_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1874553/1874553_match.json",
+      "bytes": 33730,
+      "sha256": "e6974e402779d8be44e75bf88ef2a3acfd4d025b87b3fc57f518fa826a645ad8"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1874553/1874553_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1874553/1874553_tracking_extrapolated.jsonl",
+      "bytes": 90729279,
+      "sha256": "ea97f58f8eaad925feaeacc6395ec24860dd80027af8a89450276adebd29d265"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1886347/1886347_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_match.json",
+      "bytes": 27541,
+      "sha256": "30c608e78663e9f490b3545479a3ce67b171f418c5133d5609cb249a2466abb2"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1886347/1886347_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1886347/1886347_tracking_extrapolated.jsonl",
+      "bytes": 89280839,
+      "sha256": "3577e2803da95390f8b2f85d47829eb55fbbfee6211c94adc65db0dc78e46b41"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1899585/1899585_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1899585/1899585_match.json",
+      "bytes": 27810,
+      "sha256": "41de8cb74a0512fcf0cbaaa5c615ae3e7dcaaf6745b9c78a050b59b906b1cb06"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1899585/1899585_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1899585/1899585_tracking_extrapolated.jsonl",
+      "bytes": 85550410,
+      "sha256": "90b6289ec2181192d1793ec6240fbbe8225ff0219c7956710c6278c31a661100"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1925299/1925299_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_match.json",
+      "bytes": 28396,
+      "sha256": "f4345b32c0fdd7c9990df70050b3a74f57b1992cf762e20f2a4d309bd2fba7d2"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1925299/1925299_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1925299/1925299_tracking_extrapolated.jsonl",
+      "bytes": 97091519,
+      "sha256": "48528be40ad82fa3e2b232e1af8d311705f7d6d119925ef199d2b59ea36fd3c9"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1927964/1927964_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1927964/1927964_match.json",
+      "bytes": 33400,
+      "sha256": "f967f911c20f5c5f8c89bbe2020a30c92731173616d5a1e4bafeb65435278b76"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1927964/1927964_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1927964/1927964_tracking_extrapolated.jsonl",
+      "bytes": 91049828,
+      "sha256": "858c7a756ca3d33017f864775af5999d2c0f364e58ab60ae040c8b9ebab17827"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1953632/1953632_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1953632/1953632_match.json",
+      "bytes": 27767,
+      "sha256": "366c8dd6b504d4f4ace5685040648b0f30081043a44f01663b8b7e077e6bfde8"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1953632/1953632_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1953632/1953632_tracking_extrapolated.jsonl",
+      "bytes": 90027965,
+      "sha256": "1c2014f97c3eff1ce2475203512c9d126930d7599c036105c9ac442d1de1667e"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1959846/1959846_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1959846/1959846_match.json",
+      "bytes": 32946,
+      "sha256": "4bbe2058af53edd42d5e3acd7fb28ecb8c79e4afb16cb9b77a6fe9b58f6e516b"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1959846/1959846_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1959846/1959846_tracking_extrapolated.jsonl",
+      "bytes": 87710167,
+      "sha256": "5ba2d87f6fd1ba3138301b369bd9266be69416a2d799a3fba5b5ec8a52e1284b"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1986691/1986691_match.json",
+      "url": "https://raw.githubusercontent.com/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1986691/1986691_match.json",
+      "bytes": 33792,
+      "sha256": "754f6a6fd0d996236cf553ef5c3c24513274b0db024cb6833a7419b08d55dd68"
+    },
+    {
+      "path": "data/external/skillcorner_v7/1986691/1986691_tracking_extrapolated.jsonl",
+      "url": "https://media.githubusercontent.com/media/SkillCorner/opendata/4340d274572876239c154c90bc507a9b3250a656/data/matches/1986691/1986691_tracking_extrapolated.jsonl",
+      "bytes": 88531597,
+      "sha256": "630e946950fe459f5e48872b01a36e6dfc319cf9027e7b98156150bb6e2c30f6"
+    }
+  ],
+  "source": "SkillCorner opendata, A-League 2024/25",
+  "credit": "SkillCorner",
+  "repository_license": "MIT",
+  "split_protocol": "docs/PROTOCOLO_V7.json",
+  "locked_confirmation_downloaded": false
+}
