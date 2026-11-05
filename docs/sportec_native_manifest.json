@@ -1,0 +1,38 @@
+{
+  "source": "https://doi.org/10.6084/m9.figshare.28196177",
+  "license": {
+    "value": 52,
+    "name": "CC BY",
+    "url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "files": [
+    {
+      "name": "DFL_02_01_matchinformation_DFL-COM-000001_DFL-MAT-J03WN1.xml",
+      "kind": "metadata",
+      "url": "https://ndownloader.figshare.com/files/51643472",
+      "size": 11722,
+      "sha256": "5490286436c86e6f80a538d2b1b379d0efd016e0defcaf594bc59d9ef5079f4c"
+    },
+    {
+      "name": "DFL_02_01_matchinformation_DFL-COM-000001_DFL-MAT-J03WMX.xml",
+      "kind": "metadata",
+      "url": "https://ndownloader.figshare.com/files/51643475",
+      "size": 11930,
+      "sha256": "a884728647a564cf8b20e5223a1d04a5da6f6725e1e506c8651505327c197ba9"
+    },
+    {
+      "name": "DFL_04_03_positions_raw_observed_DFL-COM-000001_DFL-MAT-J03WMX.xml",
+      "kind": "tracking",
+      "url": "https://ndownloader.figshare.com/files/51643514",
+      "size": 418524833,
+      "sha256": "d3dd92e509421a6466acb0a083c009035f1751bc5fd9ef42ffa8f20d01cf7d49"
+    },
+    {
+      "name": "DFL_04_03_positions_raw_observed_DFL-COM-000001_DFL-MAT-J03WN1.xml",
+      "kind": "tracking",
+      "url": "https://ndownloader.figshare.com/files/51643517",
+      "size": 391722803,
+      "sha256": "56ef948961a18e150dba0b7b16869d0008ff66f3050a0c355d31fa5b8ec2fcec"
+    }
+  ]
+}

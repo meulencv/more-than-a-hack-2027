@@ -1,0 +1,89 @@
+{
+  "method": "quality-gated native/Metrica-trained HGB+TCN",
+  "gate": "TCNweight=ball-missingfraction125frames; centered and half-local",
+  "model_hgb_sha256": "fbf76ce5daae3fd4628de331545bb0dd1c7cc2a0affb85276cc20d141aec4c04",
+  "model_tcn_sha256": "b70f46229ef4188ca7d4972f91874f7b08716d34938ae1320493095f125da745",
+  "competition_labels_read": false,
+  "mean_tcn_weight": 0.4069083399755974,
+  "csv_sha256": "793075ee994c33296e138f632116e136b306393702f37408262da87d29837d99",
+  "counts": {
+    "H": 46570,
+    "A": 27690,
+    "D": 84597,
+    "X": 40462
+  },
+  "decoder": {
+    "min_steps": [
+      5,
+      5,
+      5
+    ],
+    "cost_turnover": 4.0,
+    "cost_to_dead": 2.5,
+    "cost_to_live": 2.5,
+    "emission_weight": 1.0
+  },
+  "stage2": {
+    "enabled": false
+  },
+  "gate_window_frames": 125,
+  "fps": 25,
+  "gate_source_sha256": "33f36cdfd344bda9a2ec701ad416c8829309ed1e4f9d170826201ad33dafaf25",
+  "training_ids": [
+    "Metrica1",
+    "Metrica2",
+    "Metrica3",
+    "SportecJ03WMX"
+  ],
+  "validation_id": "SportecJ03WN1: external development; never fitted",
+  "hgb_targets": "corrected weak Metrica + native Sportec",
+  "tcn_targets": "legacy weak Metrica + native Sportec",
+  "provenance_files": [
+    "docs/external_data_manifest.json",
+    "data/work/domain_adaptation/provenance.json"
+  ],
+  "reproduction": "CSV byte-identical in two saved-model executions; no public-label evaluation in this agent",
+  "candidate": "evaluation/results/sequence_quality_gated.csv",
+  "selection_basis": "external Metrica leave-one-game-out, corrected-reference audit, and native Sportec J03WN1 development evaluation",
+  "public_score_used_for_selection": false,
+  "public_check_status": "not yet executed for this frozen candidate",
+  "decoder_config": {
+    "seed": 2027,
+    "degrade": {
+      "sigma_range": [
+        0.8,
+        1.4
+      ],
+      "p_live_range": [
+        0.25,
+        0.4
+      ]
+    },
+    "training_seeds": [
+      101,
+      102
+    ],
+    "model": {
+      "max_iter": 180,
+      "max_leaf_nodes": 24,
+      "learning_rate": 0.08,
+      "min_samples_leaf": 40,
+      "l2_regularization": 1.0,
+      "class_weight": "balanced"
+    },
+    "decoder": {
+      "min_steps": [
+        5,
+        5,
+        5
+      ],
+      "cost_turnover": 4.0,
+      "cost_to_dead": 2.5,
+      "cost_to_live": 2.5,
+      "emission_weight": 1.0
+    },
+    "stage2": {
+      "enabled": false
+    }
+  }
+}

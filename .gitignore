@@ -72,3 +72,6 @@ env/
 *.onnx
 *.pt
 *.pth
+
+# CatBoost model weights remain local
+*.cbm
