@@ -1,0 +1,20 @@
+{
+  "source": "https://github.com/SkillCorner/opendata",
+  "source_commit": "4340d274572876239c154c90bc507a9b3250a656",
+  "skillcorner_train": [1874553, 1886347, 1899585, 1925299, 1927964, 1953632],
+  "skillcorner_development": [1959846, 1986691],
+  "skillcorner_confirmation_locked": [1996435, 1996436],
+  "remaining_matches": "Unopened reserve; not used in this round",
+  "reference_policy": "SkillCorner possession.group home/away is an algorithmic teacher, not corrected truth. All other values are unknown, never D. No phases-of-play complement used as dead labels.",
+  "sampling": "10 Hz coordinates interpolated to 25 Hz within each half; interpolation through missing coordinates remains missing; label group held from preceding 10 Hz tick. Existing features sampled at 5 Hz, exactly every second original observation.",
+  "observation_modes": ["all available tracks", "only is_detected positions"],
+  "planned_families": ["binary H/A temporal model from broadcast teachers", "binary model from native control plus broadcast teachers", "conditional H/A fusion preserving frozen V6 dead probability", "fixed probability fusion weights 0.25, 0.5, 1.0"],
+  "native_train": ["J03WMX", "J03WOH", "J03WOY"],
+  "native_development": ["J03WN1", "J03WPY", "J03WQQ"],
+  "native_confirmation": "J03WR9 already consumed by V6; never used for V7 selection or new confirmation claims",
+  "criterion": "Mean official spellF1 over same nine native development cases. SkillCorner H/A-only masked teacher agreement reported separately, never represented as full official score. Require no native deterioration to adopt.",
+  "confirmation_policy": "Freeze configuration before opening two reserved broadcast games; report only teacher agreement there, including unknown coverage. No claim of independent confirmation for full H/A/D metric.",
+  "public_policy": "Do not load or evaluate public competition ground truth in V7. No selection based on any public result.",
+  "paid_services": false,
+  "upload_data": false
+}
