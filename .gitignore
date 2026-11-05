@@ -65,3 +65,10 @@ env/
 
 # Local multimodal experiment environment
 .venv-vision/
+
+# Local model weights and training artifacts
+*.safetensors
+*.joblib
+*.onnx
+*.pt
+*.pth
