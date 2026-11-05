@@ -1,3 +1,5 @@
+> Documento histórico. Para el candidato actual, ver [ESTADO_ACTUAL.md](ESTADO_ACTUAL.md) y [GATED_CANDIDATE.md](GATED_CANDIDATE.md).
+
 # Estado de la solución — 5 de noviembre de 2026
 
 Hay tres estimadores implementados. Todos producen un CSV válido con 199.319 filas que pasa estrictamente `evaluation/validate_submission.py`.
@@ -7,7 +9,7 @@ No se han publicado datos, código ni entregas a servicios externos.
 
 ### Temporal v1 (Heurística base)
 Distancias en metros, velocidad del balón, movimiento colectivo y Smart Tagging como evidencia blanda. Decodificador Viterbi que mantiene continuidad y duración mínima. Cada parte se procesa por separado; fotogramas fuera de los límites oficiales reciben `X`. No usa entrenamiento supervisado.
-Comprobación única de 5 minutos: spellF1 **0,2235**, macroF1 **0,5255** (por debajo del baseline oficial `smooth50` de 0,2433).
+Comprobación única de 5 minutos: spellF1 **0,2235**, macroF1 **0,5255** (la referencia pública `smooth50` obtiene 0,3256; el 0,2433 publicado corresponde al partido completo).
 Se conserva congelado en `evaluation/results/temporal_v1.csv`.
 
 ### Temporal externa v2 (Detector binario en juego / parado)

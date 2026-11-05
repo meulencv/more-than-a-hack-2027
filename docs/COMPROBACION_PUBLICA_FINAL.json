@@ -1,0 +1,14 @@
+{
+  "spell_f1_mean": 0.706667,
+  "macro_f1": 0.876808,
+  "accuracy": 0.8888,
+  "f1_H": 0.927523,
+  "f1_A": 0.882468,
+  "f1_D": 0.820434,
+  "candidate_sha256": "793075ee994c33296e138f632116e136b306393702f37408262da87d29837d99",
+  "selection_frozen_commit": "8402a96",
+  "public_evaluation_used_for_training_or_selection": false,
+  "evaluated_frames": 7500,
+  "ground_truth_possessions": 17,
+  "predicted_possessions": 13
+}

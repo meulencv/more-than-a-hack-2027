@@ -1,4 +1,5 @@
 """Mixed-domain development: Metrica1/2/3 + native SportecWMX; hold out SportecWN1."""
+import argparse
 import json
 from pathlib import Path
 import joblib
@@ -16,7 +17,11 @@ from .benchmark_external import evaluate_prediction
 
 
 def main():
- root=Path('data/work/sequence_native_mix')
+ parser=argparse.ArgumentParser()
+ parser.add_argument('--work-dir',type=Path,default=Path('data/work/sequence_native_mix'))
+ parser.add_argument('--train-only',action='store_true')
+ args=parser.parse_args()
+ root=args.work_dir
  root.mkdir(parents=True,exist_ok=True)
  cfg=load_config('possession/config_external_selected.json')
  xs,ys=[],[]
@@ -39,6 +44,9 @@ def main():
  state={k:v.detach().cpu() for k,v in model.state_dict().items()}
  torch.save(dict(state_dict=state,mean=norm.mean,std=norm.std,steps=500,seed=2027,
                  architecture='TCN48x6',training='Metrica1/2/3 + SportecJ03WMX only'),root/'mixed_model.pt')
+ if args.train_only:
+  print('Saved model',root/'mixed_model.pt',flush=True)
+  return
  baseline=joblib.load('data/work/temporal_v3/model.joblib')
  source=external_native_match('J03WN1')
  results=[]

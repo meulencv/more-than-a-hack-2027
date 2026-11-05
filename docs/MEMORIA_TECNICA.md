@@ -1,3 +1,5 @@
+> Documento histórico. Para el candidato actual, ver [ESTADO_ACTUAL.md](ESTADO_ACTUAL.md) y [GATED_CANDIDATE.md](GATED_CANDIDATE.md).
+
 # Memoria Técnica — More Than A Hack 2027
 
 **Reto:** Inferencia de posesión frame a frame (`H`, `A`, `D`, `X`) para el partido FC Barcelona vs Athletic Club (LaLiga 2024-25, Jornada 2).  

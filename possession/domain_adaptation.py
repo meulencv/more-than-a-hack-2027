@@ -3,6 +3,7 @@
 Native game J03WN1 is excluded from training. Evaluation is external development,
 not an untouched benchmark. No Barcelona/Athletic reference labels are read.
 """
+import argparse
 import json
 from pathlib import Path
 import joblib
@@ -19,7 +20,11 @@ from starter.baseline import write_submission
 
 
 def main():
-    root = Path('data/work/domain_adaptation')
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--work-dir', type=Path, default=Path('data/work/domain_adaptation'))
+    parser.add_argument('--train-only', action='store_true')
+    args = parser.parse_args()
+    root = args.work_dir
     root.mkdir(parents=True, exist_ok=True)
     cfg = load_config(Path('possession/config_external_selected.json'))
     profile = challenge_profile(challenge_match())
@@ -49,6 +54,9 @@ def main():
     print('Fitting mixed-domain model', len(y) + len(ny), flush=True)
     mixed = fit(pd.concat([x, nx], ignore_index=True), np.concatenate([y, ny]), cfg)
     joblib.dump(mixed, root / 'mixed.joblib')
+    if args.train_only:
+        print('Rebuilt mixed HGB:', file_sha256(root / 'mixed.joblib'), flush=True)
+        return
     source = external_native_match('J03WN1')
     rows = []
     baseline = joblib.load('data/work/temporal_v3/model.joblib')

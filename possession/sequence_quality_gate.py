@@ -10,6 +10,7 @@ from pathlib import Path
 import joblib
 import numpy as np
 import pandas as pd
+import torch
 from .sportec_native import external_native_match
 from .audit_stress import blind_corruption
 from .sources import challenge_match
@@ -44,10 +45,13 @@ def combine(hgb,tcn,weight):
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--export',action='store_true')
+    parser.add_argument('--device',choices=['auto','cpu','mps'],default='auto')
     parser.add_argument('--export-only',action='store_true')
     parser.add_argument('--output',type=Path,default=Path('evaluation/results/sequence_quality_gated.csv'))
     parser.add_argument('--work-dir',type=Path,default=Path('data/work/sequence_quality_gated'))
     args=parser.parse_args()
+    device=('mps' if torch.backends.mps.is_available() else 'cpu') if args.device=='auto' else args.device
+    torch.set_num_threads(8)
     args.work_dir.mkdir(parents=True,exist_ok=True)
     cfg=load_config('possession/config_external_selected.json')
     rows=[]
@@ -74,9 +78,9 @@ def main():
         hgb_path=Path('data/work/domain_adaptation/mixed.joblib')
         tcn_path=Path('data/work/sequence_native_mix/mixed_model.pt')
         hgb=joblib.load(hgb_path)
-        model,norm=load_sequence_model(tcn_path,'mps')
+        model,norm=load_sequence_model(tcn_path,device)
         a,frames=symmetric_proba(hgb,match)
-        b,fb=match_probabilities(model,norm,match,'mps')
+        b,fb=match_probabilities(model,norm,match,device)
         if not np.array_equal(frames,fb):raise ValueError('Expert frames misaligned')
         weight=missing_fraction(match,frames)
         p=combine(a,b,weight)
@@ -88,7 +92,7 @@ def main():
                 'gate':'TCNweight=ball-missingfraction125frames; centered and half-local',
                 'model_hgb_sha256':hashlib.sha256(hgb_path.read_bytes()).hexdigest(),
                 'model_tcn_sha256':hashlib.sha256(tcn_path.read_bytes()).hexdigest(),
-                'competition_labels_read':False,'mean_tcn_weight':float(weight.mean()),
+                'competition_labels_read':False,'mean_tcn_weight':float(weight.mean()),'inference_device':device,
                 'decoder':cfg['decoder'],'stage2':cfg.get('stage2'),
                 'gate_window_frames':125,'fps':25,
                 'gate_source_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

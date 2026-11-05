@@ -1,3 +1,5 @@
+> Documento histórico. Para el candidato actual, ver [ESTADO_ACTUAL.md](ESTADO_ACTUAL.md) y [GATED_CANDIDATE.md](GATED_CANDIDATE.md).
+
 # Preparación y propuesta — More Than A Hack 2027
 
 
