@@ -20,6 +20,7 @@ from .v6_temporal import SegmentNet,predict as temporal_predict
 from .sequence_tcn import Normalizer
 from .v6_experiment import subsequences,dynamic_decode
 from .v12_compare import match_record
+from .v14_resolution import decode_fine
 
 
 def digest(path):
@@ -99,7 +100,11 @@ class CompetitiveBundle:
 
     def labels(self,match):
         r=match_record(match);p,e=self.probabilities(r)
-        return dynamic_decode(p,e,r['frames'],match),dict(probabilities=p,edges=e,frames=r['frames'])
+        kind=self.selection.get('decoder_kind','coarse')
+        if kind=='coarse':codes=dynamic_decode(p,e,r['frames'],match)
+        elif kind in ('fine_probability','fine_log'):codes=decode_fine(p,e,r['frames'],match,kind.removeprefix('fine_'))
+        else:raise ValueError('Unregistered decoder')
+        return codes,dict(probabilities=p,edges=e,frames=r['frames'])
 
 
 def main():

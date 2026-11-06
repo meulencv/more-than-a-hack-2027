@@ -51,4 +51,34 @@ def development():
     print('RESOLUTION SUMMARY',summary,flush=True)
 
 
-if __name__=='__main__':development()
+def cross_validation():
+    from . import v13_cv
+    root=Path('data/work/v14');root.mkdir(parents=True,exist_ok=True);rows=[]
+    for index,held in enumerate(v13_cv.settings()['test_folds']):
+        if not v13_cv.fold_complete(index):raise ValueError('Wait for complete out-of-fold predictions')
+        for game in held:
+            for mode in ['clean','moderate','stress']:
+                r=v13_cv.record(game,mode);match=as_match(r)
+                saved=np.load(v13_cv.ROOT/f'fold{index}'/f'{game}_{mode}.npz');e=saved['edges'];f=saved['frames']
+                assert np.array_equal(f,r['frames'])
+                for method in ['baseline','combined']:
+                    for kind in ['original','probability','log']:
+                        codes=dynamic_decode(saved[method],e,f,match) if kind=='original' else decode_fine(saved[method],e,f,match,kind)
+                        metric=evaluate_prediction(r['full_labels'],codes)
+                        rows.append(dict(game=game,mode=mode,method=method,decoder=kind,**metric))
+                print('CV RESOLUTION',game,mode,{r['method']+'_'+r['decoder']:round(r['spell_f1_mean'],4) for r in rows[-6:]},flush=True)
+    summary=[]
+    for method in ['baseline','combined']:
+        for kind in ['original','probability','log']:
+            use=[r for r in rows if r['method']==method and r['decoder']==kind]
+            summary.append(dict(method=method,decoder=kind,spell_f1_mean=float(np.mean([r['spell_f1_mean'] for r in use])),
+                worst_spell_f1=float(min(r['spell_f1_mean'] for r in use)),macro_f1=float(np.mean([r['macro_f1'] for r in use])),
+                by_game={g:float(np.mean([r['spell_f1_mean'] for r in use if r['game']==g])) for g in v13_cv.settings()['games']}))
+    (root/'cross_validation.json').write_text(json.dumps(dict(rows=rows,summary=summary,challenge_labels_read=False),indent=2))
+    print('CV RESOLUTION SUMMARY',summary,flush=True)
+
+
+if __name__=='__main__':
+    p=argparse.ArgumentParser();p.add_argument('--cross-validation',action='store_true');args=p.parse_args()
+    if args.cross_validation:cross_validation()
+    else:development()

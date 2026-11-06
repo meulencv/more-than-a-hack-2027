@@ -1,0 +1,11 @@
+{
+  "purpose": "Frozen cross-provider transfer check on three external Metrica sample games, after native architecture/decoder selection",
+  "models": ["frozen V6 native-only", "frozen V12 native-only plus player trajectory experts", "final six-native-game four-network model with selected 25Hz decoder"],
+  "training_overlap": "None of these compared checkpoints is fitted on any of the three Metrica games. They were used in older project history, so this is not advertised as untouched independent confirmation.",
+  "references": ["corrected event-derived Metrica proxy", "legacy event-derived Metrica proxy reported separately"],
+  "reference_limit": "Both are weak interval references, not provider-native per-frame ground truth. Do not equate their values with native CV or competition scores.",
+  "observations": ["clean", "moderate", "stress"],
+  "noise": "Same label-blind sensor views as native development; no target-conditioned synthesis",
+  "selection": "Weights and decoder frozen before scoring. Report transfer limits without retuning on competition labels.",
+  "public_policy": "No public or private competition GT read or scored"
+}

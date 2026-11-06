@@ -1,0 +1,103 @@
+{
+  "name": "Final four-network trajectory model, six native matches, two cameras, 25Hz decoder",
+  "selection_basis": "Frozen native cross-match development; final refit uses all six external games. Final weights are not independently scored on their own training games.",
+  "components": [
+    {
+      "path": "data/work/v13/final/standard.pt",
+      "kind": "standard",
+      "boundary_head": true,
+      "weight": 0.25,
+      "sha256": "80b7b4bf6ddc6a3520e722ddaf84b8d5c91adbd43287d2b6865889174ea31f5a"
+    },
+    {
+      "path": "data/work/v13/final/physics.pt",
+      "kind": "physics",
+      "boundary_head": false,
+      "weight": 0.25,
+      "sha256": "1187338e7fe6f1f48207e21eac465af10c1f70984d064e88774ea317ef043445"
+    },
+    {
+      "path": "data/work/v13/final/trajectory2027.pt",
+      "kind": "trajectory",
+      "boundary_head": false,
+      "weight": 0.25,
+      "sha256": "980746a4026cbb15bc2a4eaea01142ffedc2efdf1c485fae4c694812ccfbcf69"
+    },
+    {
+      "path": "data/work/v13/final/trajectory2028.pt",
+      "kind": "trajectory",
+      "boundary_head": false,
+      "weight": 0.25,
+      "sha256": "a14ed0b65052992a594954883a07ebff69bab865436e2be402a10d914b5a1379"
+    }
+  ],
+  "camera": {
+    "algorithm": "possession.camera_sync.synchronize",
+    "fusion": "fill_missing",
+    "alignment_parameters": "docs/PROTOCOLO_V11.json"
+  },
+  "decoder": "Linear probability interpolation at25Hz, unary weight1/5, unchanged boundary-conditioned switch costs",
+  "challenge_public_used": false,
+  "native_confirmation_reopened": false,
+  "input_files_sha256": {
+    "tactical/BAR-ATH_tactical_atd.txt": "f130e350d2bfdf734b7e32f072931fccc6d015c1e837d082064875fe0a700431",
+    "tactical/BAR-ATH_tactical_atd.xml": "327e35e32e46a647389b88f883d4f9a2ab931e3e6148aef2fcf8f22b1e93c43a",
+    "tactical/BAR-ATH_tactical_homography.csv": "421c81abe16f0912dc45c2541f9bf19dd5660066397a3dcc043038a1b61c28c3",
+    "broadcast/BAR-ATH_broadcast_atd.txt": "a71c1c9391e564032446be91ffbd7564205b47966060181532d80a338685e458",
+    "broadcast/BAR-ATH_broadcast_atd.xml": "53d387bcdef718c2034ee2e05c3036c7edfa3cfcd5bbe8270a43695bd252dbe9",
+    "broadcast/BAR-ATH_broadcast_homography.csv": "9ed07e7085bb0f200e171929948ae378cdba760d844bd18266c0b7caa4ba4afb"
+  },
+  "alignment_algorithm_sha256": "4f93c86397262594cd734608a77b5271404717350d9b35e8ebf80de4e6307d57",
+  "alignment_mapping_sha256": "c2431b24d40fcb268ce014f2b5de964dcc6939331ce9eeaf261b1b66ecc4ce31",
+  "native_cross_validation": {
+    "method": "combined",
+    "decoder": "probability",
+    "spell_f1_mean": 0.6757751482502583,
+    "worst_spell_f1": 0.5740956826137691,
+    "macro_f1": 0.9219784318951262,
+    "by_game": {
+      "J03WMX": 0.6230240261148251,
+      "J03WN1": 0.6343302107811343,
+      "J03WOH": 0.7140030853322857,
+      "J03WPY": 0.7057900003815668,
+      "J03WOY": 0.7010330247060547,
+      "J03WQQ": 0.6764705421856826
+    }
+  },
+  "native_baseline_cross_validation": {
+    "method": "baseline",
+    "decoder": "original",
+    "spell_f1_mean": 0.6420656622107619,
+    "worst_spell_f1": 0.5279999999999999,
+    "macro_f1": 0.9078381243899736,
+    "by_game": {
+      "J03WMX": 0.5850205227248422,
+      "J03WN1": 0.5652041871610544,
+      "J03WOH": 0.6922086907009808,
+      "J03WPY": 0.6726795395930427,
+      "J03WOY": 0.6846340321776007,
+      "J03WQQ": 0.6526470009070509
+    }
+  },
+  "development_with_synthetic_second_camera": {
+    "view": "fill_missing",
+    "model": "two_seeds",
+    "spell_f1_mean": 0.6851170313070395,
+    "worst_spell_f1": 0.6384017758046615,
+    "macro_f1": 0.9252822975937488,
+    "by_game": {
+      "J03WN1": 0.6588700317112717,
+      "J03WPY": 0.7044176630936478,
+      "J03WQQ": 0.6920633991161992
+    }
+  },
+  "decoder_kind": "fine_probability",
+  "final_train_games": [
+    "J03WMX",
+    "J03WN1",
+    "J03WOH",
+    "J03WPY",
+    "J03WOY",
+    "J03WQQ"
+  ]
+}

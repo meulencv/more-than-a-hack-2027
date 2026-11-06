@@ -51,6 +51,7 @@ def fit_components(games,folder,device='mps'):
         if path.exists():
             c=torch.load(path,map_location='cpu',weights_only=False)
             if c.get('train_games')!=games:raise ValueError('Checkpoint training partition mismatch')
+            if c.get('protocol_sha256')!=hashlib.sha256(PROTOCOL.read_bytes()).hexdigest():raise ValueError('Checkpoint protocol mismatch')
             net,norm=load_temporal(path,device) if width else load_model(path,device)
         elif width:
             xx,yy=training_rows(games,width)
@@ -95,9 +96,20 @@ def fold(index,device='mps'):
     if device=='mps':torch.mps.empty_cache()
 
 
+def fold_complete(index):
+    path=ROOT/f'fold{index}'/'results.json'
+    if not path.exists():return False
+    try:rows=json.loads(path.read_text())
+    except (ValueError,OSError):return False
+    expected={(g,m,n) for g in settings()['test_folds'][index] for m in ('clean','moderate','stress') for n in ('baseline','combined')}
+    return len(rows)==len(expected) and {(r['game'],r['mode'],r['method']) for r in rows}==expected
+
+
 def summarize():
     rows=[]
-    for i in range(3):rows+=json.loads((ROOT/f'fold{i}'/'results.json').read_text())
+    for i in range(3):
+        if not fold_complete(i):raise ValueError('Incomplete cross-validation fold')
+        rows+=json.loads((ROOT/f'fold{i}'/'results.json').read_text())
     report={'rows':rows,'summary':{},'challenge_labels_read':False,'closed_confirmation_used':False}
     for method in ['baseline','combined']:
         use=[r for r in rows if r['method']==method]
@@ -120,6 +132,6 @@ if __name__=='__main__':
     if args.fold is not None:fold(args.fold,args.device)
     else:
         for i in range(3):
-            if not (ROOT/f'fold{i}'/'results.json').exists():fold(i,args.device)
+            if not fold_complete(i):fold(i,args.device)
         report=summarize()
         if args.refit and report['adopt']:fit_components(settings()['games'],ROOT/'final',args.device)
