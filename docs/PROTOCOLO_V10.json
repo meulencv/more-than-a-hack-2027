@@ -1,0 +1,16 @@
+{
+  "objective": "A real architecture change: permutation-invariant player trajectory embeddings, learned team pooling and temporal control inference; compare with the frozen V6 experts",
+  "inspiration": ["Borghesi et al. 2023, per-object temporal embeddings and invariant pooling", "Ball Radar KDD2023, set encoders and temporal context", "PathCRF KDD2026, relational possession and sequence consistency"],
+  "native_train": ["J03WMX", "J03WOH", "J03WOY"],
+  "native_development": ["J03WN1", "J03WPY", "J03WQQ"],
+  "native_confirmation": "Already consumed J03WR9 remains closed; no new independent confirmation claims",
+  "criterion": "Official spellF1 mean over the same 3 development matches x3 observation regimes. Report worst regime and per-match change, repeat a promising architecture with another seed.",
+  "planned_models": ["raw player set + temporal CNN", "per-player temporal embeddings before team pooling", "raw set representation fused with existing 156 features", "masked-ball reconstruction multitask training using unlabeled automatic challenge tracking"],
+  "training": {"steps": 1000, "seed": 2027, "window_steps": 384, "batch": 8, "node_width": 32, "temporal_width": 64, "optimizer": "AdamW", "lr": 0.0015},
+  "self_supervision": "Automatic coordinates only; no human labels on the competition match. Mask raw ball observations before the encoder, use a separate coordinate reconstruction head. No challenge tags or possession outputs used as targets.",
+  "decoders": ["frozen fixed V6", "frozen boundary-conditioned Viterbi using own edges", "same decoder using V6 edges", "equal fusion with frozen V6 pair and original edges"],
+  "pretrained_weights_policy": "Do not use a pretrained model to score any external match appearing in its training split. Do not use unavailable proprietary training data or weights.",
+  "public_policy": "No public competition labels loaded, scored or used for any optimization or selection in this round",
+  "paid_services": false,
+  "upload_data": false
+}
