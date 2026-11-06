@@ -1,0 +1,10 @@
+{
+  "purpose": "Test Ball Radar's recurrent-memory idea in the current masked, variable-slot possession task",
+  "models": ["per-player trajectory encoder plus two-layer bidirectional LSTM", "same recurrent memory combined with the existing dilated temporal CNN"],
+  "runs": {"steps": 1000, "seed": 2027, "batch": 8, "window_steps": 384, "hidden_each_direction": 64, "recurrent_layers": 2},
+  "inference": "Whole halves for recurrent models, never independent chunks with reset recurrent memory. Team-symmetric averaged predictions.",
+  "native_train": ["J03WMX", "J03WOH", "J03WOY"],
+  "native_development": ["J03WN1", "J03WPY", "J03WQQ"],
+  "criterion": "Same official spellF1 and frozen decoders as V10. No modifications to ongoing V13 folds; this is a separate exploratory experiment.",
+  "public_policy": "No competition ground truth, manual annotations or public scoring"
+}

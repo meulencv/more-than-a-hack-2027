@@ -23,7 +23,7 @@ class PlayerSetNet(nn.Module):
     def __init__(self,kind,global_features=312):
         super().__init__();self.kind=kind
         self.embedding=nn.Sequential(nn.Linear(14,32),nn.SiLU(),nn.Linear(32,32),nn.SiLU())
-        self.player_temporal=(nn.Sequential(*(Residual(32,2**i,True) for i in range(3))) if kind in ('trajectory','fused','graph') else None)
+        self.player_temporal=(nn.Sequential(*(Residual(32,2**i,True) for i in range(3))) if kind in ('trajectory','fused','graph','lstm','hybrid') else None)
         self.interactions=nn.ModuleList([nn.MultiheadAttention(32,4,dropout=.1,batch_first=True) for _ in range(2)] if kind=='graph' else [])
         self.interaction_norm=nn.ModuleList([nn.LayerNorm(32) for _ in range(2)] if kind=='graph' else [])
         self.ball_embedding=nn.Linear(7,32) if kind=='graph' else None
@@ -31,6 +31,8 @@ class PlayerSetNet(nn.Module):
         self.attention=nn.Linear(32,1)
         self.temporal=SegmentNet(192+7+(32 if kind=='graph' else 0)+(global_features if kind=='fused' else 0),width=64,local=True)
         self.reconstruction=nn.Conv1d(64,2,1)
+        self.recurrent=nn.LSTM(64,64,num_layers=2,batch_first=True,bidirectional=True,dropout=.1) if kind in ('lstm','hybrid') else None
+        self.recurrent_projection=nn.Sequential(nn.Linear(128,64),nn.LayerNorm(64)) if self.recurrent is not None else None
 
     def forward(self,nodes,ball,team,global_x=None):
         batch,length,slots,_=nodes.shape
@@ -60,7 +62,11 @@ class PlayerSetNet(nn.Module):
             maximum=torch.where(mask.any(2,keepdim=True),maximum,0.)
             pooled.extend([mean,attended,maximum])
         values=torch.cat(pooled+[ball]+extra+([global_x] if self.kind=='fused' else []),dim=2).transpose(1,2)
-        hidden=self.temporal.blocks(self.temporal.input(values))
+        initial=self.temporal.input(values)
+        if self.recurrent is not None:
+            recurrent,_=self.recurrent(initial.transpose(1,2));memory=self.recurrent_projection(recurrent).transpose(1,2)
+            hidden=memory if self.kind=='lstm' else (self.temporal.blocks(initial)+memory)/2
+        else:hidden=self.temporal.blocks(initial)
         logits=self.temporal.classifier(hidden);edge=self.temporal.boundary(hidden)[:,0]
         coordinates=self.reconstruction(hidden).transpose(1,2)
         return logits,edge,coordinates
@@ -169,8 +175,9 @@ def predict(net,norm,r,device='mps',chunk=2048):
             direct=[];mirrored=[];de=[];me=[];dc=[];mc=[]
             for swapped in (False,True):
                 p=[];e=[];c=[]
-                for start in range(a,b,chunk):
-                    stop=min(start+chunk,b);lo=max(a,start-160);hi=min(b,stop+160)
+                stride=b-a if net.kind in ('lstm','hybrid') else chunk
+                for start in range(a,b,stride):
+                    stop=min(start+stride,b);lo=max(a,start-160);hi=min(b,stop+160)
                     nodes=r['nodes'][lo:hi].astype('float32');ball=r['ball_tokens'][lo:hi];team=r['team']
                     if swapped:nodes,ball,team=mirror(nodes,ball,team)
                     gx=norm.transform(r['mirror' if swapped else 'direct'][lo:hi]) if net.kind=='fused' else None
@@ -215,7 +222,7 @@ def load_model(path,device='mps'):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--prepare',action='store_true')
-    parser.add_argument('--kind',choices=['set','trajectory','fused','selfsup','graph']);parser.add_argument('--steps',type=int,default=1000)
+    parser.add_argument('--kind',choices=['set','trajectory','fused','selfsup','graph','lstm','hybrid']);parser.add_argument('--steps',type=int,default=1000)
     parser.add_argument('--seed',type=int,default=2027)
     parser.add_argument('--run-name');parser.add_argument('--cosine',action='store_true')
     parser.add_argument('--augment',action='store_true');args=parser.parse_args()
