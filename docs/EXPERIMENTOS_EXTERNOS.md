@@ -1,3 +1,5 @@
+> Documento histórico. El modelo actual y las comparaciones válidas están en [RESULTADOS_MODELO_FINAL.md](RESULTADOS_MODELO_FINAL.md). No deben compararse scores de distintos datasets como si pertenecieran al mismo test.
+
 # Experimentos externos y Git local — 5 de noviembre de 2026
 
 El estado anterior está conservado en el commit local `3f6c7ae`. No se ha publicado

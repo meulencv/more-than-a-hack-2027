@@ -128,8 +128,14 @@ def summarize():
 
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--fold',type=int,choices=[0,1,2]);p.add_argument('--refit',action='store_true')
+    p.add_argument('--final-only',action='store_true');p.add_argument('--output-root',type=Path)
     p.add_argument('--device',choices=['cpu','mps'],default='mps');args=p.parse_args();torch.set_num_threads(6)
-    if args.fold is not None:fold(args.fold,args.device)
+    if args.output_root is not None:ROOT=args.output_root
+    if args.final_only:
+        selected=json.loads(Path('docs/FINAL_SELECTION.json').read_text())
+        if selected.get('final_train_games')!=settings()['games']:raise ValueError('Final configuration not frozen')
+        fit_components(settings()['games'],ROOT/'final',args.device)
+    elif args.fold is not None:fold(args.fold,args.device)
     else:
         for i in range(3):
             if not fold_complete(i):fold(i,args.device)

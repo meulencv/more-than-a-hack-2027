@@ -1,0 +1,188 @@
+[
+  {
+    "repo": "hyunsungkim-ds/pathcrf",
+    "commit": "1b7c6f85a6b78c92e4543fde72ca2b86a933f997",
+    "files": [
+      {
+        "path": "data/external/research_v10/hyunsungkim-ds_pathcrf/README.md",
+        "source": "https://github.com/hyunsungkim-ds/pathcrf/blob/1b7c6f85a6b78c92e4543fde72ca2b86a933f997/README.md",
+        "sha256": "f246453bd7c13ef3c17c8c9292d0ad2d79b93b1ccdd7987eb355e34f3ea25f34"
+      },
+      {
+        "path": "data/external/research_v10/hyunsungkim-ds_pathcrf/models/set_lstm.py",
+        "source": "https://github.com/hyunsungkim-ds/pathcrf/blob/1b7c6f85a6b78c92e4543fde72ca2b86a933f997/models/set_lstm.py",
+        "sha256": "ad1690e14f7693d26e19f11fe549367dba45fb4f470bf70972259665b378e963"
+      },
+      {
+        "path": "data/external/research_v10/hyunsungkim-ds_pathcrf/models/dynamic_sparse_crf.py",
+        "source": "https://github.com/hyunsungkim-ds/pathcrf/blob/1b7c6f85a6b78c92e4543fde72ca2b86a933f997/models/dynamic_sparse_crf.py",
+        "sha256": "8eb08e643886c3d986c110d46ebe5e5d4307a8553fa9ee1bc3bc93c1a9f85869"
+      },
+      {
+        "path": "data/external/research_v10/hyunsungkim-ds_pathcrf/models/utils.py",
+        "source": "https://github.com/hyunsungkim-ds/pathcrf/blob/1b7c6f85a6b78c92e4543fde72ca2b86a933f997/models/utils.py",
+        "sha256": "511e69f52dc833941c922ebab84f981995a77a78d61d3cac26e555bc5f46f7b2"
+      },
+      {
+        "path": "data/external/research_v10/hyunsungkim-ds_pathcrf/datatools/config.py",
+        "source": "https://github.com/hyunsungkim-ds/pathcrf/blob/1b7c6f85a6b78c92e4543fde72ca2b86a933f997/datatools/config.py",
+        "sha256": "4179ecaf6459a831f83676e433d4319cbaad0cfcf1e726eb0423526b9ad60db9"
+      },
+      {
+        "path": "data/external/research_v10/hyunsungkim-ds_pathcrf/train.py",
+        "source": "https://github.com/hyunsungkim-ds/pathcrf/blob/1b7c6f85a6b78c92e4543fde72ca2b86a933f997/train.py",
+        "sha256": "4465b2c3e13010b3de77aef2db0c19a3098ad6d2966e5cec186e0db84cb11b6c"
+      },
+      {
+        "path": "data/external/research_v10/hyunsungkim-ds_pathcrf/dataset.py",
+        "source": "https://github.com/hyunsungkim-ds/pathcrf/blob/1b7c6f85a6b78c92e4543fde72ca2b86a933f997/dataset.py",
+        "sha256": "a6e9f45f9358882c5a73958563ff7aa650e2f66a0cb24c6f2908658c5a71724a"
+      },
+      {
+        "path": "data/external/research_v10/hyunsungkim-ds_pathcrf/LICENSE",
+        "source": "https://github.com/hyunsungkim-ds/pathcrf/blob/1b7c6f85a6b78c92e4543fde72ca2b86a933f997/LICENSE",
+        "sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+      },
+      {
+        "path": "data/external/research_v10/hyunsungkim-ds_pathcrf/saved/140/args.json",
+        "source": "https://github.com/hyunsungkim-ds/pathcrf/blob/1b7c6f85a6b78c92e4543fde72ca2b86a933f997/saved/140/args.json",
+        "sha256": "b83d9c47fd5817c816a163b709b93d51b873bfc0e4f59a6d0b2254cf486c2489"
+      }
+    ]
+  },
+  {
+    "repo": "hyunsungkim-ds/ballradar",
+    "commit": "2486896cfb933ecd304489883241a00e3645ca8c",
+    "files": [
+      {
+        "path": "data/external/research_v10/hyunsungkim-ds_ballradar/README.md",
+        "source": "https://github.com/hyunsungkim-ds/ballradar/blob/2486896cfb933ecd304489883241a00e3645ca8c/README.md",
+        "sha256": "56e5ed83475bc96f4e0ca5317e39b6ba76cefa617bdda4549428441f3c44b2dc"
+      }
+    ]
+  },
+  {
+    "repo": "tryolabs/soccer-video-analytics",
+    "commit": "b00c7c75a1d52bd5ca183521a35fc76fbd89cc0e",
+    "files": [
+      {
+        "path": "data/external/research_v10/tryolabs_soccer-video-analytics/README.md",
+        "source": "https://github.com/tryolabs/soccer-video-analytics/blob/b00c7c75a1d52bd5ca183521a35fc76fbd89cc0e/README.md",
+        "sha256": "2e8b8a6281a5054c48898fdec3ddf9c7b92e7b1ffd50111721582ef86b2913f2"
+      }
+    ]
+  },
+  {
+    "repo": "dattran1243/football-video-analytics",
+    "commit": "712a6627602e00628fd3e289e3225353e0567f54",
+    "files": [
+      {
+        "path": "data/external/research_v10/dattran1243_football-video-analytics/README.md",
+        "source": "https://github.com/dattran1243/football-video-analytics/blob/712a6627602e00628fd3e289e3225353e0567f54/README.md",
+        "sha256": "73b5e8ebf91d2e630a0d532c23a8235b3f0d1c49c98ae71bae5b21226991bc3b"
+      }
+    ]
+  },
+  {
+    "repo": "SeyeSamba64/football-match-analysis",
+    "commit": "c108d15c11929a5f3bf8cbbb49ac4d2a8531dab1",
+    "files": [
+      {
+        "path": "data/external/research_v10/SeyeSamba64_football-match-analysis/README.md",
+        "source": "https://github.com/SeyeSamba64/football-match-analysis/blob/c108d15c11929a5f3bf8cbbb49ac4d2a8531dab1/README.md",
+        "sha256": "f678e2728ccf7bb7c3aae706a2fa6920ee65f4833058afcecb64757d378b9099"
+      }
+    ]
+  },
+  {
+    "repo": "danendral/cv-football-analysis",
+    "commit": "145a85230dd7198a69099b8d880f91783d8319a0",
+    "files": [
+      {
+        "path": "data/external/research_v10/danendral_cv-football-analysis/README.md",
+        "source": "https://github.com/danendral/cv-football-analysis/blob/145a85230dd7198a69099b8d880f91783d8319a0/README.md",
+        "sha256": "5bd4aa0af6918779d2170723ae2a67e79b52391c34562744edf571240a27a19e"
+      }
+    ]
+  },
+  {
+    "repo": "CarterFitzgerald/pitch-vision",
+    "commit": "7a02e9d2c2ab7b2523bd1e6577db236fb78166a7",
+    "files": [
+      {
+        "path": "data/external/research_v10/CarterFitzgerald_pitch-vision/README.md",
+        "source": "https://github.com/CarterFitzgerald/pitch-vision/blob/7a02e9d2c2ab7b2523bd1e6577db236fb78166a7/README.md",
+        "sha256": "e14e297f593378f73add430fdc7b7bfdb415e883b27e1f43edc28cc7e52b9d43"
+      }
+    ]
+  },
+  {
+    "repo": "donaldng05/football-cv",
+    "commit": "ca81c496cc469da3355bc2b9b7d380486561b5c1",
+    "files": [
+      {
+        "path": "data/external/research_v10/donaldng05_football-cv/README.md",
+        "source": "https://github.com/donaldng05/football-cv/blob/ca81c496cc469da3355bc2b9b7d380486561b5c1/README.md",
+        "sha256": "e007310914dcd23364b0670d82c07791f5ec1ad361a79c283e68d90b098b9cd3"
+      }
+    ]
+  },
+  {
+    "repo": "danrublop/futtraffic",
+    "commit": "729c384b45500910e06357537ec720604103bda2",
+    "files": [
+      {
+        "path": "data/external/research_v10/danrublop_futtraffic/README.md",
+        "source": "https://github.com/danrublop/futtraffic/blob/729c384b45500910e06357537ec720604103bda2/README.md",
+        "sha256": "be7d713a154d64c371f060ad2d9d72aee6f173bc32b550be73eac2a2b99003e5"
+      },
+      {
+        "path": "data/external/research_v10/danrublop_futtraffic/model/engine/possession.py",
+        "source": "https://github.com/danrublop/futtraffic/blob/729c384b45500910e06357537ec720604103bda2/model/engine/possession.py",
+        "sha256": "ac53ed3be3d61c1d2713d8c5482b99dfcbe4bf3c604356f81b3960d727d0d0dd"
+      },
+      {
+        "path": "data/external/research_v10/danrublop_futtraffic/docs/benchmarks.md",
+        "source": "https://github.com/danrublop/futtraffic/blob/729c384b45500910e06357537ec720604103bda2/docs/benchmarks.md",
+        "sha256": "287a1f1f235d3064aa438d8e6dcf12d831a59e73e1a3bb0e4b198fe9d8f7f0d2"
+      },
+      {
+        "path": "docs/reference/possession.md",
+        "error": "HTTP Error 404: Not Found"
+      }
+    ]
+  },
+  {
+    "repo": "mohamedkhaled110/sportsmot-tracking-analytics",
+    "commit": "a722fc6d9faa2cbcec81e20e48912fca755d5c47",
+    "files": [
+      {
+        "path": "data/external/research_v10/mohamedkhaled110_sportsmot-tracking-analytics/README.md",
+        "source": "https://github.com/mohamedkhaled110/sportsmot-tracking-analytics/blob/a722fc6d9faa2cbcec81e20e48912fca755d5c47/README.md",
+        "sha256": "96438fb7ff3907e84f4dd3b69fea746b75d1b7ed136cb9d84c41d550dfb2e275"
+      }
+    ]
+  },
+  {
+    "repo": "DataME2/football_video_analysis",
+    "commit": "fa2551f0a8c694487f6616d9a60437e0171d3c1c",
+    "files": [
+      {
+        "path": "data/external/research_v10/DataME2_football_video_analysis/README.md",
+        "source": "https://github.com/DataME2/football_video_analysis/blob/fa2551f0a8c694487f6616d9a60437e0171d3c1c/README.md",
+        "sha256": "e41268984eca2dd71212010ca8cabee21c0aae8aad900ab3686ad44f2392bb9f"
+      }
+    ]
+  },
+  {
+    "repo": "MohibShaikh/sportvision",
+    "commit": "972a3ed29d02aa9c7298924fa2ef8aafacd16998",
+    "files": [
+      {
+        "path": "data/external/research_v10/MohibShaikh_sportvision/README.md",
+        "source": "https://github.com/MohibShaikh/sportvision/blob/972a3ed29d02aa9c7298924fa2ef8aafacd16998/README.md",
+        "sha256": "9a1f584b4bf21523056d307dbb5b05124932f7ea7619543417f30352cf7f025f"
+      }
+    ]
+  }
+]

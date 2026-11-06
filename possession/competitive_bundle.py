@@ -108,10 +108,10 @@ class CompetitiveBundle:
 
 
 def main():
-    parser=argparse.ArgumentParser();parser.add_argument('--selection',type=Path,default=Path('docs/V12_SELECTION.json'))
+    parser=argparse.ArgumentParser();parser.add_argument('--selection',type=Path,default=Path('docs/FINAL_SELECTION.json'))
     parser.add_argument('--device',choices=['cpu','mps'],default='cpu');parser.add_argument('--alignment',type=Path)
-    parser.add_argument('--output',type=Path,default=Path('evaluation/results/v12_selected.csv'))
-    parser.add_argument('--work-dir',type=Path,default=Path('data/work/v12_selected'))
+    parser.add_argument('--output',type=Path,default=Path('evaluation/results/final_candidate.csv'))
+    parser.add_argument('--work-dir',type=Path,default=Path('data/work/final_run'))
     args=parser.parse_args();args.work_dir.mkdir(parents=True,exist_ok=True);torch.set_num_threads(6)
     selection=json.loads(args.selection.read_text());signature=input_signature()
     if selection.get('input_files_sha256')!=signature:raise ValueError('Benchmark input fingerprint changed')

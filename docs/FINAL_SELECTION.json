@@ -79,7 +79,16 @@
       "J03WQQ": 0.6526470009070509
     }
   },
-  "development_with_synthetic_second_camera": {
+  "decoder_kind": "fine_probability",
+  "final_train_games": [
+    "J03WMX",
+    "J03WN1",
+    "J03WOH",
+    "J03WPY",
+    "J03WOY",
+    "J03WQQ"
+  ],
+  "historical_v12_development": {
     "view": "fill_missing",
     "model": "two_seeds",
     "spell_f1_mean": 0.6851170313070395,
@@ -91,13 +100,5 @@
       "J03WQQ": 0.6920633991161992
     }
   },
-  "decoder_kind": "fine_probability",
-  "final_train_games": [
-    "J03WMX",
-    "J03WN1",
-    "J03WOH",
-    "J03WPY",
-    "J03WOY",
-    "J03WQQ"
-  ]
+  "evaluation_note": "Cross-validation describes independently fitted per-fold models, with each held match excluded from their training. Decoder selection reused those external predictions. The final six-game checkpoints have no independent test score."
 }
