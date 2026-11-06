@@ -1,0 +1,15 @@
+{
+  "purpose": "Replace the memoryless switching penalty by a learned age-dependent exit cost, aiming to recover brief possessions without lowering every switch penalty.",
+  "training": "Only clean training-game duration histograms; H/A pooled for symmetry, dead separate; 2-frame Gaussian smoothing, 20-risk pseudo prior, 50-frame explicit ages then geometric overflow; log hazard ratio clipped +-2; positive cost floor .05.",
+  "candidates": [
+    "baseline",
+    "duration0.5",
+    "duration1",
+    "duration2"
+  ],
+  "selection_fold": 1,
+  "confirmation_fold": 2,
+  "selection": "Highest selection spellF1 with macro>=baseline-.002; freeze then evaluate selected only on fold2; adopt if both game means improve and macro>=baseline-.002.",
+  "limitation": "Historically used matches, repeated development selection, not untouched final test.",
+  "challenge_labels_read": false
+}

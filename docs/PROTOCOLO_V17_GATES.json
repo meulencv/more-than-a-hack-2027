@@ -1,0 +1,19 @@
+{
+  "purpose": "Test conditional mixture instead of a uniform four-network mean, without training on validation labels.",
+  "candidates": [
+    "baseline",
+    "raw25",
+    "raw75",
+    "visible_raw",
+    "missing_raw",
+    "dead_tcn",
+    "dead_raw",
+    "certain_expert"
+  ],
+  "selection_fold": 1,
+  "confirmation_fold": 2,
+  "parameters": "Raw weight .25/.75, visibility 1s mean with per-half isolation; separate alive/dead and ownership distributions; entropy comparison is unsupervised.",
+  "selection": "Highest selection spellF1 with macro>=baseline-.002; freeze then test selected only on fold2; adopt if both confirmation game means improve and macro>=baseline-.002.",
+  "limitation": "Previously used external games, new-round confirmation only.",
+  "challenge_labels_read": false
+}

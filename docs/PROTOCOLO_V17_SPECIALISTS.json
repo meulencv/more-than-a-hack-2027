@@ -1,0 +1,18 @@
+{
+  "purpose": "Test short-possession, dead-ball and ownership specialists trained only on the four non-held games.",
+  "candidates": [
+    "baseline",
+    "short10",
+    "short25",
+    "dead25",
+    "owner25",
+    "factor25",
+    "uncertain25"
+  ],
+  "selection_fold": 1,
+  "confirmation_fold": 2,
+  "training": "Three HGB models, 180 iterations, 31 leaves, learning rate .06; short-spell inverse-duration weight capped at 8; sampled every .8s plus .4s in short live spells; mirrored teams.",
+  "selection": "Highest mean spellF1 on fold1 with macroF1 >= baseline-.002. Confirm only selected candidate on fold2; adopt if both game spell means improve and aggregate macro >= baseline-.002.",
+  "limitation": "Previously used external games; new-round confirmation, not untouched final test.",
+  "challenge_labels_read": false
+}

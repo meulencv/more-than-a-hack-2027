@@ -31,3 +31,7 @@ Se conservan los CSV y pesos de V5, V6 y V12. Nada se ha publicado o enviado.
 Los datos y pesos permanecen fuera de Git; el paquete de código y pesos es local.
 Investigación: [INVESTIGACION_V10.md](INVESTIGACION_V10.md).
 Las rondas anteriores siguen en sus informes V6 y V7–V9 y en el historial de Git.
+
+La ronda posterior V17–V22 ejecutó 41 alternativas y 17 ajustes/continuaciones.
+Ninguna superó el criterio de adopción; el candidato se conserva. Diagnóstico y
+resultados negativos: [EXPERIMENTOS_V17_V22.md](EXPERIMENTOS_V17_V22.md).

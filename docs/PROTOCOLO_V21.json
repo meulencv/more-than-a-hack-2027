@@ -1,0 +1,18 @@
+{
+  "purpose": "Train a corrector on observed cross-fitted base errors, with a learned intervention gate.",
+  "inner_crossfit": "Within the four outer training matches only: train one 156-feature boundary TCN on each half across games and predict the opposite half. 800 updates per model. Outer test matches never enter base training, normalizers, correctors or gates.",
+  "correction": "HGB error gate and state corrector, 200 iterations, 31 leaves. Input156 automatic signals plus log state probabilities, entropy and boundary. Error sampling with inverse-selection gate weights; corrector error weight4. Team-symmetric averaging.",
+  "limitation": "Inner errors generalize across halves of seen training matches, not fully new games; inner one-TCN probabilities differ from outer four-expert probabilities. Outer held-game evaluation checks this mismatch. Previously used external games; repeated selection, not an unbiased final estimate.",
+  "candidates": [
+    "baseline",
+    "gate25",
+    "gate50",
+    "gate75",
+    "direct10",
+    "direct25"
+  ],
+  "selection_fold": 1,
+  "confirmation_fold": 2,
+  "selection": "Highest selection spellF1 with macro>=baseline-.002; freeze then evaluate selected only on fold2; adopt if both game means improve and macro>=baseline-.002.",
+  "challenge_labels_read": false
+}

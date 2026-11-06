@@ -1,0 +1,15 @@
+{
+  "purpose": "Test a temporal residual corrector after the snapshot corrector improved frames but worsened possession objects.",
+  "training": "V21 cross-half predictions on outer training matches only; input161, local width48 TCN, zero-initialized residual head; final logits=log(base p)+delta. 1200 updates seed2033, 75% error-centered crops, segment-weighted CE, .05 same-label smoothness, .01 residual L2.",
+  "candidates": [
+    "baseline",
+    "sequence25",
+    "sequence50",
+    "sequence100"
+  ],
+  "selection_fold": 1,
+  "confirmation_fold": 2,
+  "selection": "Highest selection spellF1 with macro>=baseline-.002; freeze then evaluate selected only on fold2; adopt if both game means improve and macro>=baseline-.002.",
+  "limitation": "Inner cross-half versus outer cross-match probability mismatch; historically seen development games, repeated selection not an unbiased final test.",
+  "challenge_labels_read": false
+}

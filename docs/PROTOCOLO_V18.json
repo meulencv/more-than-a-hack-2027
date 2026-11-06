@@ -1,0 +1,18 @@
+{
+  "purpose": "Detect directed control changes rather than one untyped boundary, motivated by brief merged native possessions.",
+  "train": "156 input features, local TCN with 3 state and 7 event heads (none plus 6 directed changes); 1200 updates, seed2030; 75% boundary-centered crops; segment-weighted state CE plus .5 inverse-sqrt-count event CE.",
+  "candidates": [
+    "baseline",
+    "typed1",
+    "typed2",
+    "typed4",
+    "typed2class10",
+    "class25"
+  ],
+  "decoder": "Only event peaks >.15, >=.4s apart per type, create instantaneous Viterbi transition bonuses of 1/2/4 times type probability. No frame-specific rules.",
+  "selection_fold": 1,
+  "confirmation_fold": 2,
+  "selection": "Highest selection spellF1 with macro>=baseline-.002; freeze then evaluate selected only on fold2; adopt if both game means improve and macro>=baseline-.002.",
+  "limitation": "Historically used external games; new-round held-game confirmation, not untouched final test.",
+  "challenge_labels_read": false
+}

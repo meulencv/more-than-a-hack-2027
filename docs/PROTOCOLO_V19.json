@@ -1,0 +1,15 @@
+{
+  "purpose": "Test whether V17 highrate failed because identical update count exposed it to five times less match time.",
+  "training": "Continue 800-step highrate checkpoint for 3200 updates, fixed normalizer, batch8/window768, 75% boundary crops, cosine .0007 to .00005, seed2031; no held-game fitting.",
+  "candidates": [
+    "baseline",
+    "rate10",
+    "rate25",
+    "rate25edge"
+  ],
+  "selection_fold": 1,
+  "confirmation_fold": 2,
+  "selection": "Highest selection spellF1 with macro>=baseline-.002; freeze then evaluate selected only on fold2; adopt if both game means improve and macro>=baseline-.002.",
+  "limitation": "Historically used games; repeated selection data, not an unbiased final estimate.",
+  "challenge_labels_read": false
+}

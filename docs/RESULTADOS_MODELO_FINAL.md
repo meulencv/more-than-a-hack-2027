@@ -129,3 +129,12 @@ V5, V6 y V12 siguen conservados. V5 tuvo spellF1 público 0,7067 y V6 0,6595;
 son comprobaciones históricas, no criterios usados para elegir este candidato.
 **Esta ronda no abrió ni evaluó las etiquetas públicas o privadas del concurso.**
 La puntuación del nuevo archivo en el partido completo sigue siendo desconocida.
+
+## Ronda posterior V17–V22
+
+Se ejecutaron 41 alternativas y 17 ajustes o continuaciones adicionales, incluidos
+especialistas a 25 Hz, transiciones dirigidas, duración explícita y correctores
+de errores cruzados. Ninguno supera de forma consistente el criterio registrado
+de adopción. El candidato y sus métricas anteriores se conservan. Véase
+[el informe completo](EXPERIMENTOS_V17_V22.md), que distingue sus subconjuntos
+de desarrollo del resultado global y conserva los resultados negativos.

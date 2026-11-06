@@ -1,0 +1,15 @@
+{
+  "purpose": "Diagnose external fold0; select one decoder on fold1; open fold2 only after selecting. All base predictions exclude the held match.",
+  "candidates": [
+    "baseline",
+    "cost0.25",
+    "cost0.5",
+    "cost1.5",
+    "asrf0.2",
+    "asrf0.4",
+    "asrf0.6"
+  ],
+  "selection": "Highest mean spellF1 on fold1 subject to macroF1 >= baseline - 0.002. Confirm selected method on fold2; adopt only if both game means improve and macro does not fall > .002.",
+  "limitation": "All six games have been used in earlier architecture development; this is a new-round holdout, not untouched data.",
+  "challenge_labels_read": false
+}

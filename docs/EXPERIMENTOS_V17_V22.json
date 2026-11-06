@@ -1,0 +1,416 @@
+{
+  "experiments": [
+    {
+      "name": "decoder",
+      "source": "data/work/v17/decoder_selection.json",
+      "selection_means": {
+        "baseline": {
+          "spell_f1_mean": 0.7098965428569265,
+          "macro_f1": 0.930539365008003
+        },
+        "cost0.25": {
+          "spell_f1_mean": 0.6985846542260473,
+          "macro_f1": 0.9296682999491327
+        },
+        "cost0.5": {
+          "spell_f1_mean": 0.7087534799705063,
+          "macro_f1": 0.9302040618085238
+        },
+        "cost1.5": {
+          "spell_f1_mean": 0.7049640909794864,
+          "macro_f1": 0.9302165665294088
+        },
+        "asrf0.2": {
+          "spell_f1_mean": 0.6947114263275297,
+          "macro_f1": 0.9238744098236996
+        },
+        "asrf0.4": {
+          "spell_f1_mean": 0.6787335396186905,
+          "macro_f1": 0.915649001818743
+        },
+        "asrf0.6": {
+          "spell_f1_mean": 0.5760544370507251,
+          "macro_f1": 0.8708655115123382
+        }
+      },
+      "chosen": "baseline",
+      "selected_spell_delta": 0.0,
+      "confirmation": null,
+      "adopt": false
+    },
+    {
+      "name": "specialists",
+      "source": "data/work/v17/specialists/results.json",
+      "selection_means": {
+        "baseline": {
+          "spell_f1_mean": 0.7098965428569265,
+          "macro_f1": 0.930539365008003
+        },
+        "short10": {
+          "spell_f1_mean": 0.709615186233362,
+          "macro_f1": 0.9308636748161295
+        },
+        "short25": {
+          "spell_f1_mean": 0.7040528942641813,
+          "macro_f1": 0.9299021813692302
+        },
+        "dead25": {
+          "spell_f1_mean": 0.7104815167960069,
+          "macro_f1": 0.9310338873520094
+        },
+        "owner25": {
+          "spell_f1_mean": 0.7050891055159116,
+          "macro_f1": 0.9291335048819317
+        },
+        "factor25": {
+          "spell_f1_mean": 0.7056989441553304,
+          "macro_f1": 0.9298540343876991
+        },
+        "uncertain25": {
+          "spell_f1_mean": 0.7078336139391636,
+          "macro_f1": 0.9308665721599437
+        }
+      },
+      "chosen": "dead25",
+      "selected_spell_delta": 0.0005849739390804132,
+      "confirmation": {
+        "baseline_spell": 0.6887517834458686,
+        "candidate_spell": 0.6895278752809286,
+        "baseline_macro": 0.924173522072989,
+        "candidate_macro": 0.9238798604444168,
+        "spell_delta_by_game": {
+          "J03WOY": -0.0009793851011988819,
+          "J03WQQ": 0.0025315687713189927
+        }
+      },
+      "adopt": false
+    },
+    {
+      "name": "highrate",
+      "source": "data/work/v17/highrate/results.json",
+      "selection_means": {
+        "baseline": {
+          "spell_f1_mean": 0.7098965428569265,
+          "macro_f1": 0.930539365008003
+        },
+        "rate10": {
+          "spell_f1_mean": 0.7082242946563596,
+          "macro_f1": 0.9301273824656556
+        },
+        "rate25": {
+          "spell_f1_mean": 0.7062041002783848,
+          "macro_f1": 0.9290437008260857
+        },
+        "rate25edge": {
+          "spell_f1_mean": 0.7039591693885963,
+          "macro_f1": 0.92871325343076
+        }
+      },
+      "chosen": "baseline",
+      "selected_spell_delta": 0.0,
+      "confirmation": null,
+      "adopt": false
+    },
+    {
+      "name": "conditional_mixture",
+      "source": "data/work/v17/gates/results.json",
+      "selection_means": {
+        "baseline": {
+          "spell_f1_mean": 0.7098965428569265,
+          "macro_f1": 0.930539365008003
+        },
+        "raw25": {
+          "spell_f1_mean": 0.7044852424021268,
+          "macro_f1": 0.9274924464414048
+        },
+        "raw75": {
+          "spell_f1_mean": 0.7074933025395241,
+          "macro_f1": 0.9297702561380256
+        },
+        "visible_raw": {
+          "spell_f1_mean": 0.7067085287369143,
+          "macro_f1": 0.9277402174232301
+        },
+        "missing_raw": {
+          "spell_f1_mean": 0.70657714542577,
+          "macro_f1": 0.9298079219589509
+        },
+        "dead_tcn": {
+          "spell_f1_mean": 0.7080484655396311,
+          "macro_f1": 0.9282352495969164
+        },
+        "dead_raw": {
+          "spell_f1_mean": 0.704534408840288,
+          "macro_f1": 0.9294736470124487
+        },
+        "certain_expert": {
+          "spell_f1_mean": 0.7064912632633144,
+          "macro_f1": 0.9290422770572154
+        }
+      },
+      "chosen": "baseline",
+      "selected_spell_delta": 0.0,
+      "confirmation": null,
+      "adopt": false
+    },
+    {
+      "name": "typed_transitions",
+      "source": "data/work/v18/results.json",
+      "selection_means": {
+        "baseline": {
+          "spell_f1_mean": 0.7098965428569265,
+          "macro_f1": 0.930539365008003
+        },
+        "typed1": {
+          "spell_f1_mean": 0.7094265888269398,
+          "macro_f1": 0.9304531658783919
+        },
+        "typed2": {
+          "spell_f1_mean": 0.7072307045126673,
+          "macro_f1": 0.9310534086306014
+        },
+        "typed4": {
+          "spell_f1_mean": 0.6510603737866613,
+          "macro_f1": 0.9302140329615312
+        },
+        "typed2class10": {
+          "spell_f1_mean": 0.7079827360899129,
+          "macro_f1": 0.9313501933588472
+        },
+        "class25": {
+          "spell_f1_mean": 0.7124634848452941,
+          "macro_f1": 0.9308318177699918
+        }
+      },
+      "chosen": "class25",
+      "selected_spell_delta": 0.0025669419883675992,
+      "confirmation": {
+        "baseline_spell": 0.6887517834458686,
+        "candidate_spell": 0.6891244172550177,
+        "baseline_macro": 0.924173522072989,
+        "candidate_macro": 0.9227901292546182,
+        "spell_delta_by_game": {
+          "J03WOY": 0.004555220175901931,
+          "J03WQQ": -0.0038099525576036353
+        }
+      },
+      "adopt": false
+    },
+    {
+      "name": "highrate_long",
+      "source": "data/work/v19/results.json",
+      "selection_means": {
+        "baseline": {
+          "spell_f1_mean": 0.7098965428569265,
+          "macro_f1": 0.930539365008003
+        },
+        "rate10": {
+          "spell_f1_mean": 0.7091886236965809,
+          "macro_f1": 0.930568466755645
+        },
+        "rate25": {
+          "spell_f1_mean": 0.7103588948812495,
+          "macro_f1": 0.9304763571996526
+        },
+        "rate25edge": {
+          "spell_f1_mean": 0.7089585972869988,
+          "macro_f1": 0.9305626829161753
+        }
+      },
+      "chosen": "rate25",
+      "selected_spell_delta": 0.0004623520243229873,
+      "confirmation": {
+        "baseline_spell": 0.6887517834458686,
+        "candidate_spell": 0.6864143205750574,
+        "baseline_macro": 0.924173522072989,
+        "candidate_macro": 0.9228570473007766,
+        "spell_delta_by_game": {
+          "J03WOY": 0.002033267474795375,
+          "J03WQQ": -0.0067081932164176905
+        }
+      },
+      "adopt": false
+    },
+    {
+      "name": "explicit_duration",
+      "source": "data/work/v20/results.json",
+      "selection_means": {
+        "baseline": {
+          "spell_f1_mean": 0.7098965428569265,
+          "macro_f1": 0.930539365008003
+        },
+        "duration0.5": {
+          "spell_f1_mean": 0.7094992124761944,
+          "macro_f1": 0.9304526597724553
+        },
+        "duration1": {
+          "spell_f1_mean": 0.7063350002375945,
+          "macro_f1": 0.930521301865275
+        },
+        "duration2": {
+          "spell_f1_mean": 0.7005344466119992,
+          "macro_f1": 0.9302437781492876
+        }
+      },
+      "chosen": "baseline",
+      "selected_spell_delta": 0.0,
+      "confirmation": null,
+      "adopt": false
+    },
+    {
+      "name": "error_corrector",
+      "source": "data/work/v21/results.json",
+      "selection_means": {
+        "baseline": {
+          "spell_f1_mean": 0.7098965428569265,
+          "macro_f1": 0.930539365008003
+        },
+        "gate25": {
+          "spell_f1_mean": 0.7061172676960897,
+          "macro_f1": 0.9315508127289774
+        },
+        "gate50": {
+          "spell_f1_mean": 0.6984467825461641,
+          "macro_f1": 0.9304186666635886
+        },
+        "gate75": {
+          "spell_f1_mean": 0.6760648041766603,
+          "macro_f1": 0.9258718263650874
+        },
+        "direct10": {
+          "spell_f1_mean": 0.70456956483801,
+          "macro_f1": 0.93112387555739
+        },
+        "direct25": {
+          "spell_f1_mean": 0.6804723382663705,
+          "macro_f1": 0.9291762149756767
+        }
+      },
+      "chosen": "baseline",
+      "selected_spell_delta": 0.0,
+      "confirmation": null,
+      "adopt": false
+    },
+    {
+      "name": "sequence_corrector",
+      "source": "data/work/v22/results.json",
+      "selection_means": {
+        "baseline": {
+          "spell_f1_mean": 0.7098965428569265,
+          "macro_f1": 0.930539365008003
+        },
+        "sequence25": {
+          "spell_f1_mean": 0.7064014756939522,
+          "macro_f1": 0.9300951345737999
+        },
+        "sequence50": {
+          "spell_f1_mean": 0.7057873892440695,
+          "macro_f1": 0.9288416411713074
+        },
+        "sequence100": {
+          "spell_f1_mean": 0.6896901989241608,
+          "macro_f1": 0.9235933027860574
+        }
+      },
+      "chosen": "baseline",
+      "selected_spell_delta": 0.0,
+      "confirmation": null,
+      "adopt": false
+    }
+  ],
+  "alternative_configurations": 41,
+  "training_fits_including_continuations": 17,
+  "checkpoints": [
+    {
+      "path": "data/work/v17/specialists/fold1.joblib",
+      "models_or_continuations": 3,
+      "sha256": "9d2f6203ec1bccc7366028f2b4144ced86afb15ee1e47b40e4c05c4902fe893d"
+    },
+    {
+      "path": "data/work/v17/specialists/fold2.joblib",
+      "models_or_continuations": 3,
+      "sha256": "2e5323da7e1ac8d2afe814b5cee3e580ebbd2eaa828811c14546f55257c8bb91"
+    },
+    {
+      "path": "data/work/v17/highrate/fold1.pt",
+      "models_or_continuations": 1,
+      "sha256": "ef6b842fa270406601760985e0427f5ef8d508c450da6df3775e595580cd5f2d"
+    },
+    {
+      "path": "data/work/v17/highrate/fold2.pt",
+      "models_or_continuations": 1,
+      "sha256": "5962e5446b0713e5c7c3575cf4f97f0523e462ccd37ec25e4a35cd572400ffbe"
+    },
+    {
+      "path": "data/work/v18/fold1.pt",
+      "models_or_continuations": 1,
+      "sha256": "85c7e63c1b0d9c7b403c4eac83145e9727a561da9e35f70d77c97026bdeb9b4a"
+    },
+    {
+      "path": "data/work/v18/fold2.pt",
+      "models_or_continuations": 1,
+      "sha256": "0bfed9c7c83ddc7f4b235a2279631339b7c141e0d70a86ad1c55bd955a863f71"
+    },
+    {
+      "path": "data/work/v19/fold1.pt",
+      "models_or_continuations": 1,
+      "sha256": "ffa58934fbf74c47b7ad122cb4e9dc996080a5f4e0d0912f578a1b96f829a822"
+    },
+    {
+      "path": "data/work/v19/fold2.pt",
+      "models_or_continuations": 1,
+      "sha256": "ecbd2d3f133508f75960dd288c5c90382edf5fa1dfd7858502e1f1b39daac47a"
+    },
+    {
+      "path": "data/work/v21/fold1/inner_half0.pt",
+      "models_or_continuations": 1,
+      "sha256": "bd9d28bb6bfc8cdafcc78fbf41207f24cffd7f627584125e84106c24480d3f23"
+    },
+    {
+      "path": "data/work/v21/fold1/inner_half1.pt",
+      "models_or_continuations": 1,
+      "sha256": "bae423c134d5f3a0c29b147013fffa66ee56db2a1265a007d6217a6eee2f392f"
+    },
+    {
+      "path": "data/work/v21/fold1/correctors.joblib",
+      "models_or_continuations": 2,
+      "sha256": "5df66c3cb3b764cec56e1fba24f3afab647a66d979ed639e4a7f0093a4db0a61"
+    },
+    {
+      "path": "data/work/v22/fold1.pt",
+      "models_or_continuations": 1,
+      "sha256": "9307b8cc84d11d1563e18fb44ce9a569abdb68a40439e658b734eb19943d027e"
+    }
+  ],
+  "error_diagnosis": {
+    "under1s": {
+      "n": 486,
+      "matched_at_05": 0.10493827160493827
+    },
+    "1to3s": {
+      "n": 990,
+      "matched_at_05": 0.43333333333333335
+    },
+    "3to10s": {
+      "n": 1059,
+      "matched_at_05": 0.720491029272899
+    },
+    "over10s": {
+      "n": 498,
+      "matched_at_05": 0.8614457831325302
+    },
+    "miss_reasons": {
+      "matched": 1672,
+      "absent": 570,
+      "split": 45,
+      "merged": 588,
+      "boundary_or_team": 158
+    }
+  },
+  "challenge_labels_read": false,
+  "closed_match_reopened": false,
+  "canonical_csv_sha256": "75e884aea21d68e0cc46c3e5a67798e799e4ceb59431e5872638080b38dc192e",
+  "canonical_external_spell_f1": 0.6757751482502583,
+  "canonical_external_macro_f1": 0.9219784318951262,
+  "interpretation": "All figures here concern external development matches. Selection=J03WOH/J03WPY, second partition=J03WOY/J03WQQ, three observation regimes each; not six independent samples. These matches were used historically and the partitions are reused across hypotheses. Scores are not an unbiased final test or competition score. No new method passes the preregistered adoption rule."
+}

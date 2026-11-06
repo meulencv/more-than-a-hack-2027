@@ -1,0 +1,15 @@
+{
+  "purpose": "Resolve observed subsecond missed possessions with a 25Hz temporal expert; original features computed at every frame, not interpolated.",
+  "train": "Same four non-held matches, 3 sensor regimes and team mirroring; 800 boundary-TCN updates, seed2029, original architecture/optimizer; 384-frame windows now 15.36s, boundary supervision radius now .08s.",
+  "candidates": [
+    "baseline",
+    "rate10",
+    "rate25",
+    "rate25edge"
+  ],
+  "selection_fold": 1,
+  "confirmation_fold": 2,
+  "selection": "Highest selection spellF1 with macro>=baseline-.002; freeze then test selected only on fold2; adopt if both confirmation game means improve and macro>=baseline-.002.",
+  "limitation": "Previously used external matches, not untouched final test.",
+  "challenge_labels_read": false
+}
