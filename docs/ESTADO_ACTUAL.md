@@ -35,3 +35,8 @@ Las rondas anteriores siguen en sus informes V6 y V7–V9 y en el historial de G
 La ronda posterior V17–V22 ejecutó 41 alternativas y 17 ajustes/continuaciones.
 Ninguna superó el criterio de adopción; el candidato se conserva. Diagnóstico y
 resultados negativos: [EXPERIMENTOS_V17_V22.md](EXPERIMENTOS_V17_V22.md).
+
+La prueba V23 de márgenes para controles breves conserva el candidato: ninguna
+política temporal mejora la selección externa. Véase
+[TOQUES_CORTOS_V23.md](TOQUES_CORTOS_V23.md). El decodificador actual no impone
+un mínimo duro de duración; la documentación antigua se corrigió.

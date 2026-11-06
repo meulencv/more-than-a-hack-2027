@@ -9,8 +9,8 @@ from possession.benchmark_external import evaluate_prediction
 from possession.touch_confirmation import apply_policy,dense_evidence
 from evaluation import possession_metrics as pm
 
-ROOT = Path('data/work/v23')
-PROTOCOL = Path('docs/PROTOCOLO_V23.json')
+ROOT = Path('data/work/v23/reviewed')
+PROTOCOL = Path('docs/PROTOCOLO_V23_REVIEWED.json')
 
 
 def policies():
@@ -23,6 +23,8 @@ def policies():
         out[f'confirm_{seconds}'] = dict(kind='confirm', seconds=seconds)
     for seconds in [.24, .4]:
         out[f'adaptive_{seconds}'] = dict(kind='confirm', seconds=seconds, adaptive=True)
+    for seconds in [.24, .4]:
+        out[f'joint_{seconds}'] = dict(kind='confirm', seconds=seconds, adaptive=True, contact_immediate=True)
     for seconds in [.4, .8, 1.2]:
         out[f'recover_{seconds}'] = dict(kind='recover', seconds=seconds)
     return out
@@ -30,6 +32,8 @@ def policies():
 
 def protocol():
     return dict(purpose='Time-margin handling of short interruptions: retrospective confirmation, weak-only merging, and selective recovery of suppressed opposing control pulses.',
+        review='Second preregistered round after initial results: reject conflicting adjacent merges; use conditional H/A confidence in weak fusion; separately test immediate joint confidence+physical support. Initial source/results archived locally.',
+        implementation_sha256=hashlib.sha256(Path('possession/touch_confirmation.py').read_bytes()).hexdigest(),
         policies=policies(),evidence='Unchanged four-expert OOF probabilities, standard boundary head, automatic physical control scores and actual ball visibility. Never use reference labels in a policy.',
         semantics='No official minimum duration. A true brief controlled H/A spell must remain. No policy changes any D/X frame or merges across dead ball/halves. Strong probability evidence can bypass the confirmation wait.',
         selection_games=v13_cv.settings()['test_folds'][1],check_games=v13_cv.settings()['test_folds'][2],

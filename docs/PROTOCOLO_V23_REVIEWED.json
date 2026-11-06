@@ -1,0 +1,103 @@
+{
+  "purpose": "Time-margin handling of short interruptions: retrospective confirmation, weak-only merging, and selective recovery of suppressed opposing control pulses.",
+  "review": "Second preregistered round after initial results: reject conflicting adjacent merges; use conditional H/A confidence in weak fusion; separately test immediate joint confidence+physical support. Initial source/results archived locally.",
+  "implementation_sha256": "32ea15808a23e70fd3a84f18a27b12a7b87cc2f22af99156672c9e7c7259051d",
+  "policies": {
+    "baseline": {
+      "kind": "baseline"
+    },
+    "hard_merge_0.2": {
+      "kind": "merge",
+      "seconds": 0.2,
+      "weak_only": false,
+      "diagnostic_only": true
+    },
+    "hard_merge_0.4": {
+      "kind": "merge",
+      "seconds": 0.4,
+      "weak_only": false,
+      "diagnostic_only": true
+    },
+    "hard_merge_0.8": {
+      "kind": "merge",
+      "seconds": 0.8,
+      "weak_only": false,
+      "diagnostic_only": true
+    },
+    "weak_merge_0.4": {
+      "kind": "merge",
+      "seconds": 0.4,
+      "weak_only": true
+    },
+    "weak_merge_0.8": {
+      "kind": "merge",
+      "seconds": 0.8,
+      "weak_only": true
+    },
+    "confirm_0.12": {
+      "kind": "confirm",
+      "seconds": 0.12
+    },
+    "confirm_0.24": {
+      "kind": "confirm",
+      "seconds": 0.24
+    },
+    "confirm_0.4": {
+      "kind": "confirm",
+      "seconds": 0.4
+    },
+    "confirm_0.8": {
+      "kind": "confirm",
+      "seconds": 0.8
+    },
+    "adaptive_0.24": {
+      "kind": "confirm",
+      "seconds": 0.24,
+      "adaptive": true
+    },
+    "adaptive_0.4": {
+      "kind": "confirm",
+      "seconds": 0.4,
+      "adaptive": true
+    },
+    "joint_0.24": {
+      "kind": "confirm",
+      "seconds": 0.24,
+      "adaptive": true,
+      "contact_immediate": true
+    },
+    "joint_0.4": {
+      "kind": "confirm",
+      "seconds": 0.4,
+      "adaptive": true,
+      "contact_immediate": true
+    },
+    "recover_0.4": {
+      "kind": "recover",
+      "seconds": 0.4
+    },
+    "recover_0.8": {
+      "kind": "recover",
+      "seconds": 0.8
+    },
+    "recover_1.2": {
+      "kind": "recover",
+      "seconds": 1.2
+    }
+  },
+  "evidence": "Unchanged four-expert OOF probabilities, standard boundary head, automatic physical control scores and actual ball visibility. Never use reference labels in a policy.",
+  "semantics": "No official minimum duration. A true brief controlled H/A spell must remain. No policy changes any D/X frame or merges across dead ball/halves. Strong probability evidence can bypass the confirmation wait.",
+  "selection_games": [
+    "J03WOH",
+    "J03WPY"
+  ],
+  "check_games": [
+    "J03WOY",
+    "J03WQQ"
+  ],
+  "selection": "Highest mean official spellF1, then macroF1, among non-diagnostic policies, with macro >= baseline-.002. Freeze winner before checking the second partition.",
+  "adoption": "Winner must improve mean spellF1 in EACH of the two check games, preserve check macro >= baseline-.002 and change no D/X frame. Otherwise retain canonical model/CSV.",
+  "limitation": "These external games have been used historically and partitions reused across hypotheses. This is development validation, not an untouched final test or competition score.",
+  "challenge_labels_read": false,
+  "locked_sets_opened": false
+}

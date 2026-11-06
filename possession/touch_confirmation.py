@@ -40,7 +40,7 @@ def control_support(ev, team):
     return ev['observed'] & (c[:, team] >= .5) & (c[:, team] - c[:, 1-team] >= .2)
 
 
-def confirm(base, ev, blocks, wait_s, adaptive=False):
+def confirm(base, ev, blocks, wait_s, adaptive=False, contact_immediate=False):
     """Confirm sustained opposing evidence and backdate to its first frame."""
     out = base.copy(); p = ev['p']; support = [control_support(ev, k) for k in [0, 1]]
     for _, first, last in blocks:
@@ -57,7 +57,8 @@ def confirm(base, ev, blocks, wait_s, adaptive=False):
                         duration = .12 if support[other][t] else wait_s if ev['observed'][t] else .8
                     ready = t-start+1 >= math.ceil(duration * FPS)
                     # No absolute duration floor: overwhelming model evidence can confirm immediately.
-                    if ready or p[t, other] >= .95:
+                    joint = contact_immediate and ev['observed'][t] and p[t, other] >= .8 and ev['control'][t, other] >= .8 and ev['control'][t, other]-ev['control'][t, state] >= .5
+                    if ready or p[t, other] >= .95 or joint:
                         out[start:t+1] = other; state = other; start = -1
                 else:
                     start = -1
@@ -69,7 +70,7 @@ def merge_interruptions(base, ev, blocks, maximum_s, weak_only):
     """One simultaneous pass over H-A-H interruptions. Never merge through D."""
     out = base.copy()
     for _, first, last in blocks:
-        ss = runs(base[first:last+1])
+        ss = runs(base[first:last+1]); candidates = {}
         for i in range(1, len(ss)-1):
             a, b, middle = ss[i]; left = ss[i-1][2]; right = ss[i+1][2]
             if middle >= 2 or left >= 2 or left != right or middle == left: continue
@@ -80,7 +81,13 @@ def merge_interruptions(base, ev, blocks, maximum_s, weak_only):
                 if ev['observed'][a:b].mean() < .8: continue
                 if ev['p'][a:b, middle].mean() >= .65: continue
                 if ev['p'][a:b, middle].max() >= .9: continue
+                conditional = ev['p'][a:b, middle] / np.maximum(ev['p'][a:b, :2].sum(1), 1e-9)
+                if conditional.mean() >= .65 or conditional.max() >= .9: continue
                 if control_support(ev, middle)[a:b].any(): continue
+            candidates[i] = (a, b, left)
+        for i, (a, b, left) in candidates.items():
+            # An anchor must stay fixed: reject overlapping decisions instead of cascading.
+            if i-1 in candidates or i+1 in candidates: continue
             out[a:b] = left
     return out
 
@@ -112,7 +119,7 @@ def apply_policy(base, ev, blocks, spec):
     kind = spec['kind']
     if kind == 'baseline': return base.copy()
     if kind == 'confirm':
-        return confirm(base, ev, blocks, spec['seconds'], spec.get('adaptive', False))
+        return confirm(base, ev, blocks, spec['seconds'], spec.get('adaptive', False), spec.get('contact_immediate', False))
     if kind == 'merge':
         return merge_interruptions(base, ev, blocks, spec['seconds'], spec['weak_only'])
     if kind == 'recover': return recover_interruptions(base, ev, blocks, spec['seconds'])

@@ -67,6 +67,22 @@ class TouchConfirmationTests(unittest.TestCase):
             a=apply_policy(base,ev,blocks,spec);b=apply_policy(swap[base],swapped,blocks,spec)
             np.testing.assert_array_equal(b,swap[a]);check_invariants(base,a,blocks)
 
+    def test_overlapping_weak_merges_do_not_invert_the_anchor(self):
+        base=np.repeat([0,1,0,1,0],3).astype('int8');p=np.tile([.495,.495,.01],(len(base),1))
+        out=apply_policy(base,evidence(p),[(1,0,len(base)-1)],dict(kind='merge',seconds=.4,weak_only=True))
+        np.testing.assert_array_equal(out,base)
+
+    def test_dead_uncertainty_does_not_make_team_confidence_weak(self):
+        base=np.r_[np.zeros(40),np.ones(5),np.zeros(40)].astype('int8');p=np.tile([.99,.009,.001],(len(base),1));p[40:45]=[.01,.64,.35]
+        out=apply_policy(base,evidence(p),[(1,0,len(base)-1)],dict(kind='merge',seconds=.4,weak_only=True))
+        np.testing.assert_array_equal(out,base)
+
+    def test_joint_evidence_can_confirm_two_frame_control(self):
+        base=np.zeros(60,dtype='int8');p=np.tile([.99,.009,.001],(60,1));p[20:22]=[.099,.9,.001];c=np.zeros((60,2));c[20:22,1]=.9
+        out=apply_policy(base,evidence(p,c),[(1,0,59)],dict(kind='confirm',seconds=.4,adaptive=True,contact_immediate=True))
+        expected=base.copy();expected[20:22]=1
+        np.testing.assert_array_equal(out,expected)
+
     def test_dense_evidence_has_no_reference_label_dependency(self):
         f=np.array([0,5,10,20,25,30]);p=np.tile([.7,.2,.1],(6,1));seen=np.ones(31,bool);seen[3:8]=False
         r=dict(ball_seen=seen,columns=['control_h','control_a'],direct=np.tile([.8,.1],(6,1)),blocks=[(1,0,10),(2,20,30)])

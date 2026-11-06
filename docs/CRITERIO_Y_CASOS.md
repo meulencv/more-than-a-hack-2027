@@ -1,7 +1,9 @@
 # Criterio de posesión y revisión por casos
 
-Se revisa el candidato congelado, sin modificar sus pesos, reglas, CSV ni parámetros.
-No se consultan etiquetas del partido del reto. Base oficial: [CHALLENGE.md](../CHALLENGE.md).
+Las definiciones describen el candidato actual. La tabla de diagnóstico y las
+comprobaciones antiguas se conservan como evidencia histórica de un candidato
+anterior; no representan las métricas del conjunto final. No se consultan etiquetas
+del partido del reto. Base oficial: [CHALLENGE.md](../CHALLENGE.md).
 
 ## Definiciones
 
@@ -14,19 +16,21 @@ No se consultan etiquetas del partido del reto. Base oficial: [CHALLENGE.md](../
   de posesión viva es H+A; D se informa por separado, no se asigna a un equipo.
 - Reinicio: D hasta la reanudación; después H/A según control. El candidato aprende
   estas fronteras, pero no tiene un detector explícito de cada tipo de saque.
-- **No existe un mínimo numérico oficial**. El decodificador actual exige cinco pasos
-  a 5 Hz (1 s) en segmentos internos H/A/D. Es regularización del modelo, no una
-  definición de la competición. Puede borrar una posesión o parada real más breve;
-  al final de una parte un segmento puede quedar cortado.
-- Balón ausente/oculto: no prueba parada ni cambio de equipo. La mezcla asigna mayor
-  peso a la TCN cuando falta observación, sin garantizar que conserve siempre el
-  último poseedor. El candidato no usa vídeo ni altura Z: infiere contexto desde
+- **No existe un mínimo numérico oficial**. El decodificador actual
+  (`v14_resolution.decode_fine`) usa Viterbi a 25 Hz con costes de cambio y no
+  impone un mínimo duro. El mínimo de 1 s pertenecía a un decodificador anterior.
+  Los márgenes de confirmación se han probado separadamente en
+  [V23](TOQUES_CORTOS_V23.md), sin adoptarlos por falta de mejora.
+- Balón ausente/oculto: no prueba parada ni cambio de equipo. El conjunto actual
+  combina cuatro redes con pesos fijos; la segunda cámara aporta observaciones
+  donde falta el balón táctico. No garantiza conservar siempre al último controlador. El candidato no usa vídeo ni altura Z: infiere contexto desde
   tracking 2D, por lo que vuelo, rebote y control siguen siendo ambiguos.
 
 ## Diagnóstico externo medido
 
-Fuente: partido nativo Sportec J03WN1, excluido del entrenamiento pero ya utilizado
-como desarrollo. Se reutilizan las probabilidades congeladas de este candidato.
+Fuente histórica: partido nativo Sportec J03WN1, excluido del ajuste de aquel
+candidato pero ya utilizado como desarrollo. Se reutilizan las probabilidades
+congeladas de aquel candidato, no del conjunto actual.
 Las máscaras se superponen y no son muestras independientes. Las cifras son
 **acierto por fotograma dentro de cada caso**, no spellF1 ni accuracy del concurso.
 No se calcula spellF1 por máscara porque se inventarían fronteras al quitar frames.
