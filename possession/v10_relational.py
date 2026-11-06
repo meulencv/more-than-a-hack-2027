@@ -81,11 +81,16 @@ def hide_ball(nodes,ball,mask):
     return nodes,ball
 
 
-def sequences():
+def sequences(games=None):
     output=[];normalizer=Normalizer();features=[]
-    for game in v6_data.protocol()['native_train']:
+    native=v6_data.protocol()
+    games=native['native_train'] if games is None else games
+    allowed=set(native['native_train']+native['native_development'])
+    if len(games)!=len(set(games)) or not set(games)<=allowed:raise ValueError('Only the six available native games are permitted')
+    for game in games:
+        role='train' if game in native['native_train'] else 'development'
         for mode in ('clean','moderate','stress'):
-            r=data.record('train',game,mode)
+            r=data.record(role,game,mode)
             for a,b in r['slices']:
                 output.append(dict(nodes=r['nodes'][a:b],ball=r['ball_tokens'][a:b],team=r['team'],
                                    y=r['labels'][a:b],direct=r['direct'][a:b],mirror=r['mirror'][a:b]))
@@ -99,9 +104,9 @@ def sequences():
     return output,normalizer
 
 
-def fit(kind,seed=2027,steps=1000,device='mps',cosine=False,augment=False):
+def fit(kind,seed=2027,steps=1000,device='mps',cosine=False,augment=False,games=None):
     torch.set_num_threads(6);torch.manual_seed(seed);rng=np.random.default_rng(seed)
-    samples,norm=sequences();native_count=len(samples)
+    samples,norm=sequences(games);native_count=len(samples)
     if kind=='selfsup':
         r=data.record('unlabeled_challenge')
         for a,b in r['slices']:

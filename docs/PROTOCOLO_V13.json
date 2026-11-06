@@ -1,0 +1,16 @@
+{
+  "purpose": "Cross-match comparison with equal training data, then a frozen final refit on the six available development/training games",
+  "games": ["J03WMX", "J03WN1", "J03WOH", "J03WPY", "J03WOY", "J03WQQ"],
+  "test_folds": [["J03WMX", "J03WN1"], ["J03WOH", "J03WPY"], ["J03WOY", "J03WQQ"]],
+  "each_fold": "Train all components and their normalizers on the other four matches. Predict each held match in clean/moderate/stress regimes. No per-fold configuration selection.",
+  "baseline": "V6 architecture retrained per fold: standard boundary TCN plus physical-control TCN, each 800 updates, seed2027, equal mean, original boundary-conditioned decoder",
+  "new_method": "Equal mean of four networks: the same two baseline networks plus two per-player temporal set networks, 3000 cosine updates, seeds2027/2028. Original boundary head and costs unchanged.",
+  "second_camera": "Already frozen V11 fill_missing; its independently evaluated development evidence is reported separately. CV compares representations on the same single-view observations.",
+  "adoption_rule": "Mean official spellF1 improves, at least four of the six game-level means improve, and mean macroF1 does not fall. If so, refit the frozen four-component method on all six games.",
+  "interpretation": "Out-of-fold predictions exclude the entire held match from that fold's training. Architecture decisions have already seen these matches historically, so this is not an untouched confirmation set or an unbiased final generalization estimate.",
+  "confirmation": "J03WR9 remains closed and is not used in CV or final refit",
+  "final_refit": "After the adoption decision, use all six external games for final model weights. Do not report those weights as independently tested on any of their six training games. Preserve V5, V6 and V12 weights and CSVs.",
+  "public_policy": "No competition public or private GT opened, scored, trained on, tuned on or selected on",
+  "paid_services": false,
+  "upload_data": false
+}

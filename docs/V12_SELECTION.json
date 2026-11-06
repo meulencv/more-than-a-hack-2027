@@ -1,0 +1,54 @@
+{
+  "name": "V12 relational trajectories plus automatic second camera",
+  "selection_basis": "Native development only, three matches x three regimes, second views synthetic",
+  "development": {
+    "view": "fill_missing",
+    "model": "two_seeds",
+    "spell_f1_mean": 0.6851170313070395,
+    "worst_spell_f1": 0.6384017758046615,
+    "macro_f1": 0.9252822975937488,
+    "by_game": {
+      "J03WN1": 0.6588700317112717,
+      "J03WPY": 0.7044176630936478,
+      "J03WQQ": 0.6920633991161992
+    }
+  },
+  "components": [
+    {
+      "path": "data/work/v6/tcn_boundary/model.pt",
+      "kind": "standard",
+      "boundary_head": true,
+      "weight": 0.25,
+      "sha256": "08148bcf6e96e2720d8f114d6d8a51fc82c449d7ed59710a19c7a46e60301c68"
+    },
+    {
+      "path": "data/work/v6/physics_tcn/model.pt",
+      "kind": "physics",
+      "boundary_head": false,
+      "weight": 0.25,
+      "sha256": "d6278aed368340f1a1d66141284998f178dd3e00b3a928a2668b4db2e5dd9fa9"
+    },
+    {
+      "path": "data/work/v10/trajectory_long/model.pt",
+      "kind": "trajectory",
+      "boundary_head": false,
+      "weight": 0.25,
+      "sha256": "75403c0ac4043c956405fbeb23868793f211d3e6ae36191ebecf1096c87d964b"
+    },
+    {
+      "path": "data/work/v10/trajectory_long2028/model.pt",
+      "kind": "trajectory",
+      "boundary_head": false,
+      "weight": 0.25,
+      "sha256": "cf0c32b47fad1a877157e30ee8132a3187082bcda07c6b65604c0ec68538f332"
+    }
+  ],
+  "camera": {
+    "algorithm": "possession.camera_sync.synchronize",
+    "fusion": "fill_missing",
+    "alignment_parameters": "docs/PROTOCOLO_V11.json"
+  },
+  "decoder": "frozen boundary-conditioned Viterbi; original standard expert edge",
+  "challenge_public_used": false,
+  "native_confirmation_reopened": false
+}
