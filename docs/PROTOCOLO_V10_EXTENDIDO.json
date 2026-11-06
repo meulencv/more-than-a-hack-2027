@@ -1,0 +1,11 @@
+{
+  "reason": "Trajectory-before-pooling ensemble improves development mean .645339 -> .656282 and worst case .589794 -> .597321; test seed stability and learning curve without touching public labels",
+  "runs": [
+    {"kind": "trajectory", "seed": 2028, "steps": 1000, "cosine": false, "augment": false},
+    {"kind": "trajectory", "seed": 2027, "steps": 3000, "cosine": true, "augment": false},
+    {"kind": "trajectory", "seed": 2027, "steps": 3000, "cosine": true, "augment": true}
+  ],
+  "online_augmentation": "Label-blind raw ball masks of 0.2-6 seconds, random player-track dropout. Clear all ball-relative attributes whenever ball is hidden. No generated possession targets on challenge.",
+  "criterion": "Same external development metric and frozen decoders as V10; these are exploratory comparisons, not a new independent test",
+  "public_policy": "No competition ground truth loaded or scored"
+}

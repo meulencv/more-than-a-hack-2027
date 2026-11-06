@@ -85,7 +85,7 @@ def sequences():
     return output,normalizer
 
 
-def fit(kind,seed=2027,steps=1000,device='mps'):
+def fit(kind,seed=2027,steps=1000,device='mps',cosine=False,augment=False):
     torch.set_num_threads(6);torch.manual_seed(seed);rng=np.random.default_rng(seed)
     samples,norm=sequences();native_count=len(samples)
     if kind=='selfsup':
@@ -98,6 +98,7 @@ def fit(kind,seed=2027,steps=1000,device='mps'):
     cw=torch.tensor(np.sqrt(count.sum()/np.maximum(count,1)),dtype=torch.float32,device=device);cw/=cw.mean()
     net=PlayerSetNet(kind,len(norm.mean)*2).to(device);net.train()
     opt=torch.optim.AdamW(net.parameters(),lr=.0015,weight_decay=.001)
+    scheduler=torch.optim.lr_scheduler.CosineAnnealingLR(opt,steps,eta_min=.0001) if cosine else None
     window=384;batch=8
     for step in range(steps):
         xx=[];bb=[];tt=[];yy=[];ww=[];ee=[];gg=[];targets=[];known=[]
@@ -119,6 +120,13 @@ def fit(kind,seed=2027,steps=1000,device='mps'):
                     first=int(rng.integers(window));mask[first:first+int(rng.integers(5,101))]=True
                 nodes,ball=hide_ball(nodes,ball,mask)
                 targets.append(target);known.append(valid&mask)
+            if augment and not unlabeled and rng.random()<.5:
+                mask=np.zeros(window,dtype=bool)
+                for _ in range(2):
+                    first=int(rng.integers(window));mask[first:first+int(rng.integers(1,31))]=True
+                nodes,ball=hide_ball(nodes,ball,mask)
+                missing=rng.random(len(team))<.08
+                nodes[:,missing]=0
             xx.append(nodes);bb.append(ball);tt.append(team);yy.append(y)
             ww.append(s['segments'][a]);ee.append(s['edges'][a])
             if kind=='fused':gg.append(s['global_mirror' if swap else 'global_direct'][a])
@@ -130,6 +138,7 @@ def fit(kind,seed=2027,steps=1000,device='mps'):
             loss=loss+.5*(reconstruction*mask).sum()/mask.sum().clamp_min(1)
         if not torch.isfinite(loss):raise RuntimeError('Nonfinite objective')
         opt.zero_grad(set_to_none=True);loss.backward();torch.nn.utils.clip_grad_norm_(net.parameters(),5);opt.step()
+        if scheduler is not None:scheduler.step()
         if step%100==0 or step==steps-1:print('SET',kind,seed,step,float(loss.detach().cpu()),flush=True)
     return net.eval(),norm
 
@@ -188,12 +197,15 @@ def load_model(path,device='mps'):
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--prepare',action='store_true')
     parser.add_argument('--kind',choices=['set','trajectory','fused','selfsup']);parser.add_argument('--steps',type=int,default=1000)
-    parser.add_argument('--seed',type=int,default=2027);args=parser.parse_args()
+    parser.add_argument('--seed',type=int,default=2027)
+    parser.add_argument('--run-name');parser.add_argument('--cosine',action='store_true')
+    parser.add_argument('--augment',action='store_true');args=parser.parse_args()
     if args.prepare:data.prepare()
     if args.kind:
-        root=data.ROOT/f'{args.kind}_{args.seed}';root.mkdir(parents=True,exist_ok=True)
+        if args.run_name is not None and (not args.run_name.replace('_','').isalnum()):raise ValueError('Invalid run name')
+        root=data.ROOT/(args.run_name or f'{args.kind}_{args.seed}');root.mkdir(parents=True,exist_ok=True)
         if (root/'model.pt').exists():raise RuntimeError('Preserve existing model')
-        net,norm=fit(args.kind,args.seed,args.steps)
+        net,norm=fit(args.kind,args.seed,args.steps,cosine=args.cosine,augment=args.augment)
         torch.save(dict(state_dict={k:v.detach().cpu() for k,v in net.state_dict().items()},mean=norm.mean,std=norm.std,
-                        kind=args.kind,seed=args.seed,steps=args.steps,raw_signature=data.signature()),root/'model.pt')
+                        kind=args.kind,seed=args.seed,steps=args.steps,cosine=args.cosine,augment=args.augment,raw_signature=data.signature()),root/'model.pt')
         evaluate(net,norm,root)
