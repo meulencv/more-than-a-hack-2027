@@ -1,0 +1,15 @@
+{
+  "objective": "Use the second camera through automatic geometric synchronization, then fill missing tactical ball observations",
+  "alignment_inputs": "Team-labelled player coordinates only; no ball, no match events, no human labels, no public answer key. Ball coordinates are held out for alignment diagnostics.",
+  "algorithm": "Team position quantile retrieval, trimmed team Chamfer verification, Hough offset proposals, temporal state decoding, integer frame-offset refinement, monotone run rejection",
+  "parameters_fixed_before_possession_evaluation": {"retrieval_candidates": 16, "sampling_frames": 25, "quantiles": [0.1,0.3,0.5,0.7,0.9], "minimum_players_each_team": 4, "geometry_cap_m": 12, "geometry_gate_m": 4, "minimum_run_seconds": 15, "offset_proposals_per_orientation": 8, "offset_refinement_frames": 25},
+  "orientations": "Four pitch-axis reflections, determined algorithmically; no manual pitch or temporal correction",
+  "native_development": ["J03WN1", "J03WPY", "J03WQQ"],
+  "synthetic_alignment_check": "Independent noisy views of external matches with deterministic cuts, replays and unavailable calibration. Their source frame mapping validates synchronization; no possession labels in alignment.",
+  "fusion_variants": ["fill missing ball only", "same, reject broadcast ball further than 8m from both teams", "no second camera baseline"],
+  "possession_evaluation": "Frozen V6 inference on the same external base view versus augmented view, official spellF1, report per game. Any gain is development evidence, not fresh native confirmation.",
+  "challenge_diagnostics": "Unlabeled alignment coverage, independent observed-ball agreement, missing-ball reduction. Do not score public competition GT.",
+  "public_policy": "No competition public or private ground truth loaded or scored",
+  "paid_services": false,
+  "upload_data": false
+}
