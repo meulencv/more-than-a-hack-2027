@@ -1,0 +1,16 @@
+{
+  "objective": "Test full set interactions with two layers of masked multi-head attention over players and a ball token, following the set-attention idea of Ball Radar and PathCRF",
+  "inputs": "Same raw per-player observations and partitions as V10; ball is an observed token, never reference possession",
+  "architecture": {"player_temporal": true, "set_attention_layers": 2, "heads": 4, "embedding": 32, "temporal_width": 64},
+  "runs": [
+    {"kind": "graph", "seed": 2027, "steps": 3000, "cosine": true},
+    {"kind": "trajectory", "seed": 2028, "steps": 3000, "cosine": true, "purpose": "repeat the .6650 development ensemble"}
+  ],
+  "secondary_camera": "Test the frozen trajectory model plus V6 with the frozen V11 alignment and both predeclared ball-fill rules, on clean/moderate/stress external regimes. No changes to synchronization parameters based on possession scores.",
+  "native_train": ["J03WMX", "J03WOH", "J03WOY"],
+  "native_development": ["J03WN1", "J03WPY", "J03WQQ"],
+  "criterion": "Official spellF1 mean, worst case and per-match results. Exploratory development, no new independent native confirmation claims.",
+  "public_policy": "No competition ground truth loaded or scored; no manual annotations or frame-specific corrections",
+  "paid_services": false,
+  "upload_data": false
+}

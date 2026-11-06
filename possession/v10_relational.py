@@ -23,9 +23,13 @@ class PlayerSetNet(nn.Module):
     def __init__(self,kind,global_features=312):
         super().__init__();self.kind=kind
         self.embedding=nn.Sequential(nn.Linear(14,32),nn.SiLU(),nn.Linear(32,32),nn.SiLU())
-        self.player_temporal=(nn.Sequential(*(Residual(32,2**i,True) for i in range(3))) if kind in ('trajectory','fused') else None)
+        self.player_temporal=(nn.Sequential(*(Residual(32,2**i,True) for i in range(3))) if kind in ('trajectory','fused','graph') else None)
+        self.interactions=nn.ModuleList([nn.MultiheadAttention(32,4,dropout=.1,batch_first=True) for _ in range(2)] if kind=='graph' else [])
+        self.interaction_norm=nn.ModuleList([nn.LayerNorm(32) for _ in range(2)] if kind=='graph' else [])
+        self.ball_embedding=nn.Linear(7,32) if kind=='graph' else None
+        self.team_embedding=nn.Linear(1,32,bias=False) if kind=='graph' else None
         self.attention=nn.Linear(32,1)
-        self.temporal=SegmentNet(192+7+(global_features if kind=='fused' else 0),width=64,local=True)
+        self.temporal=SegmentNet(192+7+(32 if kind=='graph' else 0)+(global_features if kind=='fused' else 0),width=64,local=True)
         self.reconstruction=nn.Conv1d(64,2,1)
 
     def forward(self,nodes,ball,team,global_x=None):
@@ -34,7 +38,17 @@ class PlayerSetNet(nn.Module):
         if self.player_temporal is not None:
             h=self.player_temporal(h.permute(0,2,3,1).reshape(batch*slots,32,length))
             h=h.reshape(batch,slots,32,length).permute(0,3,1,2)
-        scores=self.attention(h)[:,:,:,0];visible=nodes[:,:,:,10]>.5;pooled=[]
+        visible=nodes[:,:,:,10]>.5;extra=[]
+        if self.kind=='graph':
+            code=torch.where(team>=0,1.-2.*team,0.).to(h.dtype)
+            h=h+self.team_embedding(code[:,None,:,None])
+            x=torch.cat((h,self.ball_embedding(ball)[:,:,None]),dim=2).reshape(batch*length,slots+1,32)
+            padding=torch.cat((~visible,torch.zeros((batch,length,1),dtype=torch.bool,device=h.device)),dim=2).reshape(batch*length,slots+1)
+            for layer,norm in zip(self.interactions,self.interaction_norm):
+                values=layer(x,x,x,key_padding_mask=padding,need_weights=False)[0]
+                x=norm(x+F.dropout(values,.1,self.training))
+            x=x.reshape(batch,length,slots+1,32);h=x[:,:,:slots];extra=[x[:,:,-1]]
+        scores=self.attention(h)[:,:,:,0];pooled=[]
         for side in (0,1):
             mask=visible&(team[:,None,:]==side)
             count=mask.sum(2,keepdim=True).clamp_min(1)
@@ -45,7 +59,7 @@ class PlayerSetNet(nn.Module):
             maximum=h.masked_fill(~mask[:,:,:,None],-1e4).max(2).values
             maximum=torch.where(mask.any(2,keepdim=True),maximum,0.)
             pooled.extend([mean,attended,maximum])
-        values=torch.cat(pooled+[ball]+([global_x] if self.kind=='fused' else []),dim=2).transpose(1,2)
+        values=torch.cat(pooled+[ball]+extra+([global_x] if self.kind=='fused' else []),dim=2).transpose(1,2)
         hidden=self.temporal.blocks(self.temporal.input(values))
         logits=self.temporal.classifier(hidden);edge=self.temporal.boundary(hidden)[:,0]
         coordinates=self.reconstruction(hidden).transpose(1,2)
@@ -196,7 +210,7 @@ def load_model(path,device='mps'):
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--prepare',action='store_true')
-    parser.add_argument('--kind',choices=['set','trajectory','fused','selfsup']);parser.add_argument('--steps',type=int,default=1000)
+    parser.add_argument('--kind',choices=['set','trajectory','fused','selfsup','graph']);parser.add_argument('--steps',type=int,default=1000)
     parser.add_argument('--seed',type=int,default=2027)
     parser.add_argument('--run-name');parser.add_argument('--cosine',action='store_true')
     parser.add_argument('--augment',action='store_true');args=parser.parse_args()
