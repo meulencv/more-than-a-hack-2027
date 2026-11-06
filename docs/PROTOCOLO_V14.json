@@ -1,0 +1,9 @@
+{
+  "hypothesis": "Current 5Hz predictions quantize transitions to five-frame intervals; continuous interpolation followed by 25Hz structured decoding may improve interval boundaries",
+  "variants": ["existing repeated-state 5Hz decoder", "linear probability interpolation, unary weight 1/5", "linear log-probability interpolation, unary weight 1/5"],
+  "fixed_parameters": "Same H/A/D transition costs and boundary expert as before. No cost, smoothing, duration or frame-offset search. Interpolate separately within each half.",
+  "development": "Read only saved native development probabilities and out-of-fold native predictions. No retraining or changes to ongoing V13 folds.",
+  "criterion": "Official spellF1 mean, worst case and per-game changes; do not confuse five correlated observation variants with independent matches",
+  "interpretation": "Decoder selection on reused external development, not a fresh confirmation. Original frozen candidates remain byte-identical.",
+  "public_policy": "No competition labels or public evaluation"
+}

@@ -30,11 +30,12 @@ def digest(path):
 
 
 def input_signature():
-    paths=[]
+    output={}
     for source in ['tactical','broadcast']:
         assets=asset_paths(source=source)
-        paths.extend([assets[k] for k in ['atd_raw','atd_meta','homography']])
-    return {str(p):digest(p) for p in paths}
+        for key in ['atd_raw','atd_meta','homography']:
+            p=Path(assets[key]);output[f'{source}/{p.name}']=digest(p)
+    return output
 
 
 def mapping_digest(result):
