@@ -1,0 +1,3119 @@
+{
+  "rows": [
+    {
+      "game": "J03WMX",
+      "mode": "clean",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9427080106685463,
+      "spell_f1_mean": 0.6834821428571429,
+      "spell_f1_headline": 0.6964285714285714,
+      "accuracy": 0.9490295751779512,
+      "alive_dead_f1": 0.993632364226423,
+      "n_pred_spells": 385,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 8.866285714285715,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "clean",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.8875651793886151,
+          "expected_final": 0.8960336927019313,
+          "sample_spells": 204.8125,
+          "final_spells": 171
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.861292796330212,
+          "expected_final": 0.8830190269078402,
+          "sample_spells": 278.28125,
+          "final_spells": 229
+        }
+      ],
+      "macro_f1": 0.9427173453557832,
+      "spell_f1_mean": 0.6871569703622393,
+      "spell_f1_headline": 0.7003293084522504,
+      "accuracy": 0.9490227243143998,
+      "alive_dead_f1": 0.9936162486968948,
+      "n_pred_spells": 400,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 8.5377,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "clean",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9780367139349712,
+          "expected_final": 0.9818640721909733,
+          "sample_spells": 173.53125,
+          "final_spells": 171
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9729082757186204,
+          "expected_final": 0.9820590984668567,
+          "sample_spells": 227.5625,
+          "final_spells": 224
+        }
+      ],
+      "macro_f1": 0.9423728210884028,
+      "spell_f1_mean": 0.6865342163355408,
+      "spell_f1_headline": 0.6997792494481235,
+      "accuracy": 0.9487418389087945,
+      "alive_dead_f1": 0.9936393772915226,
+      "n_pred_spells": 395,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 8.644962025316456,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "clean",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9932371723731309,
+          "expected_final": 0.9932371723731309,
+          "sample_spells": 169.0625,
+          "final_spells": 167
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.986901351197128,
+          "expected_final": 0.9893858875856791,
+          "sample_spells": 222.09375,
+          "final_spells": 224
+        }
+      ],
+      "macro_f1": 0.9425718105074182,
+      "spell_f1_mean": 0.6864745011086474,
+      "spell_f1_headline": 0.6984478935698448,
+      "accuracy": 0.9489131104975782,
+      "alive_dead_f1": 0.9936447503294772,
+      "n_pred_spells": 391,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 8.732071611253197,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "clean",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9553399649534053,
+          "expected_final": 0.9651969390228998,
+          "sample_spells": 180.65625,
+          "final_spells": 173
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9476188458942167,
+          "expected_final": 0.9591263427837229,
+          "sample_spells": 237.78125,
+          "final_spells": 224
+        }
+      ],
+      "macro_f1": 0.9420653686145027,
+      "spell_f1_mean": 0.6823788546255506,
+      "spell_f1_headline": 0.6960352422907489,
+      "accuracy": 0.9484678043667404,
+      "alive_dead_f1": 0.9935866273859796,
+      "n_pred_spells": 397,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 8.601309823677582,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "clean",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9932371723731309,
+          "expected_final": 0.997082073547626,
+          "sample_spells": 169.0625,
+          "final_spells": 169
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.986901351197128,
+          "expected_final": 0.9914862622619987,
+          "sample_spells": 222.09375,
+          "final_spells": 222
+        }
+      ],
+      "macro_f1": 0.9425844871601714,
+      "spell_f1_mean": 0.6855875831485588,
+      "spell_f1_headline": 0.6984478935698448,
+      "accuracy": 0.9489131104975782,
+      "alive_dead_f1": 0.9935984162962183,
+      "n_pred_spells": 391,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 8.733503836317135,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "moderate",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9196139611096558,
+      "spell_f1_mean": 0.6114942528735632,
+      "spell_f1_headline": 0.632183908045977,
+      "accuracy": 0.9266272513650345,
+      "alive_dead_f1": 0.9815798421799335,
+      "n_pred_spells": 359,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.493593314763231,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "moderate",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9082645056425933,
+          "expected_final": 0.914634476780182,
+          "sample_spells": 192.46875,
+          "final_spells": 170
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8750856395355362,
+          "expected_final": 0.8874683069870158,
+          "sample_spells": 241.65625,
+          "final_spells": 206
+        }
+      ],
+      "macro_f1": 0.9198133249382742,
+      "spell_f1_mean": 0.6218714768883878,
+      "spell_f1_headline": 0.6381059751972943,
+      "accuracy": 0.9268396281351264,
+      "alive_dead_f1": 0.9816139396355621,
+      "n_pred_spells": 376,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.063297872340426,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "moderate",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9857511874644153,
+          "expected_final": 0.9880956644928984,
+          "sample_spells": 167.0625,
+          "final_spells": 164
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9811629833075348,
+          "expected_final": 0.9861023626499773,
+          "sample_spells": 201.65625,
+          "final_spells": 198
+        }
+      ],
+      "macro_f1": 0.9199635719437289,
+      "spell_f1_mean": 0.6176403207331042,
+      "spell_f1_headline": 0.6345933562428409,
+      "accuracy": 0.9269629436790507,
+      "alive_dead_f1": 0.9816232951413728,
+      "n_pred_spells": 362,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.411381215469612,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "moderate",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9956710904513132,
+          "expected_final": 0.9966687912251961,
+          "sample_spells": 164.21875,
+          "final_spells": 164
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9922193347553274,
+          "expected_final": 0.9968927855000416,
+          "sample_spells": 198.21875,
+          "final_spells": 198
+        }
+      ],
+      "macro_f1": 0.9199635719437289,
+      "spell_f1_mean": 0.6176403207331042,
+      "spell_f1_headline": 0.6345933562428409,
+      "accuracy": 0.9269629436790507,
+      "alive_dead_f1": 0.9816232951413728,
+      "n_pred_spells": 362,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.411381215469612,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "moderate",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9678588100592016,
+          "expected_final": 0.9709933972523221,
+          "sample_spells": 172.5,
+          "final_spells": 164
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9590923090781436,
+          "expected_final": 0.9643574566298487,
+          "sample_spells": 209.15625,
+          "final_spells": 198
+        }
+      ],
+      "macro_f1": 0.9199392670022858,
+      "spell_f1_mean": 0.6153493699885452,
+      "spell_f1_headline": 0.6323024054982818,
+      "accuracy": 0.926928689361294,
+      "alive_dead_f1": 0.9815708464041749,
+      "n_pred_spells": 362,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.41171270718232,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "moderate",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9956710904513132,
+          "expected_final": 0.9966687912251961,
+          "sample_spells": 164.21875,
+          "final_spells": 164
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9922193347553274,
+          "expected_final": 0.9969242716461373,
+          "sample_spells": 198.21875,
+          "final_spells": 198
+        }
+      ],
+      "macro_f1": 0.9199236200705143,
+      "spell_f1_mean": 0.6148911798396334,
+      "spell_f1_headline": 0.6345933562428409,
+      "accuracy": 0.9269355402248454,
+      "alive_dead_f1": 0.9816452430099456,
+      "n_pred_spells": 362,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.409834254143647,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "stress",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9123672851613578,
+      "spell_f1_mean": 0.5740956826137691,
+      "spell_f1_headline": 0.5764294049008167,
+      "accuracy": 0.9194749498174245,
+      "alive_dead_f1": 0.9777155212498838,
+      "n_pred_spells": 346,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 10.020693641618498,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "stress",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9071539286631437,
+          "expected_final": 0.9358146551453367,
+          "sample_spells": 179.84375,
+          "final_spells": 164
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8445466404974309,
+          "expected_final": 0.878760614058394,
+          "sample_spells": 247.1875,
+          "final_spells": 212
+        }
+      ],
+      "macro_f1": 0.9125528408067402,
+      "spell_f1_mean": 0.5772266065388952,
+      "spell_f1_headline": 0.5817361894024804,
+      "accuracy": 0.9195297567258353,
+      "alive_dead_f1": 0.9773597846999807,
+      "n_pred_spells": 376,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.220212765957447,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "stress",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9723112132682628,
+          "expected_final": 0.9797582470608415,
+          "sample_spells": 160.21875,
+          "final_spells": 157
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9608422177701732,
+          "expected_final": 0.968245194924448,
+          "sample_spells": 203.0,
+          "final_spells": 199
+        }
+      ],
+      "macro_f1": 0.9125677047366018,
+      "spell_f1_mean": 0.5785467128027681,
+      "spell_f1_headline": 0.5813148788927336,
+      "accuracy": 0.9195777127706948,
+      "alive_dead_f1": 0.9776116800539366,
+      "n_pred_spells": 356,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.739887640449437,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "stress",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9908094309861448,
+          "expected_final": 0.9915505596895886,
+          "sample_spells": 156.09375,
+          "final_spells": 157
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.98514213067665,
+          "expected_final": 0.98514213067665,
+          "sample_spells": 195.90625,
+          "final_spells": 192
+        }
+      ],
+      "macro_f1": 0.9121132478691504,
+      "spell_f1_mean": 0.5758139534883722,
+      "spell_f1_headline": 0.5767441860465117,
+      "accuracy": 0.9191803626847164,
+      "alive_dead_f1": 0.9772720665616225,
+      "n_pred_spells": 349,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.928022922636103,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "stress",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9549983699737299,
+          "expected_final": 0.9765058046109836,
+          "sample_spells": 164.84375,
+          "final_spells": 163
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9301726812613946,
+          "expected_final": 0.9441959493933321,
+          "sample_spells": 212.96875,
+          "final_spells": 199
+        }
+      ],
+      "macro_f1": 0.9130208020804078,
+      "spell_f1_mean": 0.5851088201603666,
+      "spell_f1_headline": 0.5933562428407789,
+      "accuracy": 0.9199956154473271,
+      "alive_dead_f1": 0.9773907179275503,
+      "n_pred_spells": 362,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.573480662983426,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "stress",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9908094309861448,
+          "expected_final": 0.9935683900728857,
+          "sample_spells": 156.09375,
+          "final_spells": 155
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.98514213067665,
+          "expected_final": 0.990123665856486,
+          "sample_spells": 195.90625,
+          "final_spells": 194
+        }
+      ],
+      "macro_f1": 0.9117567308592491,
+      "spell_f1_mean": 0.5711627906976744,
+      "spell_f1_headline": 0.5744186046511629,
+      "accuracy": 0.9188720738249057,
+      "alive_dead_f1": 0.9773599386032233,
+      "n_pred_spells": 349,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.928595988538682,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WN1",
+      "mode": "clean",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9251515751459322,
+      "spell_f1_mean": 0.6929451287793953,
+      "spell_f1_headline": 0.6920492721164613,
+      "accuracy": 0.9432965294113491,
+      "alive_dead_f1": 0.989687997710075,
+      "n_pred_spells": 393,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.908091603053435,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "clean",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.8918035957232906,
+          "expected_final": 0.8952008009315748,
+          "sample_spells": 217.5625,
+          "final_spells": 188
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.8899134877666012,
+          "expected_final": 0.8927932755942738,
+          "sample_spells": 259.34375,
+          "final_spells": 217
+        }
+      ],
+      "macro_f1": 0.9259172255376211,
+      "spell_f1_mean": 0.6983425414364641,
+      "spell_f1_headline": 0.698342541436464,
+      "accuracy": 0.9437910158871441,
+      "alive_dead_f1": 0.9895068975638391,
+      "n_pred_spells": 405,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.706469135802468,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "clean",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.982018677348846,
+          "expected_final": 0.985089372739167,
+          "sample_spells": 184.46875,
+          "final_spells": 181
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9833394475386021,
+          "expected_final": 0.9863131095410786,
+          "sample_spells": 219.1875,
+          "final_spells": 217
+        }
+      ],
+      "macro_f1": 0.9253034902470915,
+      "spell_f1_mean": 0.693095768374165,
+      "spell_f1_headline": 0.6926503340757239,
+      "accuracy": 0.9433742344289741,
+      "alive_dead_f1": 0.9895867732206151,
+      "n_pred_spells": 398,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.823316582914573,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "clean",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9934856417318475,
+          "expected_final": 0.9956253356253566,
+          "sample_spells": 180.65625,
+          "final_spells": 181
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9924692696663963,
+          "expected_final": 0.9947326625501629,
+          "sample_spells": 216.40625,
+          "final_spells": 217
+        }
+      ],
+      "macro_f1": 0.9253034902470915,
+      "spell_f1_mean": 0.693095768374165,
+      "spell_f1_headline": 0.6926503340757239,
+      "accuracy": 0.9433742344289741,
+      "alive_dead_f1": 0.9895867732206151,
+      "n_pred_spells": 398,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.823316582914573,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "clean",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9625168426025837,
+          "expected_final": 0.9655702869615492,
+          "sample_spells": 191.1875,
+          "final_spells": 181
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9639321676304209,
+          "expected_final": 0.9676376865207079,
+          "sample_spells": 226.28125,
+          "final_spells": 217
+        }
+      ],
+      "macro_f1": 0.9253862234736955,
+      "spell_f1_mean": 0.6944320712694878,
+      "spell_f1_headline": 0.6948775055679287,
+      "accuracy": 0.9434236830765536,
+      "alive_dead_f1": 0.9895345594387119,
+      "n_pred_spells": 398,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.822211055276382,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "clean",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9934856417318475,
+          "expected_final": 0.9959370682790373,
+          "sample_spells": 180.65625,
+          "final_spells": 181
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9924692696663963,
+          "expected_final": 0.9950422134124879,
+          "sample_spells": 216.40625,
+          "final_spells": 216
+        }
+      ],
+      "macro_f1": 0.9258384277298877,
+      "spell_f1_mean": 0.6938684503901895,
+      "spell_f1_headline": 0.6956521739130436,
+      "accuracy": 0.9437839517946327,
+      "alive_dead_f1": 0.9896288249671543,
+      "n_pred_spells": 397,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.837884130982368,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "moderate",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.8796237152813987,
+      "spell_f1_mean": 0.5949425287356321,
+      "spell_f1_headline": 0.5908045977011495,
+      "accuracy": 0.9035892654050197,
+      "alive_dead_f1": 0.9580736289852474,
+      "n_pred_spells": 370,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 7.073405405405406,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "moderate",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.871334904084396,
+          "expected_final": 0.902233900207289,
+          "sample_spells": 212.40625,
+          "final_spells": 185
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8790033297660593,
+          "expected_final": 0.9018575864988583,
+          "sample_spells": 244.84375,
+          "final_spells": 211
+        }
+      ],
+      "macro_f1": 0.8809306888837457,
+      "spell_f1_mean": 0.6093750000000001,
+      "spell_f1_headline": 0.6071428571428572,
+      "accuracy": 0.9041473287134169,
+      "alive_dead_f1": 0.9564579951678174,
+      "n_pred_spells": 396,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.596969696969698,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "moderate",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9639791978827836,
+          "expected_final": 0.9757566661598456,
+          "sample_spells": 180.21875,
+          "final_spells": 176
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9696099974016639,
+          "expected_final": 0.9793303148255378,
+          "sample_spells": 208.59375,
+          "final_spells": 211
+        }
+      ],
+      "macro_f1": 0.8813619079119966,
+      "spell_f1_mean": 0.6020293122886133,
+      "spell_f1_headline": 0.5997745208568207,
+      "accuracy": 0.9046135588191663,
+      "alive_dead_f1": 0.9571861099689756,
+      "n_pred_spells": 387,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.758449612403101,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "moderate",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9840807783467824,
+          "expected_final": 0.9855168754801504,
+          "sample_spells": 174.34375,
+          "final_spells": 176
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9890813619843506,
+          "expected_final": 0.9923180129192959,
+          "sample_spells": 203.21875,
+          "final_spells": 203
+        }
+      ],
+      "macro_f1": 0.8809063492379311,
+      "spell_f1_mean": 0.6015927189988624,
+      "spell_f1_headline": 0.5984072810011377,
+      "accuracy": 0.9045287897090301,
+      "alive_dead_f1": 0.9582735747579777,
+      "n_pred_spells": 379,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.912401055408971,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "moderate",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9410369678969666,
+          "expected_final": 0.9647463514145832,
+          "sample_spells": 187.53125,
+          "final_spells": 183
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9501050362208918,
+          "expected_final": 0.9694430228104852,
+          "sample_spells": 215.75,
+          "final_spells": 211
+        }
+      ],
+      "macro_f1": 0.8812332019900749,
+      "spell_f1_mean": 0.6085011185682327,
+      "spell_f1_headline": 0.6085011185682327,
+      "accuracy": 0.9044369565063825,
+      "alive_dead_f1": 0.9566056796497924,
+      "n_pred_spells": 394,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.625177664974619,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "moderate",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9840807783467824,
+          "expected_final": 0.9885330397342074,
+          "sample_spells": 174.34375,
+          "final_spells": 174
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9890813619843506,
+          "expected_final": 0.9926728832434997,
+          "sample_spells": 203.21875,
+          "final_spells": 204
+        }
+      ],
+      "macro_f1": 0.8808887762526861,
+      "spell_f1_mean": 0.6009111617312073,
+      "spell_f1_headline": 0.5990888382687928,
+      "accuracy": 0.9045782383566096,
+      "alive_dead_f1": 0.9584603430757277,
+      "n_pred_spells": 378,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.928148148148148,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "stress",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.8878699042594264,
+      "spell_f1_mean": 0.6151029748283754,
+      "spell_f1_headline": 0.6224256292906178,
+      "accuracy": 0.9109783061718977,
+      "alive_dead_f1": 0.9675384490674214,
+      "n_pred_spells": 374,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 7.2002139037433155,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "stress",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.918953442217064,
+          "expected_final": 0.926216012452158,
+          "sample_spells": 205.71875,
+          "final_spells": 183
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8709485508351015,
+          "expected_final": 0.8889046257098063,
+          "sample_spells": 243.625,
+          "final_spells": 210
+        }
+      ],
+      "macro_f1": 0.8877835704208058,
+      "spell_f1_mean": 0.6136618141097425,
+      "spell_f1_headline": 0.6226203807390818,
+      "accuracy": 0.9106321656388412,
+      "alive_dead_f1": 0.9665775302584956,
+      "n_pred_spells": 393,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.856997455470738,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "stress",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9907827229869017,
+          "expected_final": 0.9911635132431805,
+          "sample_spells": 181.96875,
+          "final_spells": 180
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9616572908856416,
+          "expected_final": 0.9736007170319237,
+          "sample_spells": 206.25,
+          "final_spells": 201
+        }
+      ],
+      "macro_f1": 0.8866278938090044,
+      "spell_f1_mean": 0.6083995459704881,
+      "spell_f1_headline": 0.6174801362088536,
+      "accuracy": 0.9099116282026829,
+      "alive_dead_f1": 0.9669733827418796,
+      "n_pred_spells": 381,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 7.072125984251968,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "stress",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9984213318313304,
+          "expected_final": 0.9985259804913249,
+          "sample_spells": 180.09375,
+          "final_spells": 180
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9787782065825179,
+          "expected_final": 0.9871382084615902,
+          "sample_spells": 200.71875,
+          "final_spells": 201
+        }
+      ],
+      "macro_f1": 0.8866278938090044,
+      "spell_f1_mean": 0.6083995459704881,
+      "spell_f1_headline": 0.6174801362088536,
+      "accuracy": 0.9099116282026829,
+      "alive_dead_f1": 0.9669733827418796,
+      "n_pred_spells": 381,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 7.072125984251968,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "stress",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9749253498021684,
+          "expected_final": 0.9781056209223457,
+          "sample_spells": 186.625,
+          "final_spells": 183
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9410578527224782,
+          "expected_final": 0.954059929798039,
+          "sample_spells": 214.0,
+          "final_spells": 201
+        }
+      ],
+      "macro_f1": 0.886664354742916,
+      "spell_f1_mean": 0.6113122171945701,
+      "spell_f1_headline": 0.6199095022624435,
+      "accuracy": 0.9098551154625921,
+      "alive_dead_f1": 0.9666143519234879,
+      "n_pred_spells": 384,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 7.014583333333333,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "stress",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9984213318313304,
+          "expected_final": 0.9985602212560603,
+          "sample_spells": 180.09375,
+          "final_spells": 180
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9787782065825179,
+          "expected_final": 0.9891407750581602,
+          "sample_spells": 200.71875,
+          "final_spells": 199
+        }
+      ],
+      "macro_f1": 0.8865029118122156,
+      "spell_f1_mean": 0.610693970420933,
+      "spell_f1_headline": 0.6188850967007965,
+      "accuracy": 0.9098621795551034,
+      "alive_dead_f1": 0.9669801586131667,
+      "n_pred_spells": 379,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 7.102796833773088,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WOH",
+      "mode": "clean",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9479505990163282,
+      "spell_f1_mean": 0.7704095112285336,
+      "spell_f1_headline": 0.7741083223249671,
+      "accuracy": 0.9576209424694273,
+      "alive_dead_f1": 0.9924388786189835,
+      "n_pred_spells": 355,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.10692957746479,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "clean",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.8928345508652438,
+          "expected_final": 0.9024863173332407,
+          "sample_spells": 238.71875,
+          "final_spells": 208
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8856024220273342,
+          "expected_final": 0.9011392389944776,
+          "sample_spells": 190.375,
+          "final_spells": 166
+        }
+      ],
+      "macro_f1": 0.947106431518704,
+      "spell_f1_mean": 0.768041237113402,
+      "spell_f1_headline": 0.7706185567010309,
+      "accuracy": 0.9569723206086842,
+      "alive_dead_f1": 0.9925323885936578,
+      "n_pred_spells": 374,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 7.701604278074866,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "clean",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9784037788190608,
+          "expected_final": 0.980274314705026,
+          "sample_spells": 204.375,
+          "final_spells": 200
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9679941858546278,
+          "expected_final": 0.9769830747768107,
+          "sample_spells": 164.875,
+          "final_spells": 161
+        }
+      ],
+      "macro_f1": 0.9479025167664328,
+      "spell_f1_mean": 0.7706422018348624,
+      "spell_f1_headline": 0.7706422018348624,
+      "accuracy": 0.9575845030390485,
+      "alive_dead_f1": 0.9924402445803223,
+      "n_pred_spells": 361,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 7.975069252077563,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "clean",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9950978898882533,
+          "expected_final": 0.9950978898882533,
+          "sample_spells": 198.71875,
+          "final_spells": 197
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9855157069076257,
+          "expected_final": 0.9874057399222576,
+          "sample_spells": 160.8125,
+          "final_spells": 161
+        }
+      ],
+      "macro_f1": 0.9477062317768764,
+      "spell_f1_mean": 0.7678947368421054,
+      "spell_f1_headline": 0.7710526315789473,
+      "accuracy": 0.9574314574314574,
+      "alive_dead_f1": 0.9924187148644611,
+      "n_pred_spells": 358,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.040446927374301,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "clean",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9588724612107,
+          "expected_final": 0.9628578972431525,
+          "sample_spells": 211.375,
+          "final_spells": 200
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9483732950476398,
+          "expected_final": 0.9592813251899622,
+          "sample_spells": 170.15625,
+          "final_spells": 161
+        }
+      ],
+      "macro_f1": 0.9478549424166515,
+      "spell_f1_mean": 0.7669724770642202,
+      "spell_f1_headline": 0.7706422018348624,
+      "accuracy": 0.9575407757225939,
+      "alive_dead_f1": 0.9924042891790656,
+      "n_pred_spells": 361,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 7.972520775623269,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "clean",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9950978898882533,
+          "expected_final": 0.9956426004558565,
+          "sample_spells": 198.71875,
+          "final_spells": 198
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9855157069076257,
+          "expected_final": 0.9892652098790025,
+          "sample_spells": 160.8125,
+          "final_spells": 159
+        }
+      ],
+      "macro_f1": 0.9484636151482753,
+      "spell_f1_mean": 0.7699604743083004,
+      "spell_f1_headline": 0.7720685111989459,
+      "accuracy": 0.9580363519757459,
+      "alive_dead_f1": 0.992494579418469,
+      "n_pred_spells": 357,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.06173669467787,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "moderate",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9207201904094747,
+      "spell_f1_mean": 0.6953168044077135,
+      "spell_f1_headline": 0.694214876033058,
+      "accuracy": 0.9322590989257656,
+      "alive_dead_f1": 0.9751554092152618,
+      "n_pred_spells": 324,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.85283950617284,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "moderate",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.8885474566881332,
+          "expected_final": 0.9040513730978906,
+          "sample_spells": 210.125,
+          "final_spells": 178
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8928684137856278,
+          "expected_final": 0.9042003202077211,
+          "sample_spells": 183.25,
+          "final_spells": 160
+        }
+      ],
+      "macro_f1": 0.9194075900021376,
+      "spell_f1_mean": 0.685945945945946,
+      "spell_f1_headline": 0.6837837837837838,
+      "accuracy": 0.9311586281283251,
+      "alive_dead_f1": 0.9748358938304434,
+      "n_pred_spells": 338,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.486627218934911,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "moderate",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9695082695416783,
+          "expected_final": 0.9835458390857164,
+          "sample_spells": 180.65625,
+          "final_spells": 178
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9789716483324582,
+          "expected_final": 0.9868977722587888,
+          "sample_spells": 156.65625,
+          "final_spells": 155
+        }
+      ],
+      "macro_f1": 0.920640203840966,
+      "spell_f1_mean": 0.6927891156462586,
+      "spell_f1_headline": 0.691156462585034,
+      "accuracy": 0.9321789321789322,
+      "alive_dead_f1": 0.9750906522087123,
+      "n_pred_spells": 333,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.616936936936938,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "moderate",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9826458140840164,
+          "expected_final": 0.988861911753307,
+          "sample_spells": 176.8125,
+          "final_spells": 178
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9877346178486368,
+          "expected_final": 0.9960794031132343,
+          "sample_spells": 154.5625,
+          "final_spells": 155
+        }
+      ],
+      "macro_f1": 0.920640203840966,
+      "spell_f1_mean": 0.6927891156462586,
+      "spell_f1_headline": 0.691156462585034,
+      "accuracy": 0.9321789321789322,
+      "alive_dead_f1": 0.9750906522087123,
+      "n_pred_spells": 333,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.616936936936938,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "moderate",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9524064828664924,
+          "expected_final": 0.968669107368457,
+          "sample_spells": 186.1875,
+          "final_spells": 178
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9563251551472363,
+          "expected_final": 0.9645878246605196,
+          "sample_spells": 162.90625,
+          "final_spells": 155
+        }
+      ],
+      "macro_f1": 0.9205740981393493,
+      "spell_f1_mean": 0.6933333333333334,
+      "spell_f1_headline": 0.6884353741496598,
+      "accuracy": 0.9321352048624776,
+      "alive_dead_f1": 0.9750953587437703,
+      "n_pred_spells": 333,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.615375375375375,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "moderate",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9826458140840164,
+          "expected_final": 0.9927816278443058,
+          "sample_spells": 176.8125,
+          "final_spells": 176
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9877346178486368,
+          "expected_final": 0.9961604397558902,
+          "sample_spells": 154.5625,
+          "final_spells": 155
+        }
+      ],
+      "macro_f1": 0.9204915067701446,
+      "spell_f1_mean": 0.6914051841746247,
+      "spell_f1_headline": 0.6903137789904501,
+      "accuracy": 0.9320623260017199,
+      "alive_dead_f1": 0.9750892652064062,
+      "n_pred_spells": 331,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.668036253776435,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "stress",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9129941293122744,
+      "spell_f1_mean": 0.6762829403606101,
+      "spell_f1_headline": 0.6823855755894591,
+      "accuracy": 0.9246286822044398,
+      "alive_dead_f1": 0.9701439195040482,
+      "n_pred_spells": 319,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 9.22294670846395,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "stress",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.8997766636311765,
+          "expected_final": 0.92473803994305,
+          "sample_spells": 204.9375,
+          "final_spells": 184
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.8842102200726814,
+          "expected_final": 0.9139777701573815,
+          "sample_spells": 178.5625,
+          "final_spells": 159
+        }
+      ],
+      "macro_f1": 0.9145873035280894,
+      "spell_f1_mean": 0.6818791946308724,
+      "spell_f1_headline": 0.687248322147651,
+      "accuracy": 0.9258821986094713,
+      "alive_dead_f1": 0.9701079302266467,
+      "n_pred_spells": 343,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.584489795918367,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "stress",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9706366919133419,
+          "expected_final": 0.9858889375568514,
+          "sample_spells": 180.625,
+          "final_spells": 180
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9567511286928558,
+          "expected_final": 0.9773418456098328,
+          "sample_spells": 156.9375,
+          "final_spells": 159
+        }
+      ],
+      "macro_f1": 0.9144252256714447,
+      "spell_f1_mean": 0.6796221322537113,
+      "spell_f1_headline": 0.6828609986504723,
+      "accuracy": 0.9257874560904864,
+      "alive_dead_f1": 0.9702270931391075,
+      "n_pred_spells": 339,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.683185840707964,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "stress",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9820917023604419,
+          "expected_final": 0.9852580117794864,
+          "sample_spells": 177.3125,
+          "final_spells": 180
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9739568583735326,
+          "expected_final": 0.9739568583735326,
+          "sample_spells": 152.84375,
+          "final_spells": 147
+        }
+      ],
+      "macro_f1": 0.912176564949401,
+      "spell_f1_mean": 0.671604938271605,
+      "spell_f1_headline": 0.6748971193415637,
+      "accuracy": 0.9239654845715451,
+      "alive_dead_f1": 0.9701605365880478,
+      "n_pred_spells": 327,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.999021406727827,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "stress",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9564185841747426,
+          "expected_final": 0.9749522410323661,
+          "sample_spells": 185.125,
+          "final_spells": 180
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9393631078080353,
+          "expected_final": 0.9672879445664211,
+          "sample_spells": 161.4375,
+          "final_spells": 159
+        }
+      ],
+      "macro_f1": 0.9142524315692949,
+      "spell_f1_mean": 0.679622132253711,
+      "spell_f1_headline": 0.6828609986504723,
+      "accuracy": 0.9256052589385922,
+      "alive_dead_f1": 0.9700126436149744,
+      "n_pred_spells": 339,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.6823598820059,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "stress",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9820917023604419,
+          "expected_final": 0.9856752154623064,
+          "sample_spells": 177.3125,
+          "final_spells": 179
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9739568583735326,
+          "expected_final": 0.9767449990154345,
+          "sample_spells": 152.84375,
+          "final_spells": 150
+        }
+      ],
+      "macro_f1": 0.9127085875173399,
+      "spell_f1_mean": 0.6741450068399453,
+      "spell_f1_headline": 0.6785225718194254,
+      "accuracy": 0.9243590304196365,
+      "alive_dead_f1": 0.9699718894547653,
+      "n_pred_spells": 329,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.942492401215805,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WPY",
+      "mode": "clean",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9496634473836715,
+      "spell_f1_mean": 0.7655696202531644,
+      "spell_f1_headline": 0.7797468354430379,
+      "accuracy": 0.9593943000184665,
+      "alive_dead_f1": 0.9950623955979169,
+      "n_pred_spells": 369,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 8.82081300813008,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "clean",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9063646617088652,
+          "expected_final": 0.9176467735035798,
+          "sample_spells": 194.34375,
+          "final_spells": 172
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9069747054130199,
+          "expected_final": 0.9076993796519529,
+          "sample_spells": 238.96875,
+          "final_spells": 205
+        }
+      ],
+      "macro_f1": 0.9498068482475176,
+      "spell_f1_mean": 0.7639097744360902,
+      "spell_f1_headline": 0.7769423558897244,
+      "accuracy": 0.9595379280628681,
+      "alive_dead_f1": 0.9951559132853223,
+      "n_pred_spells": 377,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 8.638620689655172,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "clean",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9820658251507844,
+          "expected_final": 0.9821056909645707,
+          "sample_spells": 170.3125,
+          "final_spells": 169
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9862582754847937,
+          "expected_final": 0.9864720997043275,
+          "sample_spells": 207.15625,
+          "final_spells": 204
+        }
+      ],
+      "macro_f1": 0.9498481561238771,
+      "spell_f1_mean": 0.7642317380352645,
+      "spell_f1_headline": 0.7783375314861462,
+      "accuracy": 0.9595516069242396,
+      "alive_dead_f1": 0.9951060158547892,
+      "n_pred_spells": 373,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 8.72847184986595,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "clean",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9935910209841738,
+          "expected_final": 0.9935910209841738,
+          "sample_spells": 167.25,
+          "final_spells": 166
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9963767419935016,
+          "expected_final": 0.9965677165952678,
+          "sample_spells": 203.875,
+          "final_spells": 204
+        }
+      ],
+      "macro_f1": 0.9499390387995766,
+      "spell_f1_mean": 0.766118836915297,
+      "spell_f1_headline": 0.7787610619469026,
+      "accuracy": 0.9596200012310975,
+      "alive_dead_f1": 0.9951180570481131,
+      "n_pred_spells": 370,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 8.798378378378379,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "clean",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9625693386858563,
+          "expected_final": 0.9683832762664372,
+          "sample_spells": 175.90625,
+          "final_spells": 169
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9699233957756979,
+          "expected_final": 0.9709544996053976,
+          "sample_spells": 212.9375,
+          "final_spells": 204
+        }
+      ],
+      "macro_f1": 0.9495070225202508,
+      "spell_f1_mean": 0.7622166246851385,
+      "spell_f1_headline": 0.7707808564231737,
+      "accuracy": 0.9592575114047507,
+      "alive_dead_f1": 0.9949519762214745,
+      "n_pred_spells": 373,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 8.726648793565683,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "clean",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9935910209841738,
+          "expected_final": 0.9955914837469988,
+          "sample_spells": 167.25,
+          "final_spells": 167
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9963767419935016,
+          "expected_final": 0.9972111000524995,
+          "sample_spells": 203.875,
+          "final_spells": 204
+        }
+      ],
+      "macro_f1": 0.9499315381206204,
+      "spell_f1_mean": 0.7656565656565656,
+      "spell_f1_headline": 0.7752525252525252,
+      "accuracy": 0.9595994829390402,
+      "alive_dead_f1": 0.9950501737966272,
+      "n_pred_spells": 371,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 8.773477088948788,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "moderate",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9319660963008368,
+      "spell_f1_mean": 0.6998696219035202,
+      "spell_f1_headline": 0.6936114732724903,
+      "accuracy": 0.9439166683765243,
+      "alive_dead_f1": 0.9852920352892649,
+      "n_pred_spells": 346,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.360578034682081,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "moderate",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9226542209298789,
+          "expected_final": 0.9346672452308795,
+          "sample_spells": 182.625,
+          "final_spells": 164
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8974846487652659,
+          "expected_final": 0.9094759560087404,
+          "sample_spells": 224.03125,
+          "final_spells": 196
+        }
+      ],
+      "macro_f1": 0.9311381042800436,
+      "spell_f1_mean": 0.6934699103713188,
+      "spell_f1_headline": 0.6888604353393085,
+      "accuracy": 0.9432532436000027,
+      "alive_dead_f1": 0.9852293148863889,
+      "n_pred_spells": 360,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.002666666666666,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "moderate",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9863831908255412,
+          "expected_final": 0.9911489541873686,
+          "sample_spells": 162.5,
+          "final_spells": 162
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.981379737576703,
+          "expected_final": 0.981922025512131,
+          "sample_spells": 192.375,
+          "final_spells": 192
+        }
+      ],
+      "macro_f1": 0.9309182576674863,
+      "spell_f1_mean": 0.6895483870967741,
+      "spell_f1_headline": 0.6812903225806451,
+      "accuracy": 0.9430754184021722,
+      "alive_dead_f1": 0.9852139119729146,
+      "n_pred_spells": 354,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.151412429378531,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "moderate",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9963288235487935,
+          "expected_final": 0.9963288235487935,
+          "sample_spells": 159.9375,
+          "final_spells": 159
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9906145215713249,
+          "expected_final": 0.9906145215713249,
+          "sample_spells": 189.625,
+          "final_spells": 187
+        }
+      ],
+      "macro_f1": 0.9319660963008368,
+      "spell_f1_mean": 0.6998696219035202,
+      "spell_f1_headline": 0.6936114732724903,
+      "accuracy": 0.9439166683765243,
+      "alive_dead_f1": 0.9852920352892649,
+      "n_pred_spells": 346,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.360578034682081,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "moderate",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9744985594507495,
+          "expected_final": 0.9834055055440241,
+          "sample_spells": 166.03125,
+          "final_spells": 164
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9631055204398609,
+          "expected_final": 0.9690100226292397,
+          "sample_spells": 198.59375,
+          "final_spells": 193
+        }
+      ],
+      "macro_f1": 0.9314755352918279,
+      "spell_f1_mean": 0.6915167095115681,
+      "spell_f1_headline": 0.6889460154241646,
+      "accuracy": 0.9435268208274343,
+      "alive_dead_f1": 0.9852383531960996,
+      "n_pred_spells": 357,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.074285714285715,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "moderate",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9963288235487935,
+          "expected_final": 0.9963288235487935,
+          "sample_spells": 159.9375,
+          "final_spells": 159
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9906145215713249,
+          "expected_final": 0.9907024238387239,
+          "sample_spells": 189.625,
+          "final_spells": 188
+        }
+      ],
+      "macro_f1": 0.932061917226334,
+      "spell_f1_mean": 0.6979166666666666,
+      "spell_f1_headline": 0.6927083333333334,
+      "accuracy": 0.9439850626833822,
+      "alive_dead_f1": 0.9852234946435168,
+      "n_pred_spells": 347,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.33256484149856,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "stress",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9199417276254326,
+      "spell_f1_mean": 0.6519307589880161,
+      "spell_f1_headline": 0.6577896138482024,
+      "accuracy": 0.932152847596966,
+      "alive_dead_f1": 0.9796368645281616,
+      "n_pred_spells": 330,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 10.013454545454545,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "stress",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9149433587224366,
+          "expected_final": 0.9318306624150321,
+          "sample_spells": 175.71875,
+          "final_spells": 160
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9193948757135416,
+          "expected_final": 0.9202292894010374,
+          "sample_spells": 204.0625,
+          "final_spells": 179
+        }
+      ],
+      "macro_f1": 0.9207066650844115,
+      "spell_f1_mean": 0.6563157894736842,
+      "spell_f1_headline": 0.6605263157894737,
+      "accuracy": 0.9329120244030887,
+      "alive_dead_f1": 0.9801901115182703,
+      "n_pred_spells": 339,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.740294985250738,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "stress",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9750752150113564,
+          "expected_final": 0.9893532880509582,
+          "sample_spells": 158.03125,
+          "final_spells": 157
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9858084582265243,
+          "expected_final": 0.9867846714575564,
+          "sample_spells": 181.125,
+          "final_spells": 179
+        }
+      ],
+      "macro_f1": 0.9199634174014489,
+      "spell_f1_mean": 0.6525759577278731,
+      "spell_f1_headline": 0.655217965653897,
+      "accuracy": 0.9320844532901081,
+      "alive_dead_f1": 0.9796226783015649,
+      "n_pred_spells": 336,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.838571428571429,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "stress",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9821908333927194,
+          "expected_final": 0.9912779678804797,
+          "sample_spells": 156.34375,
+          "final_spells": 157
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9935248291279275,
+          "expected_final": 0.9935248291279275,
+          "sample_spells": 179.0,
+          "final_spells": 178
+        }
+      ],
+      "macro_f1": 0.920046698380562,
+      "spell_f1_mean": 0.6529100529100529,
+      "spell_f1_headline": 0.6560846560846562,
+      "accuracy": 0.932152847596966,
+      "alive_dead_f1": 0.9795955680696237,
+      "n_pred_spells": 335,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.865313432835821,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "stress",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9637533846494919,
+          "expected_final": 0.9809861351121477,
+          "sample_spells": 160.96875,
+          "final_spells": 157
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9710225067119174,
+          "expected_final": 0.9720598842407008,
+          "sample_spells": 185.6875,
+          "final_spells": 179
+        }
+      ],
+      "macro_f1": 0.9198534889211798,
+      "spell_f1_mean": 0.6525759577278731,
+      "spell_f1_headline": 0.655217965653897,
+      "accuracy": 0.9320023801218786,
+      "alive_dead_f1": 0.9796050186156762,
+      "n_pred_spells": 336,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.839166666666666,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "stress",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9821908333927194,
+          "expected_final": 0.9921741155168022,
+          "sample_spells": 156.34375,
+          "final_spells": 156
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9935248291279275,
+          "expected_final": 0.9939942853992771,
+          "sample_spells": 179.0,
+          "final_spells": 179
+        }
+      ],
+      "macro_f1": 0.9195978687380832,
+      "spell_f1_mean": 0.6507936507936508,
+      "spell_f1_headline": 0.6587301587301587,
+      "accuracy": 0.9317561606171902,
+      "alive_dead_f1": 0.9795025263760979,
+      "n_pred_spells": 335,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.86376119402985,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WOY",
+      "mode": "clean",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9430538210954248,
+      "spell_f1_mean": 0.7602771362586604,
+      "spell_f1_headline": 0.7852193995381062,
+      "accuracy": 0.9526505584554078,
+      "alive_dead_f1": 0.9934231580597336,
+      "n_pred_spells": 410,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.495317073170732,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "clean",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.8634765770889025,
+          "expected_final": 0.8701368373464035,
+          "sample_spells": 246.1875,
+          "final_spells": 200
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8798664558208913,
+          "expected_final": 0.8922892502016756,
+          "sample_spells": 268.15625,
+          "final_spells": 227
+        }
+      ],
+      "macro_f1": 0.9417720013990811,
+      "spell_f1_mean": 0.7524348810872027,
+      "spell_f1_headline": 0.7746319365798414,
+      "accuracy": 0.9515981927372734,
+      "alive_dead_f1": 0.9933856992680522,
+      "n_pred_spells": 427,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.200655737704918,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "clean",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9737266250889018,
+          "expected_final": 0.9776474280134532,
+          "sample_spells": 202.46875,
+          "final_spells": 199
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9733195424412215,
+          "expected_final": 0.9788224832952558,
+          "sample_spells": 225.40625,
+          "final_spells": 220
+        }
+      ],
+      "macro_f1": 0.9425946373328534,
+      "spell_f1_mean": 0.7552,
+      "spell_f1_headline": 0.7771428571428571,
+      "accuracy": 0.9522717067968793,
+      "alive_dead_f1": 0.9934043831465664,
+      "n_pred_spells": 419,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.336133651551313,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "clean",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.991133881137673,
+          "expected_final": 0.991133881137673,
+          "sample_spells": 196.78125,
+          "final_spells": 194
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9885069777561065,
+          "expected_final": 0.9922064533224504,
+          "sample_spells": 219.28125,
+          "final_spells": 220
+        }
+      ],
+      "macro_f1": 0.9423411225878905,
+      "spell_f1_mean": 0.7554022988505747,
+      "spell_f1_headline": 0.7793103448275863,
+      "accuracy": 0.9520682494247067,
+      "alive_dead_f1": 0.9933974647832136,
+      "n_pred_spells": 414,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.423864734299517,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "clean",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9522377952986794,
+          "expected_final": 0.9587433167162592,
+          "sample_spells": 210.0625,
+          "final_spells": 200
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9530239652130377,
+          "expected_final": 0.9617505492758699,
+          "sample_spells": 234.09375,
+          "final_spells": 224
+        }
+      ],
+      "macro_f1": 0.9416943653371841,
+      "spell_f1_mean": 0.7509090909090909,
+      "spell_f1_headline": 0.7749999999999999,
+      "accuracy": 0.9515350507941853,
+      "alive_dead_f1": 0.9933314610043956,
+      "n_pred_spells": 424,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.247264150943396,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "clean",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.991133881137673,
+          "expected_final": 0.9923677111353287,
+          "sample_spells": 196.78125,
+          "final_spells": 195
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9885069777561065,
+          "expected_final": 0.9923777541872241,
+          "sample_spells": 219.28125,
+          "final_spells": 220
+        }
+      ],
+      "macro_f1": 0.9423111767587947,
+      "spell_f1_mean": 0.7568312284730195,
+      "spell_f1_headline": 0.7807118254879449,
+      "accuracy": 0.9520612336532525,
+      "alive_dead_f1": 0.9934623448041643,
+      "n_pred_spells": 415,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.405012048192771,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "moderate",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9196655522659721,
+      "spell_f1_mean": 0.7005889281507656,
+      "spell_f1_headline": 0.7232037691401648,
+      "accuracy": 0.9311472189481955,
+      "alive_dead_f1": 0.982623624587051,
+      "n_pred_spells": 393,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.886615776081425,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "moderate",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.8625518984078948,
+          "expected_final": 0.8837270871402523,
+          "sample_spells": 230.28125,
+          "final_spells": 194
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8959032845100121,
+          "expected_final": 0.9096861915756533,
+          "sample_spells": 253.15625,
+          "final_spells": 219
+        }
+      ],
+      "macro_f1": 0.9197409275313051,
+      "spell_f1_mean": 0.6987341772151898,
+      "spell_f1_headline": 0.7226697353279632,
+      "accuracy": 0.9311402031767413,
+      "alive_dead_f1": 0.9823267790262172,
+      "n_pred_spells": 413,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.506634382566586,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "moderate",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9653035666047822,
+          "expected_final": 0.9791449146534309,
+          "sample_spells": 191.78125,
+          "final_spells": 187
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9796538693211346,
+          "expected_final": 0.9833930818832459,
+          "sample_spells": 217.375,
+          "final_spells": 216
+        }
+      ],
+      "macro_f1": 0.919804485586658,
+      "spell_f1_mean": 0.7022118742724097,
+      "spell_f1_headline": 0.7264260768335273,
+      "accuracy": 0.9312173766627379,
+      "alive_dead_f1": 0.9824148381306661,
+      "n_pred_spells": 403,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.690322580645161,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "moderate",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9838299260383037,
+          "expected_final": 0.9898065113434451,
+          "sample_spells": 186.3125,
+          "final_spells": 187
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9909642490948762,
+          "expected_final": 0.9909642490948762,
+          "sample_spells": 213.4375,
+          "final_spells": 211
+        }
+      ],
+      "macro_f1": 0.920484398946965,
+      "spell_f1_mean": 0.7035128805620608,
+      "spell_f1_headline": 0.7283372365339579,
+      "accuracy": 0.9318067014648931,
+      "alive_dead_f1": 0.9826441497974392,
+      "n_pred_spells": 398,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.788442211055276,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "moderate",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9420408404859084,
+          "expected_final": 0.95850320687602,
+          "sample_spells": 199.625,
+          "final_spells": 188
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9623677755254798,
+          "expected_final": 0.971581784572991,
+          "sample_spells": 224.09375,
+          "final_spells": 214
+        }
+      ],
+      "macro_f1": 0.9202405302565083,
+      "spell_f1_mean": 0.7067599067599067,
+      "spell_f1_headline": 0.7319347319347319,
+      "accuracy": 0.9315751810069035,
+      "alive_dead_f1": 0.9824534020108999,
+      "n_pred_spells": 402,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.7090547263681595,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "moderate",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9838299260383037,
+          "expected_final": 0.9899066886291803,
+          "sample_spells": 186.3125,
+          "final_spells": 187
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9909642490948762,
+          "expected_final": 0.9910524860173575,
+          "sample_spells": 213.4375,
+          "final_spells": 211
+        }
+      ],
+      "macro_f1": 0.920620373753398,
+      "spell_f1_mean": 0.7039812646370024,
+      "spell_f1_headline": 0.7283372365339579,
+      "accuracy": 0.9319189538081607,
+      "alive_dead_f1": 0.9826291110345141,
+      "n_pred_spells": 398,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.786633165829146,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "stress",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9086173689260447,
+      "spell_f1_mean": 0.6422330097087379,
+      "spell_f1_headline": 0.6601941747572816,
+      "accuracy": 0.9212058707975529,
+      "alive_dead_f1": 0.9783048998987303,
+      "n_pred_spells": 368,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 8.45195652173913,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "stress",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.8676119169303373,
+          "expected_final": 0.893972364547028,
+          "sample_spells": 218.28125,
+          "final_spells": 185
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8953255077880157,
+          "expected_final": 0.9110705092812543,
+          "sample_spells": 233.96875,
+          "final_spells": 207
+        }
+      ],
+      "macro_f1": 0.90928255114162,
+      "spell_f1_mean": 0.6556603773584906,
+      "spell_f1_headline": 0.6721698113207547,
+      "accuracy": 0.9216478643991693,
+      "alive_dead_f1": 0.9780350271561039,
+      "n_pred_spells": 392,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.941122448979591,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "stress",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9704294656796033,
+          "expected_final": 0.9789694781022018,
+          "sample_spells": 181.8125,
+          "final_spells": 178
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.97071831748919,
+          "expected_final": 0.9769800735881125,
+          "sample_spells": 203.65625,
+          "final_spells": 201
+        }
+      ],
+      "macro_f1": 0.9080561479996069,
+      "spell_f1_mean": 0.6447904191616767,
+      "spell_f1_headline": 0.665868263473054,
+      "accuracy": 0.920749845653028,
+      "alive_dead_f1": 0.9783201350123327,
+      "n_pred_spells": 379,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 8.208337730870712,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "stress",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9900735663183569,
+          "expected_final": 0.9900735663183569,
+          "sample_spells": 176.21875,
+          "final_spells": 174
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9892090646755061,
+          "expected_final": 0.9892090646755061,
+          "sample_spells": 197.34375,
+          "final_spells": 194
+        }
+      ],
+      "macro_f1": 0.9086173689260447,
+      "spell_f1_mean": 0.6422330097087379,
+      "spell_f1_headline": 0.6601941747572816,
+      "accuracy": 0.9212058707975529,
+      "alive_dead_f1": 0.9783048998987303,
+      "n_pred_spells": 368,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 8.45195652173913,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "stress",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9469558862576776,
+          "expected_final": 0.9687708278112049,
+          "sample_spells": 189.375,
+          "final_spells": 183
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9548704365981631,
+          "expected_final": 0.9702140650643745,
+          "sample_spells": 209.625,
+          "final_spells": 205
+        }
+      ],
+      "macro_f1": 0.9086878343003462,
+      "spell_f1_mean": 0.6507109004739338,
+      "spell_f1_headline": 0.6658767772511849,
+      "accuracy": 0.9212409496548241,
+      "alive_dead_f1": 0.9782900757413502,
+      "n_pred_spells": 388,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 8.019690721649484,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "stress",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9900735663183569,
+          "expected_final": 0.9910734774066301,
+          "sample_spells": 176.21875,
+          "final_spells": 174
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9892090646755061,
+          "expected_final": 0.9900583240511004,
+          "sample_spells": 197.34375,
+          "final_spells": 195
+        }
+      ],
+      "macro_f1": 0.9085318814925111,
+      "spell_f1_mean": 0.6433939393939394,
+      "spell_f1_headline": 0.6618181818181819,
+      "accuracy": 0.9211286973115563,
+      "alive_dead_f1": 0.9783278920483679,
+      "n_pred_spells": 369,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 8.431761517615177,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "clean",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.941927724929668,
+      "spell_f1_mean": 0.7114465408805031,
+      "spell_f1_headline": 0.7194968553459118,
+      "accuracy": 0.9477115458920229,
+      "alive_dead_f1": 0.9921062582718849,
+      "n_pred_spells": 394,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.618883248730963,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "clean",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.8921631047687528,
+          "expected_final": 0.9091804275341632,
+          "sample_spells": 234.0,
+          "final_spells": 204
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8761469199619605,
+          "expected_final": 0.8955400186682116,
+          "sample_spells": 249.59375,
+          "final_spells": 212
+        }
+      ],
+      "macro_f1": 0.9413134854145774,
+      "spell_f1_mean": 0.7064871481028152,
+      "spell_f1_headline": 0.7148102815177477,
+      "accuracy": 0.9471003547718571,
+      "alive_dead_f1": 0.9919369606181072,
+      "n_pred_spells": 416,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.167211538461538,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "clean",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9761461191467855,
+          "expected_final": 0.9838526697945857,
+          "sample_spells": 200.5625,
+          "final_spells": 200
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9679468758224619,
+          "expected_final": 0.9791527732901983,
+          "sample_spells": 211.125,
+          "final_spells": 206
+        }
+      ],
+      "macro_f1": 0.9409863160090172,
+      "spell_f1_mean": 0.7107806691449815,
+      "spell_f1_headline": 0.7162329615861215,
+      "accuracy": 0.9468614984720222,
+      "alive_dead_f1": 0.9920717442162724,
+      "n_pred_spells": 406,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.366108374384236,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "clean",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9919369310686594,
+          "expected_final": 0.9919369310686594,
+          "sample_spells": 195.9375,
+          "final_spells": 194
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9839977709423622,
+          "expected_final": 0.9873429580340767,
+          "sample_spells": 205.46875,
+          "final_spells": 206
+        }
+      ],
+      "macro_f1": 0.9412984612868973,
+      "spell_f1_mean": 0.7091136079900124,
+      "spell_f1_headline": 0.714107365792759,
+      "accuracy": 0.9471425058835927,
+      "alive_dead_f1": 0.9920890469635293,
+      "n_pred_spells": 400,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.4907,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "clean",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9567252221413364,
+          "expected_final": 0.9709165134939077,
+          "sample_spells": 207.34375,
+          "final_spells": 200
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9493528228362467,
+          "expected_final": 0.9685166107674938,
+          "sample_spells": 217.90625,
+          "final_spells": 210
+        }
+      ],
+      "macro_f1": 0.941436128319666,
+      "spell_f1_mean": 0.7087546239210851,
+      "spell_f1_headline": 0.7176325524044389,
+      "accuracy": 0.9472408584776424,
+      "alive_dead_f1": 0.9920423462967668,
+      "n_pred_spells": 410,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.284780487804879,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "clean",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 1.0,
+          "expected_map": 0.9919369310686594,
+          "expected_final": 0.9919698033733411,
+          "sample_spells": 195.9375,
+          "final_spells": 194
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9839977709423622,
+          "expected_final": 0.9909078181953903,
+          "sample_spells": 205.46875,
+          "final_spells": 205
+        }
+      ],
+      "macro_f1": 0.9413250374454426,
+      "spell_f1_mean": 0.708,
+      "spell_f1_headline": 0.7150000000000001,
+      "accuracy": 0.9471565562541712,
+      "alive_dead_f1": 0.9920593656945692,
+      "n_pred_spells": 399,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.511679197994987,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "moderate",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.915447621015999,
+      "spell_f1_mean": 0.6683608640406608,
+      "spell_f1_headline": 0.673443456162643,
+      "accuracy": 0.9215005795777864,
+      "alive_dead_f1": 0.9743101360328266,
+      "n_pred_spells": 386,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.886424870466321,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "moderate",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9115661856018625,
+          "expected_final": 0.9324816915653367,
+          "sample_spells": 217.0625,
+          "final_spells": 197
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8989562347008982,
+          "expected_final": 0.9045068251842561,
+          "sample_spells": 235.90625,
+          "final_spells": 203
+        }
+      ],
+      "macro_f1": 0.9150508879243381,
+      "spell_f1_mean": 0.6651685393258427,
+      "spell_f1_headline": 0.6716604244694132,
+      "accuracy": 0.921008816607538,
+      "alive_dead_f1": 0.9738243905880692,
+      "n_pred_spells": 400,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.573,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "moderate",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9786905874670395,
+          "expected_final": 0.9872642113296961,
+          "sample_spells": 193.25,
+          "final_spells": 192
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9865034497064102,
+          "expected_final": 0.9908448539782708,
+          "sample_spells": 202.34375,
+          "final_spells": 201
+        }
+      ],
+      "macro_f1": 0.9159273595574625,
+      "spell_f1_mean": 0.6664987405541561,
+      "spell_f1_headline": 0.672544080604534,
+      "accuracy": 0.9219080403245635,
+      "alive_dead_f1": 0.9743701282669269,
+      "n_pred_spells": 393,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.728956743002545,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "moderate",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9896524483306292,
+          "expected_final": 0.9922520880383484,
+          "sample_spells": 190.09375,
+          "final_spells": 192
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9923763038819366,
+          "expected_final": 0.9964526400395072,
+          "sample_spells": 200.875,
+          "final_spells": 201
+        }
+      ],
+      "macro_f1": 0.9159273595574625,
+      "spell_f1_mean": 0.6664987405541561,
+      "spell_f1_headline": 0.672544080604534,
+      "accuracy": 0.9219080403245635,
+      "alive_dead_f1": 0.9743701282669269,
+      "n_pred_spells": 393,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.728956743002545,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "moderate",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9630477301999475,
+          "expected_final": 0.9740312718196558,
+          "sample_spells": 198.03125,
+          "final_spells": 192
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9668804292015037,
+          "expected_final": 0.9725013710334931,
+          "sample_spells": 208.90625,
+          "final_spells": 201
+        }
+      ],
+      "macro_f1": 0.9161163269265119,
+      "spell_f1_mean": 0.6675062972292191,
+      "spell_f1_headline": 0.6801007556675063,
+      "accuracy": 0.9220696195862166,
+      "alive_dead_f1": 0.974352945325864,
+      "n_pred_spells": 393,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.729262086513994,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "moderate",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9896524483306292,
+          "expected_final": 0.9924157010522836,
+          "sample_spells": 190.09375,
+          "final_spells": 192
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9923763038819366,
+          "expected_final": 0.996701783588784,
+          "sample_spells": 200.875,
+          "final_spells": 201
+        }
+      ],
+      "macro_f1": 0.9161451075554581,
+      "spell_f1_mean": 0.6680100755667506,
+      "spell_f1_headline": 0.6775818639798489,
+      "accuracy": 0.9221047455126629,
+      "alive_dead_f1": 0.97442770978096,
+      "n_pred_spells": 393,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.728142493638677,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "stress",
+      "config": "frozen",
+      "report": [],
+      "macro_f1": 0.9163290442048262,
+      "spell_f1_mean": 0.6496042216358839,
+      "spell_f1_headline": 0.6596306068601583,
+      "accuracy": 0.9218167129158031,
+      "alive_dead_f1": 0.97541142077111,
+      "n_pred_spells": 357,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 9.673613445378152,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "stress",
+      "config": "cand_b3",
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9055890631669719,
+          "expected_final": 0.9319005309566917,
+          "sample_spells": 201.125,
+          "final_spells": 182
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.8884281880856484,
+          "expected_final": 0.9150422366811799,
+          "sample_spells": 225.71875,
+          "final_spells": 198
+        }
+      ],
+      "macro_f1": 0.9154565239240536,
+      "spell_f1_mean": 0.6483994878361076,
+      "spell_f1_headline": 0.6555697823303457,
+      "accuracy": 0.921008816607538,
+      "alive_dead_f1": 0.9753327791891544,
+      "n_pred_spells": 380,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 9.10336842105263,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "stress",
+      "config": "cand_b5",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9689136480037456,
+          "expected_final": 0.9846596861437804,
+          "sample_spells": 179.5625,
+          "final_spells": 178
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9667223102911064,
+          "expected_final": 0.9767758830749583,
+          "sample_spells": 195.53125,
+          "final_spells": 194
+        }
+      ],
+      "macro_f1": 0.9149782217743638,
+      "spell_f1_mean": 0.6499353169469599,
+      "spell_f1_headline": 0.6623544631306598,
+      "accuracy": 0.9206013558607609,
+      "alive_dead_f1": 0.975364440021076,
+      "n_pred_spells": 372,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 9.296559139784947,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "stress",
+      "config": "cand_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9802074970503307,
+          "expected_final": 0.9890183116269045,
+          "sample_spells": 176.125,
+          "final_spells": 178
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9863950847800549,
+          "expected_final": 0.9863950847800549,
+          "sample_spells": 189.25,
+          "final_spells": 186
+        }
+      ],
+      "macro_f1": 0.9151570764727971,
+      "spell_f1_mean": 0.6441830065359477,
+      "spell_f1_headline": 0.6535947712418301,
+      "accuracy": 0.9207769854929924,
+      "alive_dead_f1": 0.9753440064671459,
+      "n_pred_spells": 364,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 9.48978021978022,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "stress",
+      "config": "refine_b4",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.95443246614397,
+          "expected_final": 0.9745994387847293,
+          "sample_spells": 184.15625,
+          "final_spells": 178
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9517331227278802,
+          "expected_final": 0.9720393620202145,
+          "sample_spells": 200.875,
+          "final_spells": 196
+        }
+      ],
+      "macro_f1": 0.9151136704618749,
+      "spell_f1_mean": 0.6492903225806452,
+      "spell_f1_headline": 0.6658064516129032,
+      "accuracy": 0.9207207840106783,
+      "alive_dead_f1": 0.9753878578537556,
+      "n_pred_spells": 374,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 9.246844919786096,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "stress",
+      "config": "refine_b8",
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9802074970503307,
+          "expected_final": 0.9891242443938459,
+          "sample_spells": 176.125,
+          "final_spells": 178
+        },
+        {
+          "scale": 1.0,
+          "expected_map": 0.9863950847800549,
+          "expected_final": 0.9891129152562506,
+          "sample_spells": 189.25,
+          "final_spells": 187
+        }
+      ],
+      "macro_f1": 0.9152006097293203,
+      "spell_f1_mean": 0.6496083550913838,
+      "spell_f1_headline": 0.6657963446475197,
+      "accuracy": 0.9207910358635709,
+      "alive_dead_f1": 0.97517765813478,
+      "n_pred_spells": 365,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 9.462027397260274,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    }
+  ],
+  "summary": {
+    "frozen": {
+      "spell_f1_mean": 0.6757751482502583,
+      "worst_spell_f1": 0.5740956826137691,
+      "macro_f1": 0.9219784318951262,
+      "n_pred_spells": 365.44444444444446,
+      "by_game": {
+        "J03WMX": 0.6230240261148251,
+        "J03WN1": 0.6343302107811343,
+        "J03WOH": 0.7140030853322857,
+        "J03WOY": 0.7010330247060547,
+        "J03WPY": 0.7057900003815668,
+        "J03WQQ": 0.6764705421856826
+      },
+      "delta_vs_frozen": {
+        "J03WMX": 0.0,
+        "J03WN1": 0.0,
+        "J03WOH": 0.0,
+        "J03WOY": 0.0,
+        "J03WPY": 0.0,
+        "J03WQQ": 0.0
+      }
+    },
+    "cand_b3": {
+      "spell_f1_mean": 0.676893381790705,
+      "worst_spell_f1": 0.5772266065388952,
+      "macro_f1": 0.9219491286632694,
+      "n_pred_spells": 383.6111111111111,
+      "by_game": {
+        "J03WMX": 0.6287516845965074,
+        "J03WN1": 0.6404597851820689,
+        "J03WOH": 0.7119554592300735,
+        "J03WOY": 0.7022764785536276,
+        "J03WPY": 0.7045651580936978,
+        "J03WQQ": 0.6733517250882551
+      },
+      "delta_vs_frozen": {
+        "J03WMX": 0.0057276584816823295,
+        "J03WN1": 0.006129574400934645,
+        "J03WOH": -0.0020476261022122078,
+        "J03WOY": 0.0012434538475729617,
+        "J03WPY": -0.0012248422878690102,
+        "J03WQQ": -0.003118817097427451
+      }
+    },
+    "cand_b5": {
+      "spell_f1_mean": 0.6758373571766448,
+      "worst_spell_f1": 0.5785467128027681,
+      "macro_f1": 0.9219023519704691,
+      "n_pred_spells": 374.8333333333333,
+      "by_game": {
+        "J03WMX": 0.6275737499571377,
+        "J03WN1": 0.6345082088777555,
+        "J03WOH": 0.7143511499116107,
+        "J03WOY": 0.700734097811362,
+        "J03WPY": 0.7021186942866372,
+        "J03WQQ": 0.6757382422153659
+      },
+      "delta_vs_frozen": {
+        "J03WMX": 0.0045497238423125586,
+        "J03WN1": 0.00017799809662122357,
+        "J03WOH": 0.00034806457932501367,
+        "J03WOY": -0.00029892689469268596,
+        "J03WPY": -0.003671306094929605,
+        "J03WQQ": -0.0007322999703166522
+      }
+    },
+    "cand_b8": {
+      "spell_f1_mean": 0.6752859808535538,
+      "worst_spell_f1": 0.5758139534883722,
+      "macro_f1": 0.9218770547467001,
+      "n_pred_spells": 370.3333333333333,
+      "by_game": {
+        "J03WMX": 0.6266429251100413,
+        "J03WN1": 0.6343626777811718,
+        "J03WOH": 0.7107629302533228,
+        "J03WOY": 0.7003827297071245,
+        "J03WPY": 0.7062995039096234,
+        "J03WQQ": 0.6732651183600388
+      },
+      "delta_vs_frozen": {
+        "J03WMX": 0.0036188989952161688,
+        "J03WN1": 3.246700003756153e-05,
+        "J03WOH": -0.003240155078962914,
+        "J03WOY": -0.000650294998930212,
+        "J03WPY": 0.0005095035280565652,
+        "J03WQQ": -0.003205423825643816
+      }
+    },
+    "refine_b4": {
+      "spell_f1_mean": 0.6765139349031376,
+      "worst_spell_f1": 0.5851088201603666,
+      "macro_f1": 0.9219508662424738,
+      "n_pred_spells": 377.05555555555554,
+      "by_game": {
+        "J03WMX": 0.627612348258154,
+        "J03WN1": 0.638081802344097,
+        "J03WOH": 0.7133093142170882,
+        "J03WOY": 0.7027932993809771,
+        "J03WPY": 0.7021030973081932,
+        "J03WQQ": 0.6751837479103164
+      },
+      "delta_vs_frozen": {
+        "J03WMX": 0.004588322143328938,
+        "J03WN1": 0.003751591562962675,
+        "J03WOH": -0.0006937711151975279,
+        "J03WOY": 0.0017602746749224574,
+        "J03WPY": -0.003686903073373604,
+        "J03WQQ": -0.0012867942753661543
+      }
+    },
+    "refine_b8": {
+      "spell_f1_mean": 0.6753787526572248,
+      "worst_spell_f1": 0.5711627906976744,
+      "macro_f1": 0.9219380096744693,
+      "n_pred_spells": 370.27777777777777,
+      "by_game": {
+        "J03WMX": 0.6238805178952889,
+        "J03WN1": 0.6351578608474432,
+        "J03WOH": 0.7118368884409568,
+        "J03WOY": 0.7014021441679871,
+        "J03WPY": 0.704788961038961,
+        "J03WQQ": 0.6752061435527116
+      },
+      "delta_vs_frozen": {
+        "J03WMX": 0.000856491780463764,
+        "J03WN1": 0.0008276500663089159,
+        "J03WOH": -0.0021661968913289087,
+        "J03WOY": 0.0003691194619324101,
+        "J03WPY": -0.0010010393426057584,
+        "J03WQQ": -0.0012643986329710089
+      }
+    }
+  },
+  "decision": {
+    "chosen": "cand_b8",
+    "selection_gain": -0.00136532577545323,
+    "confirmation_deltas": {
+      "J03WOY": -0.000650294998930212,
+      "J03WQQ": -0.003205423825643816
+    },
+    "macro_ok": true,
+    "adopt": false
+  },
+  "challenge_labels_read": false
+}

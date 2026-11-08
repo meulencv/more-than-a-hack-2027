@@ -1,0 +1,3390 @@
+{
+  "rows": [
+    {
+      "game": "J03WMX",
+      "mode": "clean",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 14
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 89
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 123
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 86
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9427080106685463,
+      "spell_f1_mean": 0.6834821428571429,
+      "spell_f1_headline": 0.6964285714285714,
+      "accuracy": 0.9490295751779512,
+      "alive_dead_f1": 0.993632364226423,
+      "n_pred_spells": 385,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 8.866285714285715,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "clean",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 16
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 92
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 123
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 86
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 31,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9553399649534053,
+          "expected_final": 0.96245403061365,
+          "sample_spells": 180.65625,
+          "final_spells": 171
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9476188458942167,
+          "expected_final": 0.9591263427837229,
+          "sample_spells": 237.78125,
+          "final_spells": 224
+        }
+      ],
+      "macro_f1": 0.9423728210884028,
+      "spell_f1_mean": 0.6865342163355408,
+      "spell_f1_headline": 0.6997792494481235,
+      "accuracy": 0.9487418389087945,
+      "alive_dead_f1": 0.9936393772915226,
+      "n_pred_spells": 395,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 8.644962025316456,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "clean",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 17
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 92
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 124
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 85
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 52,
+      "report": [],
+      "macro_f1": 0.9429419208839418,
+      "spell_f1_mean": 0.685838779956427,
+      "spell_f1_headline": 0.6928104575163399,
+      "accuracy": 0.9492145484938377,
+      "alive_dead_f1": 0.9936225162072418,
+      "n_pred_spells": 407,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 8.391941031941032,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "clean",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 16
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 92
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 123
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 86
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 31,
+      "report": [],
+      "macro_f1": 0.9423728210884028,
+      "spell_f1_mean": 0.6865342163355408,
+      "spell_f1_headline": 0.6997792494481235,
+      "accuracy": 0.9487418389087945,
+      "alive_dead_f1": 0.9936393772915226,
+      "n_pred_spells": 395,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 8.644962025316456,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "moderate",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 10
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 66
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 119
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 80
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9196139611096558,
+      "spell_f1_mean": 0.6114942528735632,
+      "spell_f1_headline": 0.632183908045977,
+      "accuracy": 0.9266272513650345,
+      "alive_dead_f1": 0.9815798421799335,
+      "n_pred_spells": 359,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.493593314763231,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "moderate",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 9
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 67
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 120
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 81
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 78,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9678588100592016,
+          "expected_final": 0.9704752903533087,
+          "sample_spells": 172.5,
+          "final_spells": 164
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9590923090781436,
+          "expected_final": 0.9641129486929981,
+          "sample_spells": 209.15625,
+          "final_spells": 198
+        }
+      ],
+      "macro_f1": 0.9199635719437289,
+      "spell_f1_mean": 0.6176403207331042,
+      "spell_f1_headline": 0.6345933562428409,
+      "accuracy": 0.9269629436790507,
+      "alive_dead_f1": 0.9816232951413728,
+      "n_pred_spells": 362,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.411381215469612,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "moderate",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 10
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 70
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 123
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 80
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 112,
+      "report": [],
+      "macro_f1": 0.9198133249382742,
+      "spell_f1_mean": 0.6218714768883878,
+      "spell_f1_headline": 0.6381059751972943,
+      "accuracy": 0.9268396281351264,
+      "alive_dead_f1": 0.9816139396355621,
+      "n_pred_spells": 376,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.063297872340426,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "moderate",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 9
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 67
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 120
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 81
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 78,
+      "report": [],
+      "macro_f1": 0.9199635719437289,
+      "spell_f1_mean": 0.6176403207331042,
+      "spell_f1_headline": 0.6345933562428409,
+      "accuracy": 0.9269629436790507,
+      "alive_dead_f1": 0.9816232951413728,
+      "n_pred_spells": 362,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.411381215469612,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "stress",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 57
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 106
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 78
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9123672851613578,
+      "spell_f1_mean": 0.5740956826137691,
+      "spell_f1_headline": 0.5764294049008167,
+      "accuracy": 0.9194749498174245,
+      "alive_dead_f1": 0.9777155212498838,
+      "n_pred_spells": 346,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 10.020693641618498,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "stress",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 5
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 62
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 110
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 80
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 211,
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9549983699737299,
+          "expected_final": 0.9750533772301802,
+          "sample_spells": 164.84375,
+          "final_spells": 164
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9301726812613946,
+          "expected_final": 0.9437404107274476,
+          "sample_spells": 212.96875,
+          "final_spells": 199
+        }
+      ],
+      "macro_f1": 0.9127376165068549,
+      "spell_f1_mean": 0.5826086956521739,
+      "spell_f1_headline": 0.5881006864988558,
+      "accuracy": 0.9197078791781704,
+      "alive_dead_f1": 0.9773484227596909,
+      "n_pred_spells": 363,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.550633608815428,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "stress",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 5
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 65
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 109
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 79
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 309,
+      "report": [],
+      "macro_f1": 0.9125528408067402,
+      "spell_f1_mean": 0.5772266065388952,
+      "spell_f1_headline": 0.5817361894024804,
+      "accuracy": 0.9195297567258353,
+      "alive_dead_f1": 0.9773597846999807,
+      "n_pred_spells": 376,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.220212765957447,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WMX",
+      "mode": "stress",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 86,
+          "n_matched": 5
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 168,
+          "n_matched": 59
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 163,
+          "n_matched": 108
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 94,
+          "n_matched": 80
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 158,
+      "report": [],
+      "macro_f1": 0.9125677047366018,
+      "spell_f1_mean": 0.5785467128027681,
+      "spell_f1_headline": 0.5813148788927336,
+      "accuracy": 0.9195777127706948,
+      "alive_dead_f1": 0.9776116800539366,
+      "n_pred_spells": 356,
+      "n_gt_spells": 511,
+      "mean_spell_duration_s": 9.739887640449437,
+      "gt_mean_spell_duration_s": 6.682504892367906
+    },
+    {
+      "game": "J03WN1",
+      "mode": "clean",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 11
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 86
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 146
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 66
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9251515751459322,
+      "spell_f1_mean": 0.6929451287793953,
+      "spell_f1_headline": 0.6920492721164613,
+      "accuracy": 0.9432965294113491,
+      "alive_dead_f1": 0.989687997710075,
+      "n_pred_spells": 393,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.908091603053435,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "clean",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 11
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 87
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 147
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 66
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 26,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9625168426025837,
+          "expected_final": 0.9649337432455627,
+          "sample_spells": 191.1875,
+          "final_spells": 181
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9639321676304209,
+          "expected_final": 0.967159974015164,
+          "sample_spells": 226.28125,
+          "final_spells": 217
+        }
+      ],
+      "macro_f1": 0.9253034902470915,
+      "spell_f1_mean": 0.693095768374165,
+      "spell_f1_headline": 0.6926503340757239,
+      "accuracy": 0.9433742344289741,
+      "alive_dead_f1": 0.9895867732206151,
+      "n_pred_spells": 398,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.823316582914573,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "clean",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 12
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 89
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 147
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 69
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 56,
+      "report": [],
+      "macro_f1": 0.9256386103096884,
+      "spell_f1_mean": 0.6986784140969162,
+      "spell_f1_headline": 0.6982378854625552,
+      "accuracy": 0.9435790931118034,
+      "alive_dead_f1": 0.9894857327336362,
+      "n_pred_spells": 408,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.658235294117648,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "clean",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 11
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 87
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 147
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 66
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 26,
+      "report": [],
+      "macro_f1": 0.9253034902470915,
+      "spell_f1_mean": 0.693095768374165,
+      "spell_f1_headline": 0.6926503340757239,
+      "accuracy": 0.9433742344289741,
+      "alive_dead_f1": 0.9895867732206151,
+      "n_pred_spells": 398,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.823316582914573,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "moderate",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 3
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 64
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 134
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 56
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.8796237152813987,
+      "spell_f1_mean": 0.5949425287356321,
+      "spell_f1_headline": 0.5908045977011495,
+      "accuracy": 0.9035892654050197,
+      "alive_dead_f1": 0.9580736289852474,
+      "n_pred_spells": 370,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 7.073405405405406,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "moderate",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 5
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 71
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 140
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 56
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 397,
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9410369678969666,
+          "expected_final": 0.9611759427907092,
+          "sample_spells": 187.53125,
+          "final_spells": 185
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9501050362208918,
+          "expected_final": 0.9692420072515961,
+          "sample_spells": 215.75,
+          "final_spells": 211
+        }
+      ],
+      "macro_f1": 0.8809306888837457,
+      "spell_f1_mean": 0.6093750000000001,
+      "spell_f1_headline": 0.6071428571428572,
+      "accuracy": 0.9041473287134169,
+      "alive_dead_f1": 0.9564579951678174,
+      "n_pred_spells": 396,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.596969696969698,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "moderate",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 5
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 71
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 140
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 56
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 397,
+      "report": [],
+      "macro_f1": 0.8809306888837457,
+      "spell_f1_mean": 0.6093750000000001,
+      "spell_f1_headline": 0.6071428571428572,
+      "accuracy": 0.9041473287134169,
+      "alive_dead_f1": 0.9564579951678174,
+      "n_pred_spells": 396,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.596969696969698,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "moderate",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 4
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 67
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 136
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 56
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 84,
+      "report": [],
+      "macro_f1": 0.8809063492379311,
+      "spell_f1_mean": 0.6015927189988624,
+      "spell_f1_headline": 0.5984072810011377,
+      "accuracy": 0.9045287897090301,
+      "alive_dead_f1": 0.9582735747579777,
+      "n_pred_spells": 379,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.912401055408971,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "stress",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 7
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 67
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 135
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 63
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.8878699042594264,
+      "spell_f1_mean": 0.6151029748283754,
+      "spell_f1_headline": 0.6224256292906178,
+      "accuracy": 0.9109783061718977,
+      "alive_dead_f1": 0.9675384490674214,
+      "n_pred_spells": 374,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 7.2002139037433155,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "stress",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 68
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 137
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 63
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 180,
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9749253498021684,
+          "expected_final": 0.9781056209223457,
+          "sample_spells": 186.625,
+          "final_spells": 183
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9410578527224782,
+          "expected_final": 0.9533670430912145,
+          "sample_spells": 214.0,
+          "final_spells": 201
+        }
+      ],
+      "macro_f1": 0.8866958417668257,
+      "spell_f1_mean": 0.6122171945701357,
+      "spell_f1_headline": 0.6199095022624435,
+      "accuracy": 0.9098621795551034,
+      "alive_dead_f1": 0.9665382036298791,
+      "n_pred_spells": 384,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 7.013541666666666,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "stress",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 70
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 139
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 63
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 226,
+      "report": [],
+      "macro_f1": 0.8877835704208058,
+      "spell_f1_mean": 0.6136618141097425,
+      "spell_f1_headline": 0.6226203807390818,
+      "accuracy": 0.9106321656388412,
+      "alive_dead_f1": 0.9665775302584956,
+      "n_pred_spells": 393,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 6.856997455470738,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WN1",
+      "mode": "stress",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 76,
+          "n_matched": 7
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 162,
+          "n_matched": 67
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 190,
+          "n_matched": 135
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 72,
+          "n_matched": 63
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 102,
+      "report": [],
+      "macro_f1": 0.8866278938090044,
+      "spell_f1_mean": 0.6083995459704881,
+      "spell_f1_headline": 0.6174801362088536,
+      "accuracy": 0.9099116282026829,
+      "alive_dead_f1": 0.9669733827418796,
+      "n_pred_spells": 381,
+      "n_gt_spells": 500,
+      "mean_spell_duration_s": 7.072125984251968,
+      "gt_mean_spell_duration_s": 5.47016
+    },
+    {
+      "game": "J03WOH",
+      "mode": "clean",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 10
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 74
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 127
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 82
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9479505990163282,
+      "spell_f1_mean": 0.7704095112285336,
+      "spell_f1_headline": 0.7741083223249671,
+      "accuracy": 0.9576209424694273,
+      "alive_dead_f1": 0.9924388786189835,
+      "n_pred_spells": 355,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.10692957746479,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "clean",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 9
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 76
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 127
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 82
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 28,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9588724612107,
+          "expected_final": 0.96267478928643,
+          "sample_spells": 211.375,
+          "final_spells": 200
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9483732950476398,
+          "expected_final": 0.958722832041411,
+          "sample_spells": 170.15625,
+          "final_spells": 161
+        }
+      ],
+      "macro_f1": 0.9479025167664328,
+      "spell_f1_mean": 0.7706422018348624,
+      "spell_f1_headline": 0.7706422018348624,
+      "accuracy": 0.9575845030390485,
+      "alive_dead_f1": 0.9924402445803223,
+      "n_pred_spells": 361,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 7.975069252077563,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "clean",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 11
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 77
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 129
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 82
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 65,
+      "report": [],
+      "macro_f1": 0.947106431518704,
+      "spell_f1_mean": 0.768041237113402,
+      "spell_f1_headline": 0.7706185567010309,
+      "accuracy": 0.9569723206086842,
+      "alive_dead_f1": 0.9925323885936578,
+      "n_pred_spells": 374,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 7.701604278074866,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "clean",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 9
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 76
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 127
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 82
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 28,
+      "report": [],
+      "macro_f1": 0.9479025167664328,
+      "spell_f1_mean": 0.7706422018348624,
+      "spell_f1_headline": 0.7706422018348624,
+      "accuracy": 0.9575845030390485,
+      "alive_dead_f1": 0.9924402445803223,
+      "n_pred_spells": 361,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 7.975069252077563,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "moderate",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 55
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 111
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 80
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9207201904094747,
+      "spell_f1_mean": 0.6953168044077135,
+      "spell_f1_headline": 0.694214876033058,
+      "accuracy": 0.9322590989257656,
+      "alive_dead_f1": 0.9751554092152618,
+      "n_pred_spells": 324,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.85283950617284,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "moderate",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 7
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 57
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 111
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 79
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 34,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9524064828664924,
+          "expected_final": 0.968669107368457,
+          "sample_spells": 186.1875,
+          "final_spells": 178
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9563251551472363,
+          "expected_final": 0.9644275691253563,
+          "sample_spells": 162.90625,
+          "final_spells": 155
+        }
+      ],
+      "macro_f1": 0.920640203840966,
+      "spell_f1_mean": 0.6927891156462586,
+      "spell_f1_headline": 0.691156462585034,
+      "accuracy": 0.9321789321789322,
+      "alive_dead_f1": 0.9750906522087123,
+      "n_pred_spells": 333,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.616936936936938,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "moderate",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 7
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 58
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 111
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 79
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 102,
+      "report": [],
+      "macro_f1": 0.9193267961157178,
+      "spell_f1_mean": 0.686406460296097,
+      "spell_f1_headline": 0.686406460296097,
+      "accuracy": 0.9311076129257947,
+      "alive_dead_f1": 0.974810504555547,
+      "n_pred_spells": 341,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.413607038123168,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "moderate",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 7
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 57
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 111
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 79
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 34,
+      "report": [],
+      "macro_f1": 0.920640203840966,
+      "spell_f1_mean": 0.6927891156462586,
+      "spell_f1_headline": 0.691156462585034,
+      "accuracy": 0.9321789321789322,
+      "alive_dead_f1": 0.9750906522087123,
+      "n_pred_spells": 333,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.616936936936938,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "stress",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 54
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 106
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 80
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9129941293122744,
+      "spell_f1_mean": 0.6762829403606101,
+      "spell_f1_headline": 0.6823855755894591,
+      "accuracy": 0.9246286822044398,
+      "alive_dead_f1": 0.9701439195040482,
+      "n_pred_spells": 319,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 9.22294670846395,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "stress",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 57
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 109
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 81
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 51,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9564185841747426,
+          "expected_final": 0.974677309395948,
+          "sample_spells": 185.125,
+          "final_spells": 180
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9393631078080353,
+          "expected_final": 0.9651765723234792,
+          "sample_spells": 161.4375,
+          "final_spells": 159
+        }
+      ],
+      "macro_f1": 0.9144252256714447,
+      "spell_f1_mean": 0.6796221322537113,
+      "spell_f1_headline": 0.6828609986504723,
+      "accuracy": 0.9257874560904864,
+      "alive_dead_f1": 0.9702270931391075,
+      "n_pred_spells": 339,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.683185840707964,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "stress",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 60
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 109
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 81
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 96,
+      "report": [],
+      "macro_f1": 0.914371737180843,
+      "spell_f1_mean": 0.683489932885906,
+      "spell_f1_headline": 0.687248322147651,
+      "accuracy": 0.925707289343653,
+      "alive_dead_f1": 0.9701141844263984,
+      "n_pred_spells": 343,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.584139941690962,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WOH",
+      "mode": "stress",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 46,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 111,
+          "n_matched": 57
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 158,
+          "n_matched": 109
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 87,
+          "n_matched": 81
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 51,
+      "report": [],
+      "macro_f1": 0.9144252256714447,
+      "spell_f1_mean": 0.6796221322537113,
+      "spell_f1_headline": 0.6828609986504723,
+      "accuracy": 0.9257874560904864,
+      "alive_dead_f1": 0.9702270931391075,
+      "n_pred_spells": 339,
+      "n_gt_spells": 402,
+      "mean_spell_duration_s": 8.683185840707964,
+      "gt_mean_spell_duration_s": 7.158706467661691
+    },
+    {
+      "game": "J03WPY",
+      "mode": "clean",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 12
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 73
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 127
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 96
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9496634473836715,
+      "spell_f1_mean": 0.7655696202531644,
+      "spell_f1_headline": 0.7797468354430379,
+      "accuracy": 0.9593943000184665,
+      "alive_dead_f1": 0.9950623955979169,
+      "n_pred_spells": 369,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 8.82081300813008,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "clean",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 12
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 74
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 127
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 96
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 21,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9625693386858563,
+          "expected_final": 0.9682039911549143,
+          "sample_spells": 175.90625,
+          "final_spells": 169
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9699233957756979,
+          "expected_final": 0.9704149244272289,
+          "sample_spells": 212.9375,
+          "final_spells": 204
+        }
+      ],
+      "macro_f1": 0.9498481561238771,
+      "spell_f1_mean": 0.7642317380352645,
+      "spell_f1_headline": 0.7783375314861462,
+      "accuracy": 0.9595516069242396,
+      "alive_dead_f1": 0.9951060158547892,
+      "n_pred_spells": 373,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 8.72847184986595,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "clean",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 13
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 75
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 126
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 96
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 47,
+      "report": [],
+      "macro_f1": 0.9498068482475176,
+      "spell_f1_mean": 0.7639097744360902,
+      "spell_f1_headline": 0.7769423558897244,
+      "accuracy": 0.9595379280628681,
+      "alive_dead_f1": 0.9951559132853223,
+      "n_pred_spells": 377,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 8.638620689655172,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "clean",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 12
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 74
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 127
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 96
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 21,
+      "report": [],
+      "macro_f1": 0.9498481561238771,
+      "spell_f1_mean": 0.7642317380352645,
+      "spell_f1_headline": 0.7783375314861462,
+      "accuracy": 0.9595516069242396,
+      "alive_dead_f1": 0.9951060158547892,
+      "n_pred_spells": 373,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 8.72847184986595,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "moderate",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 4
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 59
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 110
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 93
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9319660963008368,
+      "spell_f1_mean": 0.6998696219035202,
+      "spell_f1_headline": 0.6936114732724903,
+      "accuracy": 0.9439166683765243,
+      "alive_dead_f1": 0.9852920352892649,
+      "n_pred_spells": 346,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.360578034682081,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "moderate",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 3
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 60
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 111
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 92
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 42,
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9744985594507495,
+          "expected_final": 0.9831780157217211,
+          "sample_spells": 166.03125,
+          "final_spells": 164
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9631055204398609,
+          "expected_final": 0.9682535558175354,
+          "sample_spells": 198.59375,
+          "final_spells": 192
+        }
+      ],
+      "macro_f1": 0.9310637354787206,
+      "spell_f1_mean": 0.6913770913770914,
+      "spell_f1_headline": 0.6846846846846847,
+      "accuracy": 0.9431985281545164,
+      "alive_dead_f1": 0.9852083936056926,
+      "n_pred_spells": 356,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.100786516853933,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "moderate",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 4
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 62
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 111
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 92
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 71,
+      "report": [],
+      "macro_f1": 0.9311381042800436,
+      "spell_f1_mean": 0.6934699103713188,
+      "spell_f1_headline": 0.6888604353393085,
+      "accuracy": 0.9432532436000027,
+      "alive_dead_f1": 0.9852293148863889,
+      "n_pred_spells": 360,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.002666666666666,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "moderate",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 3
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 59
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 110
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 92
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 33,
+      "report": [],
+      "macro_f1": 0.9309182576674863,
+      "spell_f1_mean": 0.6895483870967741,
+      "spell_f1_headline": 0.6812903225806451,
+      "accuracy": 0.9430754184021722,
+      "alive_dead_f1": 0.9852139119729146,
+      "n_pred_spells": 354,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.151412429378531,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "stress",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 50
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 98
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 93
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9199417276254326,
+      "spell_f1_mean": 0.6519307589880161,
+      "spell_f1_headline": 0.6577896138482024,
+      "accuracy": 0.932152847596966,
+      "alive_dead_f1": 0.9796368645281616,
+      "n_pred_spells": 330,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 10.013454545454545,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "stress",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 51
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 98
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 93
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 45,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9637533846494919,
+          "expected_final": 0.9794910074768202,
+          "sample_spells": 160.96875,
+          "final_spells": 157
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9710225067119174,
+          "expected_final": 0.9720598842407008,
+          "sample_spells": 185.6875,
+          "final_spells": 179
+        }
+      ],
+      "macro_f1": 0.9199634174014489,
+      "spell_f1_mean": 0.6525759577278731,
+      "spell_f1_headline": 0.655217965653897,
+      "accuracy": 0.9320844532901081,
+      "alive_dead_f1": 0.9796226783015649,
+      "n_pred_spells": 336,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.838571428571429,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "stress",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 54
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 98
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 95
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 199,
+      "report": [],
+      "macro_f1": 0.9202368993669848,
+      "spell_f1_mean": 0.6567320261437908,
+      "spell_f1_headline": 0.661437908496732,
+      "accuracy": 0.9324879797005697,
+      "alive_dead_f1": 0.9801863096544492,
+      "n_pred_spells": 344,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.60093023255814,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WPY",
+      "mode": "stress",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 57,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 51
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 149,
+          "n_matched": 98
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 97,
+          "n_matched": 93
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 45,
+      "report": [],
+      "macro_f1": 0.9199634174014489,
+      "spell_f1_mean": 0.6525759577278731,
+      "spell_f1_headline": 0.655217965653897,
+      "accuracy": 0.9320844532901081,
+      "alive_dead_f1": 0.9796226783015649,
+      "n_pred_spells": 336,
+      "n_gt_spells": 421,
+      "mean_spell_duration_s": 9.838571428571429,
+      "gt_mean_spell_duration_s": 7.739667458432304
+    },
+    {
+      "game": "J03WOY",
+      "mode": "clean",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 16
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 95
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 143
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 86
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9430538210954248,
+      "spell_f1_mean": 0.7602771362586604,
+      "spell_f1_headline": 0.7852193995381062,
+      "accuracy": 0.9526505584554078,
+      "alive_dead_f1": 0.9934231580597336,
+      "n_pred_spells": 410,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.495317073170732,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "clean",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 16
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 96
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 144
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 86
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 42,
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9522377952986794,
+          "expected_final": 0.9582558247875197,
+          "sample_spells": 210.0625,
+          "final_spells": 200
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9530239652130377,
+          "expected_final": 0.9594937369346949,
+          "sample_spells": 234.09375,
+          "final_spells": 227
+        }
+      ],
+      "macro_f1": 0.9417720013990811,
+      "spell_f1_mean": 0.7524348810872027,
+      "spell_f1_headline": 0.7746319365798414,
+      "accuracy": 0.9515981927372734,
+      "alive_dead_f1": 0.9933856992680522,
+      "n_pred_spells": 427,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.200655737704918,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "clean",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 16
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 96
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 144
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 86
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 42,
+      "report": [],
+      "macro_f1": 0.9417720013990811,
+      "spell_f1_mean": 0.7524348810872027,
+      "spell_f1_headline": 0.7746319365798414,
+      "accuracy": 0.9515981927372734,
+      "alive_dead_f1": 0.9933856992680522,
+      "n_pred_spells": 427,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.200655737704918,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "clean",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 16
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 95
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 143
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 86
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 21,
+      "report": [],
+      "macro_f1": 0.9425946373328534,
+      "spell_f1_mean": 0.7552,
+      "spell_f1_headline": 0.7771428571428571,
+      "accuracy": 0.9522717067968793,
+      "alive_dead_f1": 0.9934043831465664,
+      "n_pred_spells": 419,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.336133651551313,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "moderate",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 10
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 79
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 133
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 85
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9196655522659721,
+      "spell_f1_mean": 0.7005889281507656,
+      "spell_f1_headline": 0.7232037691401648,
+      "accuracy": 0.9311472189481955,
+      "alive_dead_f1": 0.982623624587051,
+      "n_pred_spells": 393,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.886615776081425,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "moderate",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 10
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 81
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 136
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 85
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 62,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9420408404859084,
+          "expected_final": 0.9573958314549763,
+          "sample_spells": 199.625,
+          "final_spells": 187
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9623677755254798,
+          "expected_final": 0.9697223173714753,
+          "sample_spells": 224.09375,
+          "final_spells": 216
+        }
+      ],
+      "macro_f1": 0.919804485586658,
+      "spell_f1_mean": 0.7022118742724097,
+      "spell_f1_headline": 0.7264260768335273,
+      "accuracy": 0.9312173766627379,
+      "alive_dead_f1": 0.9824148381306661,
+      "n_pred_spells": 403,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.690322580645161,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "moderate",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 11
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 83
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 136
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 84
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 102,
+      "report": [],
+      "macro_f1": 0.9197409275313051,
+      "spell_f1_mean": 0.6987341772151898,
+      "spell_f1_headline": 0.7226697353279632,
+      "accuracy": 0.9311402031767413,
+      "alive_dead_f1": 0.9823267790262172,
+      "n_pred_spells": 413,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.506634382566586,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "moderate",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 10
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 81
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 136
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 85
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 62,
+      "report": [],
+      "macro_f1": 0.919804485586658,
+      "spell_f1_mean": 0.7022118742724097,
+      "spell_f1_headline": 0.7264260768335273,
+      "accuracy": 0.9312173766627379,
+      "alive_dead_f1": 0.9824148381306661,
+      "n_pred_spells": 403,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.690322580645161,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "stress",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 8
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 58
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 120
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 86
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9086173689260447,
+      "spell_f1_mean": 0.6422330097087379,
+      "spell_f1_headline": 0.6601941747572816,
+      "accuracy": 0.9212058707975529,
+      "alive_dead_f1": 0.9783048998987303,
+      "n_pred_spells": 368,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 8.45195652173913,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "stress",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 10
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 64
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 125
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 86
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 153,
+      "report": [
+        {
+          "scale": 0.6,
+          "expected_map": 0.9469558862576776,
+          "expected_final": 0.9630122910381598,
+          "sample_spells": 189.375,
+          "final_spells": 185
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9548704365981631,
+          "expected_final": 0.9641707506859274,
+          "sample_spells": 209.625,
+          "final_spells": 207
+        }
+      ],
+      "macro_f1": 0.90928255114162,
+      "spell_f1_mean": 0.6556603773584906,
+      "spell_f1_headline": 0.6721698113207547,
+      "accuracy": 0.9216478643991693,
+      "alive_dead_f1": 0.9780350271561039,
+      "n_pred_spells": 392,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.941122448979591,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "stress",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 10
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 64
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 125
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 86
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 153,
+      "report": [],
+      "macro_f1": 0.90928255114162,
+      "spell_f1_mean": 0.6556603773584906,
+      "spell_f1_headline": 0.6721698113207547,
+      "accuracy": 0.9216478643991693,
+      "alive_dead_f1": 0.9780350271561039,
+      "n_pred_spells": 392,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 7.941122448979591,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WOY",
+      "mode": "stress",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 41,
+          "n_matched": 10
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 156,
+          "n_matched": 59
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 170,
+          "n_matched": 123
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 89,
+          "n_matched": 86
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 88,
+      "report": [],
+      "macro_f1": 0.9080561479996069,
+      "spell_f1_mean": 0.6447904191616767,
+      "spell_f1_headline": 0.665868263473054,
+      "accuracy": 0.920749845653028,
+      "alive_dead_f1": 0.9783201350123327,
+      "n_pred_spells": 379,
+      "n_gt_spells": 456,
+      "mean_spell_duration_s": 8.208337730870712,
+      "gt_mean_spell_duration_s": 6.691754385964912
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "clean",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 4
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 67
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 110
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 105
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.941927724929668,
+      "spell_f1_mean": 0.7114465408805031,
+      "spell_f1_headline": 0.7194968553459118,
+      "accuracy": 0.9477115458920229,
+      "alive_dead_f1": 0.9921062582718849,
+      "n_pred_spells": 394,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.618883248730963,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "clean",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 71
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 111
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 104
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 40,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9567252221413364,
+          "expected_final": 0.9707932208042716,
+          "sample_spells": 207.34375,
+          "final_spells": 200
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9493528228362467,
+          "expected_final": 0.9644322483713006,
+          "sample_spells": 217.90625,
+          "final_spells": 212
+        }
+      ],
+      "macro_f1": 0.941418885461475,
+      "spell_f1_mean": 0.7114391143911438,
+      "spell_f1_headline": 0.7183271832718328,
+      "accuracy": 0.9472127577364853,
+      "alive_dead_f1": 0.9919896030245746,
+      "n_pred_spells": 412,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.245436893203884,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "clean",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 71
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 111
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 104
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 55,
+      "report": [],
+      "macro_f1": 0.9413134854145774,
+      "spell_f1_mean": 0.7064871481028152,
+      "spell_f1_headline": 0.7148102815177477,
+      "accuracy": 0.9471003547718571,
+      "alive_dead_f1": 0.9919369606181072,
+      "n_pred_spells": 416,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.167211538461538,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "clean",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 6
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 68
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 111
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 104
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 24,
+      "report": [],
+      "macro_f1": 0.9409863160090172,
+      "spell_f1_mean": 0.7107806691449815,
+      "spell_f1_headline": 0.7162329615861215,
+      "accuracy": 0.9468614984720222,
+      "alive_dead_f1": 0.9920717442162724,
+      "n_pred_spells": 406,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.366108374384236,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "moderate",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 2
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 56
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 105
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 102
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.915447621015999,
+      "spell_f1_mean": 0.6683608640406608,
+      "spell_f1_headline": 0.673443456162643,
+      "accuracy": 0.9215005795777864,
+      "alive_dead_f1": 0.9743101360328266,
+      "n_pred_spells": 386,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.886424870466321,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "moderate",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 2
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 57
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 106
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 102
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 68,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.9630477301999475,
+          "expected_final": 0.9735192482078185,
+          "sample_spells": 198.03125,
+          "final_spells": 192
+        },
+        {
+          "scale": 0.8,
+          "expected_map": 0.9668804292015037,
+          "expected_final": 0.9719219325707105,
+          "sample_spells": 208.90625,
+          "final_spells": 201
+        }
+      ],
+      "macro_f1": 0.9159273595574625,
+      "spell_f1_mean": 0.6664987405541561,
+      "spell_f1_headline": 0.672544080604534,
+      "accuracy": 0.9219080403245635,
+      "alive_dead_f1": 0.9743701282669269,
+      "n_pred_spells": 393,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.728956743002545,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "moderate",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 2
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 60
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 105
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 102
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 180,
+      "report": [],
+      "macro_f1": 0.9150508879243381,
+      "spell_f1_mean": 0.6651685393258427,
+      "spell_f1_headline": 0.6716604244694132,
+      "accuracy": 0.921008816607538,
+      "alive_dead_f1": 0.9738243905880692,
+      "n_pred_spells": 400,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.573,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "moderate",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 2
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 57
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 106
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 102
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 68,
+      "report": [],
+      "macro_f1": 0.9159273595574625,
+      "spell_f1_mean": 0.6664987405541561,
+      "spell_f1_headline": 0.672544080604534,
+      "accuracy": 0.9219080403245635,
+      "alive_dead_f1": 0.9743701282669269,
+      "n_pred_spells": 393,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 8.728956743002545,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "stress",
+      "config": "frozen",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 1
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 51
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 102
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 96
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 0,
+      "report": [],
+      "macro_f1": 0.9163290442048262,
+      "spell_f1_mean": 0.6496042216358839,
+      "spell_f1_headline": 0.6596306068601583,
+      "accuracy": 0.9218167129158031,
+      "alive_dead_f1": 0.97541142077111,
+      "n_pred_spells": 357,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 9.673613445378152,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "stress",
+      "config": "cand_b4",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 1
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 55
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 101
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 98
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 144,
+      "report": [
+        {
+          "scale": 0.8,
+          "expected_map": 0.95443246614397,
+          "expected_final": 0.9743239006401032,
+          "sample_spells": 184.15625,
+          "final_spells": 178
+        },
+        {
+          "scale": 0.6,
+          "expected_map": 0.9517331227278802,
+          "expected_final": 0.96899482648188,
+          "sample_spells": 200.875,
+          "final_spells": 198
+        }
+      ],
+      "macro_f1": 0.915338632004071,
+      "spell_f1_mean": 0.6471042471042472,
+      "spell_f1_headline": 0.6563706563706565,
+      "accuracy": 0.9209174891987776,
+      "alive_dead_f1": 0.9753364672548135,
+      "n_pred_spells": 376,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 9.198617021276595,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "stress",
+      "config": "fixed_0.6",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 1
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 56
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 101
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 98
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 163,
+      "report": [],
+      "macro_f1": 0.9154565239240536,
+      "spell_f1_mean": 0.6483994878361076,
+      "spell_f1_headline": 0.6555697823303457,
+      "accuracy": 0.921008816607538,
+      "alive_dead_f1": 0.9753327791891544,
+      "n_pred_spells": 380,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 9.10336842105263,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    },
+    {
+      "game": "J03WQQ",
+      "mode": "stress",
+      "config": "fixed_0.8",
+      "recall_by_duration_iou_0_5": [
+        {
+          "min_frames": 0,
+          "max_frames_exclusive": 25,
+          "n_gt": 37,
+          "n_matched": 1
+        },
+        {
+          "min_frames": 25,
+          "max_frames_exclusive": 75,
+          "n_gt": 118,
+          "n_matched": 56
+        },
+        {
+          "min_frames": 75,
+          "max_frames_exclusive": 250,
+          "n_gt": 136,
+          "n_matched": 101
+        },
+        {
+          "min_frames": 250,
+          "max_frames_exclusive": null,
+          "n_gt": 110,
+          "n_matched": 98
+        }
+      ],
+      "dead_frames_changed_vs_frozen": 129,
+      "report": [],
+      "macro_f1": 0.9149782217743638,
+      "spell_f1_mean": 0.6499353169469599,
+      "spell_f1_headline": 0.6623544631306598,
+      "accuracy": 0.9206013558607609,
+      "alive_dead_f1": 0.975364440021076,
+      "n_pred_spells": 372,
+      "n_gt_spells": 401,
+      "mean_spell_duration_s": 9.296559139784947,
+      "gt_mean_spell_duration_s": 8.414164588528678
+    }
+  ],
+  "summary": {
+    "frozen": {
+      "spell_f1_mean": 0.6757751482502583,
+      "worst_spell_f1": 0.5740956826137691,
+      "macro_f1": 0.9219784318951262,
+      "n_pred_spells": 365.44444444444446,
+      "by_game": {
+        "J03WMX": 0.6230240261148251,
+        "J03WN1": 0.6343302107811343,
+        "J03WOH": 0.7140030853322857,
+        "J03WOY": 0.7010330247060547,
+        "J03WPY": 0.7057900003815668,
+        "J03WQQ": 0.6764705421856826
+      },
+      "delta_vs_frozen": {
+        "J03WMX": 0.0,
+        "J03WN1": 0.0,
+        "J03WOH": 0.0,
+        "J03WOY": 0.0,
+        "J03WPY": 0.0,
+        "J03WQQ": 0.0
+      }
+    },
+    "cand_b4": {
+      "spell_f1_mean": 0.6771143704059905,
+      "worst_spell_f1": 0.5826086956521739,
+      "macro_f1": 0.921966177826106,
+      "n_pred_spells": 377.72222222222223,
+      "by_game": {
+        "J03WMX": 0.6289277442402729,
+        "J03WN1": 0.6382293209814337,
+        "J03WOH": 0.7143511499116107,
+        "J03WOY": 0.7034357109060343,
+        "J03WPY": 0.7027282623800764,
+        "J03WQQ": 0.6750140340165158
+      },
+      "delta_vs_frozen": {
+        "J03WMX": 0.0059037181254477655,
+        "J03WN1": 0.003899110200299427,
+        "J03WOH": 0.00034806457932501367,
+        "J03WOY": 0.002402686199979631,
+        "J03WPY": -0.003061738001490455,
+        "J03WQQ": -0.0014565081691667592
+      }
+    },
+    "fixed_0.6": {
+      "spell_f1_mean": 0.6769770024312568,
+      "worst_spell_f1": 0.5772266065388952,
+      "macro_f1": 0.921903563904888,
+      "n_pred_spells": 384.6111111111111,
+      "by_game": {
+        "J03WMX": 0.62831228779457,
+        "J03WN1": 0.640571742735553,
+        "J03WOH": 0.712645876765135,
+        "J03WOY": 0.7022764785536276,
+        "J03WPY": 0.7047039036503998,
+        "J03WQQ": 0.6733517250882551
+      },
+      "delta_vs_frozen": {
+        "J03WMX": 0.005288261679744943,
+        "J03WN1": 0.006241531954418678,
+        "J03WOH": -0.001357208567150714,
+        "J03WOY": 0.0012434538475729617,
+        "J03WPY": -0.0010860967311669967,
+        "J03WQQ": -0.003118817097427451
+      }
+    },
+    "fixed_0.8": {
+      "spell_f1_mean": 0.6758131019938809,
+      "worst_spell_f1": 0.5785467128027681,
+      "macro_f1": 0.9218770431552432,
+      "n_pred_spells": 374.3888888888889,
+      "by_game": {
+        "J03WMX": 0.6275737499571377,
+        "J03WN1": 0.6343626777811718,
+        "J03WOH": 0.7143511499116107,
+        "J03WOY": 0.700734097811362,
+        "J03WPY": 0.7021186942866372,
+        "J03WQQ": 0.6757382422153659
+      },
+      "delta_vs_frozen": {
+        "J03WMX": 0.0045497238423125586,
+        "J03WN1": 3.246700003756153e-05,
+        "J03WOH": 0.00034806457932501367,
+        "J03WOY": -0.00029892689469268596,
+        "J03WPY": -0.003671306094929605,
+        "J03WQQ": -0.0007322999703166522
+      }
+    }
+  },
+  "exploratory": true,
+  "challenge_labels_read": false
+}
