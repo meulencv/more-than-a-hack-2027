@@ -35,7 +35,7 @@ from pathlib import Path
 from types import SimpleNamespace
 import numpy as np
 from sklearn.ensemble import HistGradientBoostingClassifier
-from games import GAME, GAMES, half_video_blocks, source_frames
+from games import GAME, GAMES, asset_paths, half_video_blocks, source_frames
 from starter.load_homography import load as load_homography
 from starter.baseline import write_submission
 from starter.load_smart_tagging import KICKOFF_VIDEO_FRAMES
@@ -206,6 +206,25 @@ def before_published_kickoff(frames, blocks):
     return mask
 
 
+WHISTLE_REACH = 5 * FPS         # a decoded stoppage this soon after a referee whistle began at it
+
+
+def stoppages_from_whistles(codes, whistles):
+    """Frames between a referee whistle heard in play and the stoppage decoded right after it.
+
+    The whistle is when play stops; the networks only notice once the players have slowed
+    down. Nothing is created: a stoppage must already follow the whistle within WHISTLE_REACH.
+    """
+    mask = np.zeros(len(codes), dtype=bool)
+    for w in whistles:
+        if codes[w] == 2:
+            continue
+        ahead = np.flatnonzero(codes[w + 1:w + 1 + WHISTLE_REACH] == 2)
+        if len(ahead):
+            mask[w:w + 1 + ahead[0]] = True
+    return mask
+
+
 def spells(codes, blocks):
     count = 0
     for _, first, last in blocks:
@@ -221,6 +240,8 @@ def main():
     parser.add_argument("--alignment", type=Path, default=Path("data/work/v11/challenge_alignment.json"))
     parser.add_argument("--output", type=Path, default=Path("evaluation/results/v24_camera_fusion.csv"))
     parser.add_argument("--work-dir", type=Path, default=Path("data/work/v24"))
+    parser.add_argument("--whistles", action="store_true",
+                        help="start a stoppage at the referee whistle heard just before it (audio)")
     args = parser.parse_args()
     args.work_dir.mkdir(parents=True, exist_ok=True)
     blocks = list(half_video_blocks(GAME))
@@ -237,6 +258,18 @@ def main():
     waiting = before_published_kickoff(frames, blocks)
     fused[waiting] = [5e-5, 5e-5, 1 - 1e-4]
     codes = decode_fine(fused, edges, frames, match, "probability")
+    whistle_report = None
+    if args.whistles:
+        from .audio_whistle import tone_track, referee_whistles
+        tone, pitch = tone_track(asset_paths()["video"], len(codes))
+        whistles, template = referee_whistles(tone, pitch, blocks, sorted(KICKOFF_VIDEO_FRAMES.values()))
+        earlier = stoppages_from_whistles(codes, whistles)
+        fused[earlier[frames]] = [5e-5, 5e-5, 1 - 1e-4]
+        before = codes
+        codes = decode_fine(fused, edges, frames, match, "probability")
+        whistle_report = dict(referee_whistles=int(len(whistles)), heard_in_play=int((before[whistles] != 2).sum()),
+                              stoppages_moved_earlier=int((np.diff(earlier.astype(np.int8)) == 1).sum()),
+                              frames_changed=int((before != codes).sum()), template=template)
     labels = np.array(["H", "A", "D", "X"])[codes]
     args.output.parent.mkdir(parents=True, exist_ok=True)
     write_submission(str(args.output), labels)
@@ -252,6 +285,7 @@ def main():
         fused=dict(spells=spells(codes, blocks), dead_share=float((codes[graded] == 2).mean())),
         changed_frames=int((teacher[graded] != codes[graded]).sum()),
         frames_before_published_kickoff=int(waiting.sum()) * int(np.diff(frames[:2])[0]),
+        whistles=whistle_report,
         counts={k: int((labels == k).sum()) for k in "HADX"},
         challenge_labels_read=False)
     np.savez_compressed(args.work_dir / "fusion.npz", student=student, prior=prior, fused=fused, frames=frames)

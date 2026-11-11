@@ -138,3 +138,44 @@ el segundo tarda unos 12 segundos.
   incoherencias respecto a la vista de cámara.
 - No mejora la asignación de equipo: los toques sin control que la referencia no
   cuenta como cambio de posesión siguen produciendo cambios espurios.
+
+## Trabajo posterior (no adoptado / sin terminar)
+
+El candidato sigue siendo V24. Dos líneas quedaron abiertas:
+
+**Silbato del árbitro (audio), probado y no adoptado.** `possession/audio_whistle.py`
+detecta los pitidos del árbitro tomando como plantilla los dos que preceden a los
+saques iniciales publicados (tono ≈ 3,8–3,9 kHz con trino). Con
+`v24_camera_fusion --whistles` el inicio de una parada se adelanta al pitido que la
+precede. Encuentra 40 pitidos, 14 en juego, y adelanta 12 paradas. En la
+comprobación del tramo público acierta dos inicios de parada pero un pitido que
+suena durante juego vivo corta una posesión correcta, así que queda desactivado
+por defecto.
+
+**Balón desde el vídeo, implementado hasta el entrenamiento.** El tracking no
+tiene balón en el 41 % de los frames puntuables, siempre en tramos de 3 s o más,
+y en el vídeo táctico el balón suele verse. `possession/video_ball.py` aprende a
+detectarlo con las posiciones del propio tracking como pseudoetiquetas (hay que
+recolocarlas: el balón del tracking está desplazado ~11 px de mediana respecto
+al real), y `possession/v26_video_fill.py` vuelve a pasar las redes congeladas
+con el balón completado. Es la mejora con más recorrido: da balón a las redes en
+los tramos donde hoy deciden a ciegas y en las paradas, que es como fueron
+entrenadas. Falta entrenar, detectar, enlazar y medir. Para retomarlo:
+
+```bash
+.venv/bin/python -m possession.video_ball extract            # ~7 min (ya hecho: data/work/v26)
+.venv/bin/python -m possession.video_ball snap
+.venv/bin/python -m possession.video_ball train --epochs 8   # ~2 min por época en MPS
+.venv/bin/python -m possession.video_ball snap --round net
+.venv/bin/python -m possession.video_ball train --epochs 14
+.venv/bin/python -m possession.video_ball detect             # segunda pasada por el vídeo
+.venv/bin/python -m possession.video_ball link --dry         # mirar false_track_share antes de fijar --min-score
+.venv/bin/python -m possession.video_ball link
+.venv/bin/python -m possession.v26_video_fill --alignment data/work/v11/challenge_alignment.npz
+.venv/bin/python -m possession.v24_camera_fusion --probabilities data/work/v26/run/probabilities.npz \
+    --output evaluation/results/v26_video_ball.csv --work-dir data/work/v26/fusion
+```
+
+`link` incluye su propia comprobación sin etiquetas en minutos reservados: acuerdo
+con el balón del tracking y tasa de pistas inventadas al ocultar el balón real.
+Solo debe adoptarse si esa tasa es baja.
