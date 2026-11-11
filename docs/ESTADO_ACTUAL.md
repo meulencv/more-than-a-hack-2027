@@ -1,4 +1,24 @@
-# Estado actual: modelo final de cuatro redes y dos cámaras
+# Estado actual: cuatro redes, dos cámaras y vista del operador (V24)
+
+El candidato actual es `evaluation/results/v24_camera_fusion.csv`
+(SHA-256 `aac4079298817bc79b26de485a90103bb170ac1586ff25fbe6e0d60ffef08096`).
+Parte del conjunto congelado de cuatro redes y le añade una evidencia que este no
+veía: los cortes de la realización de TV y el movimiento de ambas cámaras, fusionados
+mediante un alumno auto-supervisado. Método, resultados y límites:
+[V24_FUSION_CAMARAS.md](V24_FUSION_CAMARAS.md).
+
+```bash
+OMP_NUM_THREADS=6 .venv/bin/python -m possession.competitive_bundle --work-dir data/work/final_run
+OMP_NUM_THREADS=6 .venv/bin/python -m possession.v24_camera_fusion \
+    --probabilities data/work/final_run/probabilities.npz --alignment data/work/final_run/alignment.json
+.venv/bin/python evaluation/validate_submission.py evaluation/results/v24_camera_fusion.csv
+```
+
+En esta ronda sí se abrió el tramo público, solo para comprobar el pipeline y
+entender la referencia; no se ajustó nada con él. Lo que sigue describe el
+conjunto congelado sobre el que se construye V24.
+
+## Conjunto congelado anterior (`final_candidate.csv`)
 
 El candidato actual es `evaluation/results/final_candidate.csv`.
 Configuración: [FINAL_SELECTION.json](FINAL_SELECTION.json).

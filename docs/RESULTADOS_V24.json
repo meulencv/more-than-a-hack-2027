@@ -1,0 +1,62 @@
+{
+  "csv": "evaluation/results/v24_camera_fusion.csv",
+  "csv_sha256": "aac4079298817bc79b26de485a90103bb170ac1586ff25fbe6e0d60ffef08096",
+  "rows": 199319,
+  "offsets_by_half": {
+    "1": -4014,
+    "2": -26920
+  },
+  "student": {
+    "max_iter": 200,
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 8,
+    "min_samples_leaf": 300,
+    "l2_regularization": 1.0,
+    "early_stopping": false,
+    "random_state": 0
+  },
+  "clip": [
+    0.02,
+    0.98
+  ],
+  "folds": 10,
+  "features": [
+    "b_valid",
+    "b_since_change",
+    "b_until_change",
+    "b_previous_run",
+    "b_next_run",
+    "b_reprojection",
+    "b_focus_x",
+    "b_focus_y",
+    "b_log_width",
+    "b_pan_2s",
+    "b_zoom_rate_2s",
+    "t_focus_x",
+    "t_focus_y",
+    "t_log_width",
+    "t_pan_05s",
+    "t_pan_2s",
+    "t_pan_6s",
+    "t_zoom_rate_2s",
+    "focus_gap"
+  ],
+  "student_auc_against_teacher": 0.9112117403619225,
+  "teacher": {
+    "spells": 409,
+    "dead_share": 0.4390426610095872
+  },
+  "fused": {
+    "spells": 379,
+    "dead_share": 0.44998331833032224
+  },
+  "changed_frames": 7872,
+  "frames_before_published_kickoff": 2935,
+  "counts": {
+    "H": 50519,
+    "A": 36855,
+    "D": 71483,
+    "X": 40462
+  },
+  "challenge_labels_read": false
+}

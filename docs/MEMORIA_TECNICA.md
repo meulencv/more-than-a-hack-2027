@@ -103,6 +103,32 @@ Viterbi usa costes H↔A de 4 y cambios con D de 2,5. La cabeza de fronteras del
 experto reduce esos costes cuando hay evidencia de cambio. No se buscó otra tabla
 de costes ni se impuso una duración mínima manual. Las partes nunca se conectan.
 
+## Vista del operador de cámara (V24)
+
+El balón parado es donde peor transfiere el conjunto: en el tracking automático
+una parada suele carecer de balón o mostrar uno que se lleva al punto de saque.
+Las grabaciones aportan una evidencia independiente: la realización abandona la
+cámara principal sobre todo con el balón parado y ambas cámaras se mueven de otro
+modo durante una parada.
+
+Con el desplazamiento por parte que da la alineación automática se proyecta toda
+la línea de tiempo broadcast sobre la táctica. Un gradient boosting con 19
+atributos exclusivamente de cámara (estado y cronología de los cortes, paneo,
+zoom y punto de enfoque de las dos cámaras) aprende parado/no parado de las
+decisiones del propio conjunto, con ajuste cruzado por tramos contiguos. Su
+salida se combina con la del conjunto como evidencia independiente,
+`logit P(D) = logit P_conjunto(D) + logit P_cámara(D) − logit prior(D)`, antes
+del mismo decodificador. Los frames puntuables previos al saque publicado de la
+segunda parte se fijan a D. No interviene ninguna etiqueta del partido del reto:
+las pseudoetiquetas las produce el algoritmo. Detalle, evidencias y límites en
+`docs/V24_FUSION_CAMARAS.md`.
+
+El archivo entregado es `evaluation/results/v24_camera_fusion.csv`, SHA-256
+`aac4079298817bc79b26de485a90103bb170ac1586ff25fbe6e0d60ffef08096`. Se obtiene
+ejecutando, tras el comando de la sección de reproducción,
+`python -m possession.v24_camera_fusion` sobre las probabilidades y la alineación
+que aquel deja en su directorio de trabajo.
+
 ## Evaluación y límites
 
 En tres particiones, cada una entrena con cuatro partidos y deja dos completamente
@@ -124,7 +150,9 @@ que las reales y sobreestimar el beneficio. La sincronización puede fallar con
 formaciones parecidas, pocas detecciones o cambios de plano. Los balones en vuelo
 y las proyecciones erróneas siguen siendo casos difíciles.
 
-No se abrió ni puntuó el ground truth público o privado del reto en estas rondas.
+Las rondas de entrenamiento y selección del conjunto no abrieron el ground truth
+del reto. La ronda V24 abrió el tramo público solo para comprobar el pipeline y
+entender la referencia, sin ajustar nada con él; el privado nunca se ha usado.
 No se conocen el spellF1 del nuevo candidato sobre el partido completo ni su posición
 en la clasificación. Las comprobaciones públicas anteriores son históricas.
 
