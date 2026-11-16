@@ -1,0 +1,453 @@
+{
+  "threshold": 0.4,
+  "min_weight": 3.0,
+  "detections": "detections_net3.npz",
+  "seeds": [
+    2601,
+    2602,
+    2603
+  ],
+  "hide_share_target": 0.4,
+  "summary": {
+    "G": {
+      "spell_f1": {
+        "mean": 0.8885468770039759,
+        "min": 0.8743362831858408,
+        "max": 0.9147826086956522
+      },
+      "macro_f1": {
+        "mean": 0.9496047441668961,
+        "min": 0.9379428178272659,
+        "max": 0.9683064436110502
+      },
+      "accuracy": {
+        "mean": 0.9511965811965811,
+        "min": 0.9405128205128205,
+        "max": 0.9693846153846154
+      },
+      "n_reference_spells": {
+        "mean": 60.0,
+        "min": 60.0,
+        "max": 60.0
+      },
+      "n_spells": {
+        "mean": 54.333333333333336,
+        "min": 53.0,
+        "max": 55.0
+      },
+      "agreement_heldout": {
+        "mean": 0.9511965811965811,
+        "min": 0.9405128205128205,
+        "max": 0.9693846153846154
+      },
+      "agreement_hidden": {
+        "mean": 0.8607753472115741,
+        "min": 0.8165544133286069,
+        "max": 0.9203012786827816
+      },
+      "abs_change_h_minus_a_hidden": {
+        "mean": 0.23363210757573447,
+        "min": 0.20509687066078186,
+        "max": 0.2479940950870514
+      },
+      "abs_change_dead_hidden": {
+        "mean": 0.13044549028078714,
+        "min": 0.09572085738182068,
+        "max": 0.15008190274238586
+      },
+      "agreement_hidden_video_filled": {
+        "mean": 0.8710514221024956,
+        "min": 0.8110724925521351,
+        "max": 0.9475409836065574
+      },
+      "agreement_hidden_left_empty": {
+        "mean": 0.8354778088099691,
+        "min": 0.8178264268960125,
+        "max": 0.8583715596330275
+      }
+    },
+    "F": {
+      "spell_f1": {
+        "mean": 0.8953066426750637,
+        "min": 0.8842105263157896,
+        "max": 0.9094017094017094
+      },
+      "macro_f1": {
+        "mean": 0.963949218142453,
+        "min": 0.9611842326807302,
+        "max": 0.9664017803559503
+      },
+      "accuracy": {
+        "mean": 0.9661538461538463,
+        "min": 0.9651794871794872,
+        "max": 0.9674871794871794
+      },
+      "n_reference_spells": {
+        "mean": 60.0,
+        "min": 60.0,
+        "max": 60.0
+      },
+      "n_spells": {
+        "mean": 56.0,
+        "min": 54.0,
+        "max": 57.0
+      },
+      "agreement_heldout": {
+        "mean": 0.9661538461538463,
+        "min": 0.9651794871794872,
+        "max": 0.9674871794871794
+      },
+      "agreement_hidden": {
+        "mean": 0.9069873256705634,
+        "min": 0.8938319744771358,
+        "max": 0.9190751445086706
+      },
+      "abs_change_h_minus_a_hidden": {
+        "mean": 0.1231625775496165,
+        "min": 0.12286026030778885,
+        "max": 0.12365954369306564
+      },
+      "abs_change_dead_hidden": {
+        "mean": 0.05027638375759125,
+        "min": 0.023124832659959793,
+        "max": 0.07083802670240402
+      },
+      "filled_share_of_hidden": {
+        "mean": 0.7204647933806809,
+        "min": 0.6945174286214749,
+        "max": 0.7529457214603053
+      },
+      "within_3m_of_tracking": {
+        "mean": 0.8663876365558026,
+        "min": 0.8387273724629731,
+        "max": 0.909305373525557
+      },
+      "far_over_5m_of_tracking": {
+        "mean": 0.05529083338179628,
+        "min": 0.038269986893840105,
+        "max": 0.06966538672517827
+      },
+      "median_error_m": {
+        "mean": 0.7481019385490861,
+        "min": 0.7301734071487112,
+        "max": 0.7610970815526568
+      },
+      "agreement_hidden_video_filled": {
+        "mean": 0.9338459178042052,
+        "min": 0.9168321747765641,
+        "max": 0.946532156368222
+      },
+      "agreement_hidden_left_empty": {
+        "mean": 0.836448436050352,
+        "min": 0.8162627052384676,
+        "max": 0.856651376146789
+      }
+    },
+    "F2": {
+      "spell_f1": {
+        "mean": 0.9077312740598744,
+        "min": 0.8758620689655171,
+        "max": 0.9310924369747898
+      },
+      "macro_f1": {
+        "mean": 0.9702977199537705,
+        "min": 0.9670582408747701,
+        "max": 0.9749340285703031
+      },
+      "accuracy": {
+        "mean": 0.9717606837606837,
+        "min": 0.9683076923076923,
+        "max": 0.9750769230769231
+      },
+      "n_reference_spells": {
+        "mean": 60.0,
+        "min": 60.0,
+        "max": 60.0
+      },
+      "n_spells": {
+        "mean": 57.333333333333336,
+        "min": 56.0,
+        "max": 59.0
+      },
+      "agreement_heldout": {
+        "mean": 0.9717606837606837,
+        "min": 0.9683076923076923,
+        "max": 0.9750769230769231
+      },
+      "agreement_hidden": {
+        "mean": 0.9191813841576408,
+        "min": 0.9157470660360834,
+        "max": 0.9256326057562295
+      },
+      "abs_change_h_minus_a_hidden": {
+        "mean": 0.1069099133213361,
+        "min": 0.10166469216346741,
+        "max": 0.11134675145149231
+      },
+      "abs_change_dead_hidden": {
+        "mean": 0.03328771082063516,
+        "min": 0.019619403406977654,
+        "max": 0.04452354460954666
+      },
+      "filled_share_of_hidden": {
+        "mean": 0.9157759460856418,
+        "min": 0.8734491315136477,
+        "max": 0.9491983774386711
+      },
+      "within_3m_of_tracking": {
+        "mean": 0.7802611693753226,
+        "min": 0.7549845837615622,
+        "max": 0.816396242527754
+      },
+      "far_over_5m_of_tracking": {
+        "mean": 0.11586449786513286,
+        "min": 0.09265584970111017,
+        "max": 0.136896197327852
+      },
+      "median_error_m": {
+        "mean": 0.9363559746825478,
+        "min": 0.8882404659162657,
+        "max": 0.9662142163638056
+      },
+      "agreement_hidden_video_filled": {
+        "mean": 0.9340091865129385,
+        "min": 0.9185700099304865,
+        "max": 0.9445145018915511
+      },
+      "agreement_hidden_left_empty": {
+        "mean": 0.8818571951087272,
+        "min": 0.8503440366972477,
+        "max": 0.9101610904584883
+      }
+    }
+  },
+  "share_of_loss_recovered": {
+    "F_spell_f1": {
+      "mean": 0.0168464463709621,
+      "min": -0.3587540279269597,
+      "max": 0.2662814493800411
+    },
+    "F2_spell_f1": {
+      "mean": 0.1062262956182242,
+      "min": -0.4567206192821977,
+      "max": 0.4419457924014671
+    },
+    "F_macro_f1": {
+      "mean": 0.23072670881717358,
+      "min": -0.060096230026241135,
+      "max": 0.37776024021626947
+    },
+    "F2_macro_f1": {
+      "mean": 0.34101903359280855,
+      "min": -0.039383486061391346,
+      "max": 0.5635769339140135
+    },
+    "F_agreement_hidden": {
+      "mean": 0.2702904744209094,
+      "min": -0.015384615384614634,
+      "max": 0.4212560386473431
+    },
+    "F2_agreement_hidden": {
+      "mean": 0.33486743731308954,
+      "min": -0.05714285714285714,
+      "max": 0.5429951690821256
+    },
+    "F_agreement_hidden_video_filled": {
+      "mean": 0.3718382964623294,
+      "min": -0.0192307692307685,
+      "max": 0.5749559082892415
+    },
+    "F2_agreement_hidden_video_filled": {
+      "mean": 0.36384759311463927,
+      "min": -0.05769230769230761,
+      "max": 0.5802469135802469
+    }
+  },
+  "per_seed": [
+    {
+      "seed": 2601,
+      "heldout_frames": 19500,
+      "heldout_frames_with_tracked_ball": 12808,
+      "hidden_frames": 5709,
+      "hidden_share_of_tracked": 0.40787008119925044,
+      "simulated_gaps": 17,
+      "simulated_median_length": 232.0,
+      "real_median_length": 268.0,
+      "variants": {
+        "G": {
+          "spell_f1": 0.9147826086956522,
+          "macro_f1": 0.9683064436110502,
+          "accuracy": 0.9693846153846154,
+          "n_reference_spells": 60,
+          "n_spells": 55,
+          "agreement_heldout": 0.9693846153846154,
+          "agreement_hidden": 0.9203012786827816,
+          "abs_change_h_minus_a_hidden": 0.20509687066078186,
+          "abs_change_dead_hidden": 0.09572085738182068,
+          "agreement_hidden_video_filled": 0.9475409836065574,
+          "agreement_hidden_left_empty": 0.8583715596330275
+        },
+        "F": {
+          "spell_f1": 0.8842105263157896,
+          "macro_f1": 0.9664017803559503,
+          "accuracy": 0.9674871794871794,
+          "n_reference_spells": 60,
+          "n_spells": 54,
+          "agreement_heldout": 0.9674871794871794,
+          "agreement_hidden": 0.9190751445086706,
+          "abs_change_h_minus_a_hidden": 0.12286026030778885,
+          "abs_change_dead_hidden": 0.023124832659959793,
+          "filled_share_of_hidden": 0.6945174286214749,
+          "within_3m_of_tracking": 0.8387273724629731,
+          "far_over_5m_of_tracking": 0.06966538672517827,
+          "median_error_m": 0.7610970815526568,
+          "agreement_hidden_video_filled": 0.946532156368222,
+          "agreement_hidden_left_empty": 0.856651376146789
+        },
+        "F2": {
+          "spell_f1": 0.8758620689655171,
+          "macro_f1": 0.9670582408747701,
+          "accuracy": 0.9683076923076923,
+          "n_reference_spells": 60,
+          "n_spells": 56,
+          "agreement_heldout": 0.9683076923076923,
+          "agreement_hidden": 0.9157470660360834,
+          "abs_change_h_minus_a_hidden": 0.10166469216346741,
+          "abs_change_dead_hidden": 0.019619403406977654,
+          "filled_share_of_hidden": 0.9246803293046068,
+          "within_3m_of_tracking": 0.7694026818366517,
+          "far_over_5m_of_tracking": 0.1180414465664364,
+          "median_error_m": 0.9546132417675723,
+          "agreement_hidden_video_filled": 0.9445145018915511,
+          "agreement_hidden_left_empty": 0.8503440366972477
+        }
+      },
+      "hidden_video_filled_frames": 3965,
+      "hidden_left_empty_frames": 1744
+    },
+    {
+      "seed": 2602,
+      "heldout_frames": 19500,
+      "heldout_frames_with_tracked_ball": 12808,
+      "hidden_frames": 5177,
+      "hidden_share_of_tracked": 0.40037476577139286,
+      "simulated_gaps": 15,
+      "simulated_median_length": 297.0,
+      "real_median_length": 268.0,
+      "variants": {
+        "G": {
+          "spell_f1": 0.8743362831858408,
+          "macro_f1": 0.9425649710623721,
+          "accuracy": 0.9436923076923077,
+          "n_reference_spells": 60,
+          "n_spells": 53,
+          "agreement_heldout": 0.9436923076923077,
+          "agreement_hidden": 0.845470349623334,
+          "abs_change_h_minus_a_hidden": 0.24780535697937012,
+          "abs_change_dead_hidden": 0.15008190274238586,
+          "agreement_hidden_video_filled": 0.8545407901487942,
+          "agreement_hidden_left_empty": 0.8178264268960125
+        },
+        "F": {
+          "spell_f1": 0.8923076923076924,
+          "macro_f1": 0.9642616413906788,
+          "accuracy": 0.9657948717948718,
+          "n_reference_spells": 60,
+          "n_spells": 57,
+          "agreement_heldout": 0.9657948717948718,
+          "agreement_hidden": 0.9080548580258837,
+          "abs_change_h_minus_a_hidden": 0.122967928647995,
+          "abs_change_dead_hidden": 0.05686629191040993,
+          "filled_share_of_hidden": 0.7529457214603053,
+          "within_3m_of_tracking": 0.8511301636788776,
+          "far_over_5m_of_tracking": 0.05793712652637049,
+          "median_error_m": 0.7301734071487112,
+          "agreement_hidden_video_filled": 0.9381734222678296,
+          "agreement_hidden_left_empty": 0.8162627052384676
+        },
+        "F2": {
+          "spell_f1": 0.9162393162393162,
+          "macro_f1": 0.9749340285703031,
+          "accuracy": 0.9750769230769231,
+          "n_reference_spells": 60,
+          "n_spells": 57,
+          "agreement_heldout": 0.9750769230769231,
+          "agreement_hidden": 0.9256326057562295,
+          "abs_change_h_minus_a_hidden": 0.11134675145149231,
+          "abs_change_dead_hidden": 0.035720184445381165,
+          "filled_share_of_hidden": 0.9491983774386711,
+          "within_3m_of_tracking": 0.7549845837615622,
+          "far_over_5m_of_tracking": 0.136896197327852,
+          "median_error_m": 0.9662142163638056,
+          "agreement_hidden_video_filled": 0.9389430477167778,
+          "agreement_hidden_left_empty": 0.8850664581704457
+        }
+      },
+      "hidden_video_filled_frames": 3898,
+      "hidden_left_empty_frames": 1279
+    },
+    {
+      "seed": 2603,
+      "heldout_frames": 19500,
+      "heldout_frames_with_tracked_ball": 12808,
+      "hidden_frames": 5642,
+      "hidden_share_of_tracked": 0.4095877576514678,
+      "simulated_gaps": 35,
+      "simulated_median_length": 232.0,
+      "real_median_length": 268.0,
+      "variants": {
+        "G": {
+          "spell_f1": 0.8765217391304347,
+          "macro_f1": 0.9379428178272659,
+          "accuracy": 0.9405128205128205,
+          "n_reference_spells": 60,
+          "n_spells": 55,
+          "agreement_heldout": 0.9405128205128205,
+          "agreement_hidden": 0.8165544133286069,
+          "abs_change_h_minus_a_hidden": 0.2479940950870514,
+          "abs_change_dead_hidden": 0.1455337107181549,
+          "agreement_hidden_video_filled": 0.8110724925521351,
+          "agreement_hidden_left_empty": 0.8302354399008675
+        },
+        "F": {
+          "spell_f1": 0.9094017094017094,
+          "macro_f1": 0.9611842326807302,
+          "accuracy": 0.9651794871794872,
+          "n_reference_spells": 60,
+          "n_spells": 57,
+          "agreement_heldout": 0.9651794871794872,
+          "agreement_hidden": 0.8938319744771358,
+          "abs_change_h_minus_a_hidden": 0.12365954369306564,
+          "abs_change_dead_hidden": 0.07083802670240402,
+          "filled_share_of_hidden": 0.7139312300602623,
+          "within_3m_of_tracking": 0.909305373525557,
+          "far_over_5m_of_tracking": 0.038269986893840105,
+          "median_error_m": 0.7530353269458905,
+          "agreement_hidden_video_filled": 0.9168321747765641,
+          "agreement_hidden_left_empty": 0.8364312267657993
+        },
+        "F2": {
+          "spell_f1": 0.9310924369747898,
+          "macro_f1": 0.9689008904162381,
+          "accuracy": 0.9718974358974359,
+          "n_reference_spells": 60,
+          "n_spells": 59,
+          "agreement_heldout": 0.9718974358974359,
+          "agreement_hidden": 0.9161644806806097,
+          "abs_change_h_minus_a_hidden": 0.10771829634904861,
+          "abs_change_dead_hidden": 0.04452354460954666,
+          "filled_share_of_hidden": 0.8734491315136477,
+          "within_3m_of_tracking": 0.816396242527754,
+          "far_over_5m_of_tracking": 0.09265584970111017,
+          "median_error_m": 0.8882404659162657,
+          "agreement_hidden_video_filled": 0.9185700099304865,
+          "agreement_hidden_left_empty": 0.9101610904584883
+        }
+      },
+      "hidden_video_filled_frames": 4028,
+      "hidden_left_empty_frames": 1614
+    }
+  ],
+  "pseudo_reference": "frozen run decoded labels (not the challenge ground truth)",
+  "ground_truth_read": false
+}

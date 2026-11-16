@@ -6,12 +6,13 @@ the ball looks like from the frames where the tracking DOES have it (its positio
 the image through the provided homography is the pseudo-label; no human label is involved),
 then looks for it where the tracking does not.
 
-    python -m possession.video_ball extract   # one pass over the video: training crops
-    python -m possession.video_ball snap      # pseudo-label -> the ball actually visible nearby
-    python -m possession.video_ball train     # small fully-convolutional heat-map network
-    python -m possession.video_ball snap --round net ; ... train   # one self-training round
-    python -m possession.video_ball detect    # second pass: candidates on gap + held-out frames
-    python -m possession.video_ball link      # temporal linking, self-check, filled ball track
+    python -m possession.video_ball extract   # one pass over the video: seed training crops
+    python -m possession.video_ball snap      # pseudo-label -> the bright blob actually visible nearby
+
+The detector that was finally used, its self-training rounds, the full-match detection pass,
+the tracker and the validation live in possession.v26_ball and possession.v26_track (this
+module keeps the seed extraction, the blob snap and the shared helpers; its own train /
+detect / link stages are the first, unfinished design and are kept only for reference).
 
 Held-out one-minute blocks (every eighth minute) never enter training; the detector and the
 linker are checked there against the tracking's own ball. No ground truth is read anywhere.

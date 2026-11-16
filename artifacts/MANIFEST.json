@@ -1,0 +1,341 @@
+{
+  "note": "Fitted objects needed to regenerate the submission and the four alternatives that were not submitted. None of them is frame-level data of the challenge match: network weights, gradient-boosting spell verifiers fitted on the open Metrica games, and two ensemble definitions.",
+  "submission": "evaluation/results/v29_final.csv",
+  "submission_variant": "final",
+  "submission_sha256": "19cf15870dec4d7ae88a507128e23a8d04dec3e8d9cc5cc3dbcbf748be10203c",
+  "variants": {
+    "final": {
+      "csv": "evaluation/results/v29_final.csv",
+      "sha256": "19cf15870dec4d7ae88a507128e23a8d04dec3e8d9cc5cc3dbcbf748be10203c",
+      "submission": true,
+      "networks": "frozen",
+      "verifier": "verifier/frozen_v27_w0.50.joblib",
+      "artifacts": [
+        "ball_detector/net3.pt",
+        "verifier/frozen_v27_w0.50.joblib",
+        "frozen/standard.pt",
+        "frozen/physics.pt",
+        "frozen/trajectory2027.pt",
+        "frozen/trajectory2028.pt",
+        "frozen/selection.json"
+      ],
+      "name_in_study_code": null,
+      "reference_csv": "evaluation/results/v29_final.csv",
+      "reference_csv_written_by": "scripts/reproduce_submission.py"
+    },
+    "prior70": {
+      "csv": "evaluation/results/v29_prior70.csv",
+      "sha256": "ed3e87d911e3070662b96550d3759a0801422790622c7a252998ab878dfaea7a",
+      "submission": false,
+      "networks": "frozen",
+      "verifier": "verifier/frozen_v27_w0.70.joblib",
+      "artifacts": [
+        "ball_detector/net3.pt",
+        "verifier/frozen_v27_w0.70.joblib",
+        "frozen/standard.pt",
+        "frozen/physics.pt",
+        "frozen/trajectory2027.pt",
+        "frozen/trajectory2028.pt",
+        "frozen/selection.json"
+      ],
+      "name_in_study_code": "hedge_frozen",
+      "reference_csv": "evaluation/results/v29_hedge_frozen.csv",
+      "reference_csv_written_by": "study run (possession.v29_final)"
+    },
+    "blend_hedge": {
+      "csv": "evaluation/results/v29_blend_hedge.csv",
+      "sha256": "2d1ac7a7063a6d83ca59e7b757f89b973a32ec0bcfbc1df9286181ca404b82ff",
+      "submission": false,
+      "networks": "blend",
+      "verifier": "verifier/blend_v27_w0.70.joblib",
+      "artifacts": [
+        "ball_detector/net3.pt",
+        "verifier/blend_v27_w0.70.joblib",
+        "frozen/standard.pt",
+        "frozen/physics.pt",
+        "frozen/trajectory2027.pt",
+        "frozen/trajectory2028.pt",
+        "frozen/selection.json",
+        "retrained/standard.pt",
+        "retrained/physics.pt",
+        "retrained/trajectory2027.pt",
+        "retrained/trajectory2028.pt",
+        "retrained/selection.json"
+      ],
+      "name_in_study_code": "hedge",
+      "reference_csv": "evaluation/results/v29_hedge.csv",
+      "reference_csv_written_by": "study run (possession.v29_final)"
+    },
+    "blend_bet": {
+      "csv": "evaluation/results/v29_blend_bet.csv",
+      "sha256": "8219bb6a2d4409eba1c0adfc81358d073f8b9e0b93583a76305948abdda00294",
+      "submission": false,
+      "networks": "blend",
+      "verifier": "verifier/blend_v27_w1.00.joblib",
+      "artifacts": [
+        "ball_detector/net3.pt",
+        "verifier/blend_v27_w1.00.joblib",
+        "frozen/standard.pt",
+        "frozen/physics.pt",
+        "frozen/trajectory2027.pt",
+        "frozen/trajectory2028.pt",
+        "frozen/selection.json",
+        "retrained/standard.pt",
+        "retrained/physics.pt",
+        "retrained/trajectory2027.pt",
+        "retrained/trajectory2028.pt",
+        "retrained/selection.json"
+      ],
+      "name_in_study_code": "bet",
+      "reference_csv": "evaluation/results/v29_bet.csv",
+      "reference_csv_written_by": "study run (possession.v29_final)"
+    },
+    "safe": {
+      "csv": "evaluation/results/v29_safe.csv",
+      "sha256": "1dafcd2e633e618812c516bcb66870767f0c7b7dc939e82f442538b6e1104f71",
+      "submission": false,
+      "networks": "frozen",
+      "verifier": "verifier/frozen_v27_robust.joblib",
+      "artifacts": [
+        "ball_detector/net3.pt",
+        "verifier/frozen_v27_robust.joblib",
+        "frozen/standard.pt",
+        "frozen/physics.pt",
+        "frozen/trajectory2027.pt",
+        "frozen/trajectory2028.pt",
+        "frozen/selection.json"
+      ],
+      "name_in_study_code": "safe",
+      "reference_csv": "evaluation/results/v29_safe.csv",
+      "reference_csv_written_by": "study run (possession.v29_final)"
+    }
+  },
+  "variants_note": "`artifacts` lists what each variant reads. The submission (`final`), `prior70` and `safe` do not read retrained/. `name_in_study_code` is the name of the same candidate in possession.v29_final / possession.v29_lab and in data/work/v29; the study run wrote no CSV for `final` (verifier target w0.50 of possession.v29_lab on the frozen base), so its reference is the CSV scripts/reproduce_submission.py wrote.",
+  "environment": {
+    "python": "3.12.15",
+    "platform": "macOS-27.0.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.15.0",
+    "numpy": "2.5.4",
+    "scikit_learn": "1.9.1",
+    "opencv": "5.0.0",
+    "mps": true
+  },
+  "files": [
+    {
+      "path": "ball_detector/net3.pt",
+      "bytes": 709357,
+      "sha256": "5af5251e2a0f679c37fb869aae4a773217d0010d3fea6ad43030576cf831b5b6",
+      "needed_by": [
+        "final",
+        "prior70",
+        "blend_hedge",
+        "blend_bet",
+        "safe"
+      ],
+      "copied_from": "data/work/v26/net3.pt",
+      "produced_by": "possession.video_ball extract/snap + possession.v26_ball train/mine (three self-training rounds on the tactical video; pseudo-labels = the tracking's own ball; no human label). REPRODUCE.md section 6.1"
+    },
+    {
+      "path": "verifier/blend_v27_w0.70.joblib",
+      "bytes": 163231,
+      "sha256": "638fce4aaf26658513d3fff0b302a347aeabc2cf78fd2acf6dc6621c5b12b672",
+      "needed_by": [
+        "blend_hedge"
+      ],
+      "copied_from": "data/work/v29/verifiers/blend_v27_w0.70.joblib",
+      "produced_by": "possession.v29_lab table + fit: spell verifier on the blend base, target 0.7*consistent + 0.3*alternative (variant blend_hedge). Section 6.4"
+    },
+    {
+      "path": "verifier/blend_v27_w1.00.joblib",
+      "bytes": 163231,
+      "sha256": "4ae53f80e0e0d3d064e8688a959051da335cab88684a36dbaadebbbd55408366",
+      "needed_by": [
+        "blend_bet"
+      ],
+      "copied_from": "data/work/v29/verifiers/blend_v27_w1.00.joblib",
+      "produced_by": "possession.v29_lab table + fit: spell verifier on the blend base, consistent target (variant blend_bet). Section 6.4"
+    },
+    {
+      "path": "verifier/frozen_v27_robust.joblib",
+      "bytes": 163433,
+      "sha256": "81862d3eb492ce73ec6de9d79f1befb1f8eef88e97489d19660ee0ddfd95bf92",
+      "needed_by": [
+        "safe"
+      ],
+      "copied_from": "data/work/v29/verifiers/frozen_v27_robust.joblib",
+      "produced_by": "possession.v29_lab table + fit: spell verifier on the frozen base, min(consistent, alternative) target (variant safe). Section 6.4"
+    },
+    {
+      "path": "verifier/frozen_v27_w0.50.joblib",
+      "bytes": 163440,
+      "sha256": "a4a2de98695f1f7be399b6ca9b687d3149e2844968b06620d7d4ba9d9bcf90d0",
+      "needed_by": [
+        "final"
+      ],
+      "copied_from": "data/work/v29/verifiers/frozen_v27_w0.50.joblib",
+      "produced_by": "possession.v29_lab table + fit: spell verifier on the frozen base, target 0.5*consistent + 0.5*alternative (variant final, the submission). Section 6.4"
+    },
+    {
+      "path": "verifier/frozen_v27_w0.70.joblib",
+      "bytes": 163440,
+      "sha256": "b30a870f2db556642386965a1d4e1c8dc38d92e04bf62b8a23e4e7d175450a4d",
+      "needed_by": [
+        "prior70"
+      ],
+      "copied_from": "data/work/v29/verifiers/frozen_v27_w0.70.joblib",
+      "produced_by": "possession.v29_lab table + fit: spell verifier on the frozen base, target 0.7*consistent + 0.3*alternative (variant prior70). Section 6.4"
+    },
+    {
+      "path": "frozen/standard.pt",
+      "bytes": 546953,
+      "sha256": "80b7b4bf6ddc6a3520e722ddaf84b8d5c91adbd43287d2b6865889174ea31f5a",
+      "needed_by": [
+        "final",
+        "prior70",
+        "blend_hedge",
+        "blend_bet",
+        "safe"
+      ],
+      "copied_from": "data/work/v13/final/standard.pt",
+      "produced_by": "scripts/prepare_final_training.py + possession.v13_cv --final-only: four networks on the six DFL/Sportec open matches with their native possession labels. Section 6.2"
+    },
+    {
+      "path": "frozen/physics.pt",
+      "bytes": 563603,
+      "sha256": "1187338e7fe6f1f48207e21eac465af10c1f70984d064e88774ea317ef043445",
+      "needed_by": [
+        "final",
+        "prior70",
+        "blend_hedge",
+        "blend_bet",
+        "safe"
+      ],
+      "copied_from": "data/work/v13/final/physics.pt",
+      "produced_by": "scripts/prepare_final_training.py + possession.v13_cv --final-only: four networks on the six DFL/Sportec open matches with their native possession labels. Section 6.2"
+    },
+    {
+      "path": "frozen/trajectory2027.pt",
+      "bytes": 601461,
+      "sha256": "980746a4026cbb15bc2a4eaea01142ffedc2efdf1c485fae4c694812ccfbcf69",
+      "needed_by": [
+        "final",
+        "prior70",
+        "blend_hedge",
+        "blend_bet",
+        "safe"
+      ],
+      "copied_from": "data/work/v13/final/trajectory2027.pt",
+      "produced_by": "scripts/prepare_final_training.py + possession.v13_cv --final-only: four networks on the six DFL/Sportec open matches with their native possession labels. Section 6.2"
+    },
+    {
+      "path": "frozen/trajectory2028.pt",
+      "bytes": 601461,
+      "sha256": "a14ed0b65052992a594954883a07ebff69bab865436e2be402a10d914b5a1379",
+      "needed_by": [
+        "final",
+        "prior70",
+        "blend_hedge",
+        "blend_bet",
+        "safe"
+      ],
+      "copied_from": "data/work/v13/final/trajectory2028.pt",
+      "produced_by": "scripts/prepare_final_training.py + possession.v13_cv --final-only: four networks on the six DFL/Sportec open matches with their native possession labels. Section 6.2"
+    },
+    {
+      "path": "frozen/selection.json",
+      "bytes": 4096,
+      "sha256": "33ecb5a94ac1e9a1d551ef81d4b3f0f01bb2d8bb74f7fe12f765af5553886776",
+      "needed_by": [
+        "final",
+        "prior70",
+        "blend_hedge",
+        "blend_bet",
+        "safe"
+      ],
+      "copied_from": "docs/FINAL_SELECTION.json",
+      "produced_by": "ensemble definition; only the checkpoint paths were rewritten to artifacts/"
+    },
+    {
+      "path": "retrained/standard.pt",
+      "bytes": 547145,
+      "sha256": "0320c8a0f8c09d3969a8fe3212bd7f7f063807145ec7d03e57ee903b0c354388",
+      "needed_by": [
+        "blend_hedge",
+        "blend_bet"
+      ],
+      "copied_from": "data/work/v28d/checkpoints/standard.pt",
+      "produced_by": "possession.v28d_train: the same four-network recipe on the same six DFL/Sportec matches, labels relabelled algorithmically to controlled possession (possession.v28d_relabel). Section 6.3"
+    },
+    {
+      "path": "retrained/physics.pt",
+      "bytes": 563795,
+      "sha256": "3d515a8ca336c96a130e6ec5407441776406c937c0ee61f8a393e8e88e5bfcc5",
+      "needed_by": [
+        "blend_hedge",
+        "blend_bet"
+      ],
+      "copied_from": "data/work/v28d/checkpoints/physics.pt",
+      "produced_by": "possession.v28d_train: the same four-network recipe on the same six DFL/Sportec matches, labels relabelled algorithmically to controlled possession (possession.v28d_relabel). Section 6.3"
+    },
+    {
+      "path": "retrained/trajectory2027.pt",
+      "bytes": 601717,
+      "sha256": "9826c7b3f054432682937cf306489ee8fdb2b86254f90f5e937b0538f2d759ed",
+      "needed_by": [
+        "blend_hedge",
+        "blend_bet"
+      ],
+      "copied_from": "data/work/v28d/checkpoints/trajectory2027.pt",
+      "produced_by": "possession.v28d_train: the same four-network recipe on the same six DFL/Sportec matches, labels relabelled algorithmically to controlled possession (possession.v28d_relabel). Section 6.3"
+    },
+    {
+      "path": "retrained/trajectory2028.pt",
+      "bytes": 601717,
+      "sha256": "9a2b9d30b10c6f99f09b3d36284ee3f6b434987b2eecc795953f5fdc53b50af7",
+      "needed_by": [
+        "blend_hedge",
+        "blend_bet"
+      ],
+      "copied_from": "data/work/v28d/checkpoints/trajectory2028.pt",
+      "produced_by": "possession.v28d_train: the same four-network recipe on the same six DFL/Sportec matches, labels relabelled algorithmically to controlled possession (possession.v28d_relabel). Section 6.3"
+    },
+    {
+      "path": "retrained/selection.json",
+      "bytes": 4232,
+      "sha256": "ca97cfbeab6e4aeed3f3a6545c81b698bf22d28037281bbd3080695c57b6f76c",
+      "needed_by": [
+        "blend_hedge",
+        "blend_bet"
+      ],
+      "copied_from": "data/work/v28d/selection.json",
+      "produced_by": "ensemble definition; only the checkpoint paths were rewritten to artifacts/"
+    }
+  ],
+  "inputs": {
+    "tactical/BAR-ATH_tactical.mp4": {
+      "bytes": 5222307334,
+      "sha256": "ff249f072aa7cd89a4a7f603a08f399aa0d34bd429982c847cd4a9373f645f14"
+    }
+  },
+  "inputs_note": "the tactical video; the six tracking and homography files are fingerprinted in frozen/selection.json",
+  "expected": {
+    "tracking_tactical": "80a9ca60da78cc35e51b2679457f937dba2e83afa2b66a9320458e39131a788f",
+    "tracking_broadcast": "65dd1387a66f9f449212b5e4c73ac4e4e80f9a5454115f4c6757d12a41fcfcb5",
+    "alignment_mapping": "c2431b24d40fcb268ce014f2b5de964dcc6939331ce9eeaf261b1b66ecc4ce31",
+    "alignment_arrays": "9b4e87c768652670c7c5c47df993be6444380b2ff32eb1162b99b41b1bc545dd",
+    "alignment_runs": "74e74af9554677292cd4e7642e2260c1fa02c008e2885b6c6413ce6d04235c69",
+    "detections": "e592dc74326b6cfbfe4de36c8539ea74f0fb07fdc5379e8de1db5a6fdf5406ac",
+    "video_ball": "bab723a44ea656ef6bc3de0d312d29fe7edfe1125419fd489c02602fa101a87a",
+    "frozen_probabilities": "603eed2e1850fc3ba90c63a5c41fc772a5feaed2d96ba203354de1a1b51860df",
+    "retrained_probabilities": "50fbe24a53d3884023ca30ceaca9f5e4e8d83056ccf7d36cd8bbcf3ad971177d",
+    "fused_frozen": "886b1797d52249ce1ebacb66b8773511938714ee9496e18abedb8c3f379ae6ac",
+    "fused_blend": "79c8d2c71a381c7db2e775cadcf5f306213c00a28d6cc76f8c0bc70cc857deef",
+    "csv_v29_final": "19cf15870dec4d7ae88a507128e23a8d04dec3e8d9cc5cc3dbcbf748be10203c",
+    "csv_v29_prior70": "ed3e87d911e3070662b96550d3759a0801422790622c7a252998ab878dfaea7a",
+    "csv_v29_blend_hedge": "2d1ac7a7063a6d83ca59e7b757f89b973a32ec0bcfbc1df9286181ca404b82ff",
+    "csv_v29_blend_bet": "8219bb6a2d4409eba1c0adfc81358d073f8b9e0b93583a76305948abdda00294",
+    "csv_v29_safe": "1dafcd2e633e618812c516bcb66870767f0c7b7dc939e82f442538b6e1104f71"
+  },
+  "expected_note": "content digests (scripts/reproduce_submission.py content_digest) of the intermediates of the study run (data/work/v29/run: every variant shares them up to the fused probabilities), and sha256 of the CSV files. They identify the step at which another run diverges. retrained_probabilities and fused_blend exist only for the blend variants."
+}

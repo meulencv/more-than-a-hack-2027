@@ -2,7 +2,7 @@
 
 Order of ball sources, none of them overwriting an earlier one:
 1. the tactical automatic tracking;
-2. the self-supervised video detector (possession.video_ball), tactical image -> pitch;
+2. the self-supervised video detector (possession.v26_ball / v26_track), tactical image -> pitch;
 3. the broadcast tracking through the automatic camera alignment (unchanged V11 logic).
 
 The networks, their weights and the decoder are untouched: they simply see a ball on more
@@ -24,7 +24,9 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--selection", type=Path, default=Path("docs/FINAL_SELECTION.json"))
     parser.add_argument("--video-ball", type=Path, default=Path("data/work/v26/video_ball.npz"))
-    parser.add_argument("--alignment", type=Path, help="alignment.npz of a previous run; recomputed if omitted")
+    parser.add_argument("--alignment", type=Path, default=Path("data/work/v11/challenge_alignment.npz"),
+                        help="alignment.npz of the frozen run")
+    parser.add_argument("--min-confidence", type=float, default=0.0)
     parser.add_argument("--device", choices=["cpu", "mps"], default="cpu")
     parser.add_argument("--work-dir", type=Path, default=Path("data/work/v26/run"))
     args = parser.parse_args()
@@ -34,9 +36,11 @@ def main():
     reference = challenge_match()
     other, valid = camera_match(reference, args.work_dir)
     alignment = align(reference, other, valid, args.work_dir, args.alignment)
-    video = np.load(args.video_ball)["ball"]
+    saved = np.load(args.video_ball)
+    video = saved["ball"] * np.array(reference.pitch, dtype=np.float32)      # stored normalised, used in metres
     ball = reference.ball.copy()
-    from_video = ~np.isfinite(ball[:, 0]) & np.isfinite(video[:, 0])
+    from_video = (~np.isfinite(ball[:, 0]) & np.isfinite(video[:, 0]) & (saved["source"] >= 2)
+                  & (saved["confidence"] >= args.min_confidence))
     ball[from_video] = video[from_video]
     match, from_broadcast = fused_ball(reference.copy_with(ball=ball), other, alignment)
     bundle = CompetitiveBundle(selection, args.device)

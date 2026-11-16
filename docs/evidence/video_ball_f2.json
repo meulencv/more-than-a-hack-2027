@@ -1,0 +1,402 @@
+{
+  "operating_point": {
+    "threshold": 0.4,
+    "min_weight": 3.0,
+    "heldout_frames_with_tracked_ball": 12808,
+    "video_reports_ball": 0.9214553404122423,
+    "within_1_5m_of_all": 0.5876795752654591,
+    "within_3m_of_all": 0.7211898813241724,
+    "within_1_5m_of_reported": 0.6377732587697,
+    "within_3m_of_reported": 0.78266395526182,
+    "far_over_5m_of_reported": 0.12370784612777495,
+    "far_airborne_of_reported": 0.10532113201152347,
+    "false_track_of_reported": 0.018386714116251483,
+    "flights": {
+      "corrected": 0,
+      "removed": 0
+    },
+    "far_over_5m_of_all": 0.11399125546533416,
+    "median_error_m": 0.9258503337189381,
+    "heldout_frames_without_tracked_ball": 6692,
+    "video_reports_ball_there": 0.32919904363419006
+  },
+  "without_flight_filter": {
+    "threshold": 0.4,
+    "min_weight": 3.0,
+    "heldout_frames_with_tracked_ball": 12808,
+    "video_reports_ball": 0.9201280449718926,
+    "within_1_5m_of_all": 0.5876795752654591,
+    "within_3m_of_all": 0.7211898813241724,
+    "within_1_5m_of_reported": 0.6386932541366144,
+    "within_3m_of_reported": 0.7837929571489182,
+    "far_over_5m_of_reported": 0.12252863809927875,
+    "far_airborne_of_reported": 0.1041154009333899,
+    "false_track_of_reported": 0.018413237165888843,
+    "flights": {
+      "corrected": 0,
+      "removed": 0
+    },
+    "far_over_5m_of_all": 0.1127420362273579,
+    "median_error_m": 0.9240451613498509,
+    "heldout_frames_without_tracked_ball": 6692,
+    "video_reports_ball_there": 0.32919904363419006
+  },
+  "sweep": [
+    {
+      "threshold": 0.2,
+      "min_weight": 1.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.9640068707058088,
+      "within_1_5m_of_all": 0.605793254216115,
+      "within_3m_of_all": 0.7521861336664585,
+      "within_1_5m_of_reported": 0.6284117599416862,
+      "within_3m_of_reported": 0.7802705110553171,
+      "far_over_5m_of_reported": 0.12561755892119544,
+      "far_airborne_of_reported": 0.10156313274479631,
+      "false_track_of_reported": 0.024054426176399125,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.12109618988132417,
+      "median_error_m": 0.9572412761287961,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.5724745965331739
+    },
+    {
+      "threshold": 0.2,
+      "min_weight": 3.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.9583073079325422,
+      "within_1_5m_of_all": 0.6036071205496565,
+      "within_3m_of_all": 0.7482823235477827,
+      "within_1_5m_of_reported": 0.6298680136874695,
+      "within_3m_of_reported": 0.780837542773342,
+      "far_over_5m_of_reported": 0.12571288903372985,
+      "far_airborne_of_reported": 0.10151539840312856,
+      "false_track_of_reported": 0.02419749063060127,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.12047158026233604,
+      "median_error_m": 0.9531937598783093,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.5334728033472803
+    },
+    {
+      "threshold": 0.2,
+      "min_weight": 6.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.945737039350406,
+      "within_1_5m_of_all": 0.6001717676452217,
+      "within_3m_of_all": 0.7381324172392255,
+      "within_1_5m_of_reported": 0.6346074465450343,
+      "within_3m_of_reported": 0.780483777759432,
+      "far_over_5m_of_reported": 0.12721869066292413,
+      "far_airborne_of_reported": 0.102864690828036,
+      "false_track_of_reported": 0.024353999834888135,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.120315427857589,
+      "median_error_m": 0.9363804081742175,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.49372384937238495
+    },
+    {
+      "threshold": 0.3,
+      "min_weight": 1.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.9489381636477202,
+      "within_1_5m_of_all": 0.5980637101811368,
+      "within_3m_of_all": 0.7410993129294191,
+      "within_1_5m_of_reported": 0.6302451867697877,
+      "within_3m_of_reported": 0.7809774559815699,
+      "far_over_5m_of_reported": 0.12407437880533158,
+      "far_airborne_of_reported": 0.10358729636333718,
+      "false_track_of_reported": 0.020487082441994407,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.11773891317926297,
+      "median_error_m": 0.9518833623935954,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.4720561864913329
+    },
+    {
+      "threshold": 0.3,
+      "min_weight": 3.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.9391786383510307,
+      "within_1_5m_of_all": 0.5954091193004373,
+      "within_3m_of_all": 0.7334478450968145,
+      "within_1_5m_of_reported": 0.6339679108820351,
+      "within_3m_of_reported": 0.7809460470529553,
+      "far_over_5m_of_reported": 0.12453238008146979,
+      "far_airborne_of_reported": 0.10399866988112062,
+      "false_track_of_reported": 0.020533710200349158,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.1169581511555278,
+      "median_error_m": 0.9381583055130676,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.42393903167961744
+    },
+    {
+      "threshold": 0.3,
+      "min_weight": 6.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.9317613991255466,
+      "within_1_5m_of_all": 0.5949406620861961,
+      "within_3m_of_all": 0.7297001873828857,
+      "within_1_5m_of_reported": 0.6385118149824032,
+      "within_3m_of_reported": 0.7831406066700184,
+      "far_over_5m_of_reported": 0.12401541813306519,
+      "far_airborne_of_reported": 0.1048265460030166,
+      "false_track_of_reported": 0.0191888721300486,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.1155527795128045,
+      "median_error_m": 0.9264391527519164,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.38702928870292885
+    },
+    {
+      "threshold": 0.4,
+      "min_weight": 1.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.9237195502810743,
+      "within_1_5m_of_all": 0.5881480324797002,
+      "within_3m_of_all": 0.7232198625858838,
+      "within_1_5m_of_reported": 0.6367170991463106,
+      "within_3m_of_reported": 0.78294311554391,
+      "far_over_5m_of_reported": 0.12340461499450596,
+      "far_airborne_of_reported": 0.10506297016313076,
+      "false_track_of_reported": 0.018341644831375202,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.11399125546533416,
+      "median_error_m": 0.9297121966408758,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.3577405857740586
+    },
+    {
+      "threshold": 0.4,
+      "min_weight": 3.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.9214553404122423,
+      "within_1_5m_of_all": 0.5876795752654591,
+      "within_3m_of_all": 0.7211898813241724,
+      "within_1_5m_of_reported": 0.6377732587697,
+      "within_3m_of_reported": 0.78266395526182,
+      "far_over_5m_of_reported": 0.12370784612777495,
+      "far_airborne_of_reported": 0.10532113201152347,
+      "false_track_of_reported": 0.018386714116251483,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.11399125546533416,
+      "median_error_m": 0.9258503337189381,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.32919904363419006
+    },
+    {
+      "threshold": 0.4,
+      "min_weight": 6.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.8994378513429107,
+      "within_1_5m_of_all": 0.5783104309806371,
+      "within_3m_of_all": 0.7083853841349157,
+      "within_1_5m_of_reported": 0.64296875,
+      "within_3m_of_reported": 0.7875868055555556,
+      "far_over_5m_of_reported": 0.12135416666666667,
+      "far_airborne_of_reported": 0.10529513888888889,
+      "false_track_of_reported": 0.016059027777777776,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.10915053091817614,
+      "median_error_m": 0.9131728885435838,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.293335325762104
+    },
+    {
+      "threshold": 0.5,
+      "min_weight": 1.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.8940505933791381,
+      "within_1_5m_of_all": 0.5719862585883823,
+      "within_3m_of_all": 0.7029200499687696,
+      "within_1_5m_of_reported": 0.6397694524495677,
+      "within_3m_of_reported": 0.7862195441446161,
+      "far_over_5m_of_reported": 0.12252205047594096,
+      "far_airborne_of_reported": 0.10627892760457602,
+      "false_track_of_reported": 0.016243122871364948,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.10954091193004373,
+      "median_error_m": 0.9178707125192463,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.24476987447698745
+    },
+    {
+      "threshold": 0.5,
+      "min_weight": 3.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.877420362273579,
+      "within_1_5m_of_all": 0.5644128669581512,
+      "within_3m_of_all": 0.6926920674578388,
+      "within_1_5m_of_reported": 0.6432639259654743,
+      "within_3m_of_reported": 0.7894643174942161,
+      "far_over_5m_of_reported": 0.12288663463249688,
+      "far_airborne_of_reported": 0.10633564691226197,
+      "false_track_of_reported": 0.016550987720234916,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.10782323547782637,
+      "median_error_m": 0.9131728885435838,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.22743574417214585
+    },
+    {
+      "threshold": 0.5,
+      "min_weight": 6.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.8514990630855716,
+      "within_1_5m_of_all": 0.5493441599000625,
+      "within_3m_of_all": 0.672158026233604,
+      "within_1_5m_of_reported": 0.6451494590133872,
+      "within_3m_of_reported": 0.7893819915642766,
+      "far_over_5m_of_reported": 0.12396845772969008,
+      "far_airborne_of_reported": 0.10691362552723271,
+      "false_track_of_reported": 0.017054832202457362,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.10555902560899438,
+      "median_error_m": 0.9041926420307631,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.19381350866706515
+    },
+    {
+      "threshold": 0.6,
+      "min_weight": 1.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.8025452841973766,
+      "within_1_5m_of_all": 0.5239693941286696,
+      "within_3m_of_all": 0.6343691442848219,
+      "within_1_5m_of_reported": 0.6528845218406459,
+      "within_3m_of_reported": 0.790446541492363,
+      "far_over_5m_of_reported": 0.1240393034341862,
+      "far_airborne_of_reported": 0.10691701527385933,
+      "false_track_of_reported": 0.01712228816032688,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.09954715802623361,
+      "median_error_m": 0.8696673602308916,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.1737895995218171
+    },
+    {
+      "threshold": 0.6,
+      "min_weight": 3.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.7564803247970019,
+      "within_1_5m_of_all": 0.5010930668332292,
+      "within_3m_of_all": 0.601577139287945,
+      "within_1_5m_of_reported": 0.6624006605428837,
+      "within_3m_of_reported": 0.7952317060584168,
+      "far_over_5m_of_reported": 0.12281969243471978,
+      "far_airborne_of_reported": 0.10816389720301373,
+      "false_track_of_reported": 0.014655795231706058,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.0929106808244847,
+      "median_error_m": 0.83532267494009,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.16377764494919306
+    },
+    {
+      "threshold": 0.6,
+      "min_weight": 6.0,
+      "heldout_frames_with_tracked_ball": 12808,
+      "video_reports_ball": 0.6785602748282323,
+      "within_1_5m_of_all": 0.4680668332292317,
+      "within_3m_of_all": 0.5517645221736415,
+      "within_1_5m_of_reported": 0.689794039811299,
+      "within_3m_of_reported": 0.8131400299160051,
+      "far_over_5m_of_reported": 0.10965366471062019,
+      "far_airborne_of_reported": 0.09791738580140374,
+      "false_track_of_reported": 0.01173627890921643,
+      "flights": {
+        "corrected": 0,
+        "removed": 0
+      },
+      "far_over_5m_of_all": 0.07440662086196127,
+      "median_error_m": 0.7782907624140855,
+      "heldout_frames_without_tracked_ball": 6692,
+      "video_reports_ball_there": 0.1419605499103407
+    }
+  ],
+  "max_far": 0.05,
+  "detections": "detections_net3.npz",
+  "flight_mode": "remove",
+  "coverage_graded_tracking": 0.593074274347369,
+  "coverage_graded_after": 0.7441283670219128,
+  "gap_frames_graded": 64643,
+  "gap_frames_filled": 23996,
+  "filled_outside_lines": 2933,
+  "flights_in_fill": {
+    "corrected": 0,
+    "removed": 0
+  },
+  "challenge_labels_read": false,
+  "flight_filter": false,
+  "operating_point_selected_with_flight_filter": {
+    "threshold": 0.4,
+    "min_weight": 3.0,
+    "heldout_frames_with_tracked_ball": 12808,
+    "video_reports_ball": 0.6771549031855091,
+    "within_1_5m_of_all": 0.5053091817613992,
+    "within_3m_of_all": 0.5971267957526546,
+    "within_1_5m_of_reported": 0.7462239132941312,
+    "within_3m_of_reported": 0.8818171336331143,
+    "far_over_5m_of_reported": 0.04911795226565202,
+    "far_airborne_of_reported": 0.027902686498328146,
+    "false_track_of_reported": 0.02121526576732388,
+    "flights": {
+      "corrected": 0,
+      "removed": 4175
+    },
+    "far_over_5m_of_all": 0.03326046221111805,
+    "median_error_m": 0.7268043410469268,
+    "heldout_frames_without_tracked_ball": 6692,
+    "video_reports_ball_there": 0.29423191870890614
+  },
+  "gap_split_by_current_candidate": {
+    "dead_frames": 55237,
+    "dead_filled": 0.36057352861306735,
+    "alive_frames": 9406,
+    "alive_filled": 0.43365936636189667
+  }
+}

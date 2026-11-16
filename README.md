@@ -1,3 +1,28 @@
+> **Team submission (this section was added by the participating team; everything below the line is
+> the organisers' original README, unchanged).**
+>
+> - **Install, run and regenerate the submitted CSV:** [REPRODUCE.md](REPRODUCE.md). One command,
+>   `.venv/bin/python scripts/reproduce_submission.py`, goes from the organisers' data bundle in
+>   `data/` to `evaluation/results/v29_final.csv` and checks its sha256. Pinned dependencies:
+>   [requirements-submission.lock.txt](requirements-submission.lock.txt). Fitted model files:
+>   [artifacts/](artifacts/MANIFEST.json).
+> - **Technical document** (approach, assets, training data, possession rules, limitations):
+>   [docs/TECHNICAL_REPORT.md](docs/TECHNICAL_REPORT.md).
+> - **Current state and history of the earlier rounds** (in Spanish):
+>   [docs/ESTADO_ACTUAL.md](docs/ESTADO_ACTUAL.md) and the other files in [docs/](docs/).
+> - **Evidence files** behind the tables of the technical document (aggregates only, no
+>   frame-level data of the match): [docs/evidence/](docs/evidence/).
+>
+> The team added no match data and no submission CSV to this repository (the CSV is sent through
+> the form). The pipeline does not read the labels of the challenge match, public or private. The
+> spell verifier is fitted only on the three Metrica open games, with an equal prior (0.5 / 0.5)
+> between the two readings of the written possession definition. How the public 5-minute window
+> was used during development (scored as a pipeline check, inspected, and an earlier 0.7 prior
+> that was informed by it and was replaced for that reason) is stated in section 6 of the
+> technical document.
+
+---
+
 # More than a Hack 2027 — Phase 1: Ball Possession
 
 **Organised by [Metrica Sports](https://metrica-sports.com), [FC Barcelona](https://www.fcbarcelona.com)

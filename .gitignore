@@ -75,3 +75,13 @@ env/
 
 # CatBoost model weights remain local
 *.cbm
+
+# -- submission artifacts ------------------------------------------------------------------------
+# artifacts/ holds the fitted objects that scripts/reproduce_submission.py needs to regenerate the
+# submission: network weights (*.pt), the spell verifier (*.joblib) and artifacts/MANIFEST.json.
+# None of them is frame-level data of the match. Everything else stays ignored as above: data/,
+# evaluation/results/*.csv and model files anywhere outside this folder.
+# Only the two model-file types are re-included (the .json files were never ignored), so a video,
+# a .DS_Store or a __pycache__ that lands in artifacts/ stays out of git.
+!artifacts/**/*.pt
+!artifacts/**/*.joblib
