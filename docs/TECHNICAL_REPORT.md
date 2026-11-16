@@ -1,4 +1,4 @@
-# TEAM_NAME: possession labels for FC Barcelona vs Athletic Club
+# CabraLabs: possession labels for FC Barcelona vs Athletic Club
 
 More Than A Hack 2027, Metrica Sports challenge. Technical document of the submitted possession file. 16 November 2026.
 
