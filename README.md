@@ -1,6 +1,9 @@
 > **Team submission (this section was added by the participating team; everything below the line is
 > the organisers' original README, unchanged).**
 >
+> - **Team:** CabraLabs. Files sent through the form: `CabraLabs.csv` (the same bytes as
+>   `evaluation/results/v29_kickoff.csv`, sha256 `c1ccf161b837790d50b0b3848cf9ee3a4a37a0b3919c725132dd322fba0aa35e`)
+>   and `CabraLabs.pdf` (built from [docs/TECHNICAL_REPORT.md](docs/TECHNICAL_REPORT.md)).
 > - **Install, run and regenerate the submitted CSV:** [REPRODUCE.md](REPRODUCE.md). One command,
 >   `.venv/bin/python scripts/reproduce_submission.py`, goes from the organisers' data bundle in
 >   `data/` to `evaluation/results/v29_kickoff.csv` and checks its sha256. Pinned dependencies:
