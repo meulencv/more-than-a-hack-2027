@@ -1,7 +1,7 @@
 # Reproducing the submission
 
-The submission is `evaluation/results/v29_final.csv`
-(sha256 `19cf15870dec4d7ae88a507128e23a8d04dec3e8d9cc5cc3dbcbf748be10203c`, 199,319 rows).
+The submission is `evaluation/results/v29_kickoff.csv`
+(sha256 `c1ccf161b837790d50b0b3848cf9ee3a4a37a0b3919c725132dd322fba0aa35e`, 199,319 rows).
 
 One command regenerates it from the organisers' data bundle and the fitted objects in
 `artifacts/`:
@@ -10,7 +10,7 @@ One command regenerates it from the organisers' data bundle and the fitted objec
 .venv/bin/python scripts/reproduce_submission.py
 ```
 
-It takes about 11 minutes on an Apple M5 Max (10 min 33 s and 11 min 27 s in two runs), prints the sha256 of the CSV it wrote, and exits with
+It takes about 11 minutes on an Apple M5 Max (10 min 33 s, 11 min 27 s and 10 min 28 s in three runs), prints the sha256 of the CSV it wrote, and exits with
 status 0 only if that is the sha256 above. The method is described in
 `docs/TECHNICAL_REPORT.md`.
 
@@ -18,8 +18,9 @@ No ground truth of the challenge match is read by this command or by any trainin
 (neither `evaluation/gt/` nor any hand label). How the public 5-minute window was used during
 development (candidates scored with the official scorer as a pipeline check, inspection, and an
 earlier default whose 0.7 prior was informed by the window and was replaced by the equal prior for
-that reason) is stated in section 6 of `docs/TECHNICAL_REPORT.md`. The submitted file has not been
-scored on the public window.
+that reason) is stated in section 6 of `docs/TECHNICAL_REPORT.md`. The submitted file was scored on
+the public window once, alone, on 17 November, after it had been fixed (spellF1 0.709, the value of
+the pipeline without the verifier; same section).
 
 ## 1. Environment
 
@@ -63,8 +64,8 @@ which is under the ignored `data/` folder.
 ## 3. The command
 
 ```bash
-.venv/bin/python scripts/reproduce_submission.py                    # evaluation/results/v29_final.csv
-.venv/bin/python evaluation/validate_submission.py evaluation/results/v29_final.csv
+.venv/bin/python scripts/reproduce_submission.py                    # evaluation/results/v29_kickoff.csv
+.venv/bin/python evaluation/validate_submission.py evaluation/results/v29_kickoff.csv
 .venv/bin/python scripts/reproduce_submission.py --team-name NAME   # also evaluation/results/NAME.csv
 ```
 
@@ -74,7 +75,7 @@ expected sha256.
 
 | Option | Default | Meaning |
 |---|---|---|
-| `--variant` | `final` | one or more of `final`, `prior70`, `blend_hedge`, `blend_bet`, `safe` |
+| `--variant` | `kickoff` | one or more of `kickoff`, `final`, `prior70`, `blend_hedge`, `blend_bet`, `safe` |
 | `--team-name NAME` | none | also write `<output-dir>/NAME.csv` with the same bytes; needs exactly one variant |
 | `--output-dir` | `evaluation/results` | the CSV is `<output-dir>/v29_<variant>.csv` |
 | `--work-dir` | `data/work/repro` | every intermediate is rebuilt here (75 MB) |
@@ -89,10 +90,13 @@ exit status is 1.
 
 ### Variants
 
-`final` is the submission. The other four were studied and not submitted; they stay available
-with `--variant`:
+`kickoff` is the submission: the variant `final` followed by the kick-off law
+(`possession/v31_law.py`; `docs/TECHNICAL_REPORT.md`, section 2, step 7), which changes 32 frames
+at the start of the second half and has no fitted object. The other five were studied and not
+submitted; they stay available with `--variant`:
 
 ```bash
+.venv/bin/python scripts/reproduce_submission.py --variant final         # evaluation/results/v29_final.csv
 .venv/bin/python scripts/reproduce_submission.py --variant prior70       # evaluation/results/v29_prior70.csv
 .venv/bin/python scripts/reproduce_submission.py --variant blend_hedge   # evaluation/results/v29_blend_hedge.csv
 .venv/bin/python scripts/reproduce_submission.py --variant blend_bet     # evaluation/results/v29_blend_bet.csv
@@ -104,7 +108,8 @@ alternative reading` (section 6.4).
 
 | Variant | Networks | Verifier target | File | sha256 |
 |---|---|---|---|---|
-| `final` (the submission) | frozen | w = 0.5, the equal prior | `v29_final.csv` | `19cf15870dec4d7ae88a507128e23a8d04dec3e8d9cc5cc3dbcbf748be10203c` |
+| `kickoff` (the submission) | frozen | w = 0.5, the equal prior; then the kick-off law | `v29_kickoff.csv` | `c1ccf161b837790d50b0b3848cf9ee3a4a37a0b3919c725132dd322fba0aa35e` |
+| `final` | frozen | w = 0.5, the equal prior | `v29_final.csv` | `19cf15870dec4d7ae88a507128e23a8d04dec3e8d9cc5cc3dbcbf748be10203c` |
 | `prior70` | frozen | w = 0.7 | `v29_prior70.csv` | `ed3e87d911e3070662b96550d3759a0801422790622c7a252998ab878dfaea7a` |
 | `blend_hedge` | frozen + retrained, 50/50 | w = 0.7 | `v29_blend_hedge.csv` | `2d1ac7a7063a6d83ca59e7b757f89b973a32ec0bcfbc1df9286181ca404b82ff` |
 | `blend_bet` | frozen + retrained, 50/50 | w = 1.0 (consistent only) | `v29_blend_bet.csv` | `8219bb6a2d4409eba1c0adfc81358d073f8b9e0b93583a76305948abdda00294` |
@@ -123,7 +128,9 @@ the expected sha256 values of those four variants are the sha256 of those files.
 fitted and scored the verifier of `final` (target `w0.50` of `possession.v29_lab` on the frozen
 base) but wrote no CSV for it. Its expected sha256 is that of the CSV this command wrote in run A
 of section 4, which is also what `possession.v29_final.verify` gives when it is applied with the
-same verifier to the fused probabilities saved by the study run.
+same verifier to the fused probabilities saved by the study run. `v29_final.csv` was the
+submission candidate until 17 November; `kickoff` differs from it on 32 frames (113,741 to
+113,772), and its expected sha256 is that of the CSV this command wrote in run F of section 4.
 
 ## 4. What the command does, and how long it takes
 
@@ -134,15 +141,15 @@ same verifier to the fused probabilities saved by the study run.
 | 3 | Ball detector over the 158,857 graded frames of the tactical video | MPS, float16, 6 processes | 9 min 13 s to 11 min 4 s | `detections_net3.npz` (12 MB) |
 | 4 | Link detections into a ball track that fills the gaps of the tracking's ball | CPU | 7-13 s | `video_ball_f2.npz` |
 | 5 | Frozen four-network ensemble on the filled ball | CPU, 6 threads | 22-27 s | `frozen_probabilities.npz` |
-| 6 | Camera fusion, 25 Hz decoder, spell verifier, CSV | CPU | 3-4 s | the CSV |
-| | Total | | 10 min 33 s and 11 min 27 s (runs A and C below) | 75 MB |
+| 6 | Camera fusion, 25 Hz decoder, spell verifier, kick-off law, CSV | CPU | 3-4 s | the CSV |
+| | Total | | 10 min 33 s, 11 min 27 s and 10 min 28 s (runs A, C and G below) | 75 MB |
 
 The camera alignment, the detections, the ball track and the network outputs are frame-level data
 of the match, so none of them is shipped; they are recomputed every time.
 
 `blend_hedge` and `blend_bet` also run the retrained ensemble in step 5 (38-43 s for both ensembles,
-`retrained_probabilities.npz`) and blend the two outputs 50/50 before the camera fusion. `final`,
-`prior70` and `safe` do not read `artifacts/retrained/`.
+`retrained_probabilities.npz`) and blend the two outputs 50/50 before the camera fusion. `kickoff`,
+`final`, `prior70` and `safe` do not read `artifacts/retrained/`.
 
 After each step the command compares what it produced with a content digest of the same
 intermediate in the study run (`artifacts/MANIFEST.json`, key `expected`; all variants share the
@@ -150,9 +157,11 @@ intermediates up to the fused probabilities). If
 the final CSV differs, the first check reported as `DIFFERENT` is the step where the run left the
 reference. The timings and all checks are written to `<work-dir>/reproduce_report.json`.
 
-### Verification (16 November, Apple M5 Max)
+### Verification (16 and 17 November, Apple M5 Max)
 
-With the script as published (default variant `final`, the equal prior). Runs A and C are complete
+Runs A to E were made with the default variant of that day, `final` (the equal prior, without the
+kick-off law); runs F to H, on 17 November, with the script as published (default variant
+`kickoff`). Runs A and C are complete
 runs of the default command, each into an empty work directory, with no cache of an earlier run
 read.
 
@@ -163,11 +172,15 @@ read.
 | C | working repository | `scripts/reproduce_submission.py --work-dir data/work/repro_final_w50_c` | 11 min 27 s | the CSV has the expected sha256 (the file of run A was found with the same bytes), exit status 0 |
 | D | working repository, detections of run A reused | `scripts/reproduce_submission.py --variant final prior70 blend_hedge blend_bet safe --detections data/work/repro_final_w50/detections_net3.npz --work-dir data/work/repro_final_w50_all` | 1 min 15 s | all five CSVs have the expected sha256, exit status 0 |
 | E | copy of the published files only, detections of run A reused | `scripts/reproduce_submission.py --detections <run A>/detections_net3.npz --team-name TEAM_NAME_TEST` | 54 s | `v29_final.csv` and `TEAM_NAME_TEST.csv` written new, both with the expected sha256, exit status 0 |
+| F | working repository, detections of run A reused | `scripts/reproduce_submission.py --variant kickoff final --detections data/work/repro_final_w50/detections_net3.npz --work-dir data/work/repro_kickoff --output-dir data/work/repro_kickoff/csv` | 51 s | `v29_kickoff.csv` written new, sha256 `c1ccf161...`. This is the run that established that sha256 (the manifest had none for `kickoff` yet, so the exit status was 1 by design); `v29_final.csv` written new in the same folder with its expected sha256 `19cf1587...` |
+| G | working repository | `scripts/reproduce_submission.py --team-name CabraLabs --work-dir data/work/repro_kickoff_full` | 10 min 28 s | complete run of the default command into an empty work directory: `v29_kickoff.csv` and `CabraLabs.csv` written new in `evaluation/results/`, both with the expected sha256, exit status 0 |
+| H | working repository, detections of run G reused | `scripts/reproduce_submission.py --variant kickoff final prior70 blend_hedge blend_bet safe --detections data/work/repro_kickoff_full/detections_net3.npz --work-dir data/work/repro_kickoff_all` | 1 min 12 s | all six CSVs have the expected sha256, exit status 0 |
+| I | copy of the published files only, detections of run G reused | `scripts/reproduce_submission.py --detections <run G>/detections_net3.npz --team-name TEAM_NAME_TEST`, then `--variant final` into an empty output folder | 52 s and 53 s | `v29_kickoff.csv` and `TEAM_NAME_TEST.csv` written new with the expected sha256 `c1ccf161...`, every check the same, exit status 0; `v29_final.csv` with its expected sha256 `19cf1587...`, exit status 0 |
 
-In the five runs every intermediate had the digest of the study run: parsed tracking, camera
+In the nine runs every intermediate had the digest of the study run: parsed tracking, camera
 alignment, detections, ball track, network outputs and fused probabilities.
 
-- Run A is the default command. Its CSV passes `evaluation/validate_submission.py` (199,319 rows).
+- Run A is the default command of 16 November (variant `final`). Its CSV passes `evaluation/validate_submission.py` (199,319 rows).
   The detector pass took 9 min 40 s (10 min 29 s in run C). Its sha256 was then recorded in the
   manifest (`--collect`), and runs B to E were checked against it.
 - The sha256 does not rest on this command alone: applying `possession.v29_final.verify` (the
@@ -179,17 +192,29 @@ alignment, detections, ball track, network outputs and fused probabilities.
 - Run E started from a copy of only the files git would publish (tracked files plus the new ones),
   without `evaluation/gt/`, without `artifacts/retrained/` and without the verifiers of the other
   four variants, with `data/` holding only its README and the bundle reached through
-  `MTAH_DATA_DIR`. It shows that the submission needs no file outside the published ones and the
-  data bundle, and none of the fitted objects of the other variants. It is not a complete run: the
-  detector pass was not repeated in the copy.
+  `MTAH_DATA_DIR`. It shows that the variant `final` of that day needs no file outside the published
+  ones and the data bundle, and none of the fitted objects of the other variants. It is not a
+  complete run: the detector pass was not repeated in the copy. Run I repeats it for `kickoff`.
 - Run D moved no file: the five CSVs were already in `evaluation/results/` with the same bytes
   (`v29_prior70.csv` is the file the earlier version of the script had written as `v29_final.csv`).
+- Runs F to H (17 November) are the same checks for the default variant `kickoff`: F established
+  its sha256 in a scratch folder, G is a complete run of the published default command into an
+  empty work directory (detector pass 9 min 37 s) and wrote the team-named file, H regenerated all
+  six variants. Report of run F: `data/work/repro_kickoff/reproduce_report.json`; logs of runs G
+  and H: `data/work/repro_kickoff_full.log`, `data/work/repro_kickoff_all.log`.
+- Run I (17 November, a separate internal review) repeats run E for the published default: a copy
+  of only the 302 files git would publish (tracked files plus the new ones, without
+  `evaluation/gt/`), the bundle reached through `MTAH_DATA_DIR` as a folder holding exactly the
+  seven files of section 2. An audit of every file opened and every module imported showed that the
+  run read nothing outside the copy, the interpreter, those seven files and the detections file.
+  The detector pass was not repeated in the copy. Its files are under
+  `data/work/review_final_repro/`.
 
 Logs and reports: `data/work/repro_final_w50/`, `repro_final_w50_b/`, `repro_final_w50_c/`,
 `repro_final_w50_all/` and `repro_final_w50_clean/` (run E), each with `run.log` and
 `reproduce_report.json`.
 
-Earlier the same day, with two earlier versions of the script. They differed in the names of the
+Earlier on 16 November, with two earlier versions of the script. They differed in the names of the
 variants and in which one was the default, not in any computing step. In the first table the
 default was the variant now called `prior70`, which that version wrote to `v29_final.csv`:
 
@@ -245,7 +270,7 @@ frame-level data of the match.
 |---|---|---|---|
 | `ball_detector/net3.pt` | ball detector for the tactical video (0.7 MB) | the challenge video, with the tracking's own ball as pseudo-label; no human label | all variants |
 | `frozen/*.pt`, `frozen/selection.json` | four possession networks (2.3 MB) | six DFL/Sportec open matches, native possession labels | all variants |
-| `verifier/frozen_v27_w0.50.joblib` | spell verifier of the submission (0.16 MB) | three Metrica open sample games, event-derived references | `final` |
+| `verifier/frozen_v27_w0.50.joblib` | spell verifier of the submission (0.16 MB) | three Metrica open sample games, event-derived references | `kickoff`, `final` |
 | `verifier/` the other four `.joblib` | spell verifiers of the other variants (0.16 MB each) | the same | one variant each (section 6.4) |
 | `retrained/*.pt`, `retrained/selection.json` | the same four networks, retrained (2.3 MB) | the same six matches, labels converted by rule to controlled possession | `blend_hedge`, `blend_bet` |
 
@@ -263,7 +288,8 @@ Labelled data, all external to the challenge match:
 - **Metrica Sports open sample data**: github.com/metrica-sports/sample-data at revision
   `e706dd5`, three games with tracking and event data. Pinned in
   `docs/external_data_manifest.json`. Used only to fit and test the spell verifier and to choose
-  between pipeline variants, never to train a network.
+  between pipeline variants, never to train a network of `artifacts/` (dropped experiments of
+  section 4 of the technical document did train networks on it).
 
 The challenge match contributes no label anywhere. Two training steps read its unlabelled inputs:
 the ball detector (video, tracking ball, homography), and the sensor degradation used to make the
@@ -331,7 +357,7 @@ A possession is removed when its score reaches 0 (the best-scored first, in up t
 
 | File | Variant | Networks | Target |
 |---|---|---|---|
-| `frozen_v27_w0.50.joblib` | `final` (the submission) | frozen | w = 0.5 |
+| `frozen_v27_w0.50.joblib` | `kickoff` (the submission) and `final` | frozen | w = 0.5 |
 | `frozen_v27_w0.70.joblib` | `prior70` | frozen | w = 0.7 |
 | `blend_v27_w0.70.joblib` | `blend_hedge` | frozen + retrained, 50/50 | w = 0.7 |
 | `blend_v27_w1.00.joblib` | `blend_bet` | frozen + retrained, 50/50 | w = 1.0 |
@@ -393,7 +419,7 @@ working tree in which the models were trained.
 
 `data/` and `evaluation/results/*.csv` are ignored by git and must stay so: the work directory
 holds frame-level exports of the match, and a results file is a set of labels for the whole match.
-That includes `v29_final.csv` and the team-named copy written by `--team-name`: the CSV is sent to
+That includes `v29_kickoff.csv` and the team-named copy written by `--team-name`: the CSV is sent to
 the organisers, not committed. `docs/evidence/` holds only aggregate numbers (statistics of the
 external games, of the held-out minutes of the ball detector and of whole prediction files), no
 per-frame value of the match.

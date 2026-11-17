@@ -1,13 +1,32 @@
 {
-  "note": "Fitted objects needed to regenerate the submission and the four alternatives that were not submitted. None of them is frame-level data of the challenge match: network weights, gradient-boosting spell verifiers fitted on the open Metrica games, and two ensemble definitions.",
-  "submission": "evaluation/results/v29_final.csv",
-  "submission_variant": "final",
-  "submission_sha256": "19cf15870dec4d7ae88a507128e23a8d04dec3e8d9cc5cc3dbcbf748be10203c",
+  "note": "Fitted objects needed to regenerate the submission and the five alternatives that were not submitted. None of them is frame-level data of the challenge match: network weights, gradient-boosting spell verifiers fitted on the open Metrica games, and two ensemble definitions.",
+  "submission": "evaluation/results/v29_kickoff.csv",
+  "submission_variant": "kickoff",
+  "submission_sha256": "c1ccf161b837790d50b0b3848cf9ee3a4a37a0b3919c725132dd322fba0aa35e",
   "variants": {
+    "kickoff": {
+      "csv": "evaluation/results/v29_kickoff.csv",
+      "sha256": "c1ccf161b837790d50b0b3848cf9ee3a4a37a0b3919c725132dd322fba0aa35e",
+      "submission": true,
+      "networks": "frozen",
+      "verifier": "verifier/frozen_v27_w0.50.joblib",
+      "artifacts": [
+        "ball_detector/net3.pt",
+        "verifier/frozen_v27_w0.50.joblib",
+        "frozen/standard.pt",
+        "frozen/physics.pt",
+        "frozen/trajectory2027.pt",
+        "frozen/trajectory2028.pt",
+        "frozen/selection.json"
+      ],
+      "name_in_study_code": null,
+      "reference_csv": "evaluation/results/v29_kickoff.csv",
+      "reference_csv_written_by": "scripts/reproduce_submission.py"
+    },
     "final": {
       "csv": "evaluation/results/v29_final.csv",
       "sha256": "19cf15870dec4d7ae88a507128e23a8d04dec3e8d9cc5cc3dbcbf748be10203c",
-      "submission": true,
+      "submission": false,
       "networks": "frozen",
       "verifier": "verifier/frozen_v27_w0.50.joblib",
       "artifacts": [
@@ -110,7 +129,7 @@
       "reference_csv_written_by": "study run (possession.v29_final)"
     }
   },
-  "variants_note": "`artifacts` lists what each variant reads. The submission (`final`), `prior70` and `safe` do not read retrained/. `name_in_study_code` is the name of the same candidate in possession.v29_final / possession.v29_lab and in data/work/v29; the study run wrote no CSV for `final` (verifier target w0.50 of possession.v29_lab on the frozen base), so its reference is the CSV scripts/reproduce_submission.py wrote.",
+  "variants_note": "`artifacts` lists what each variant reads. The submission (`kickoff`), `final`, `prior70` and `safe` do not read retrained/. `kickoff` is `final` followed by the kick-off law (possession/v31_law.py: no fitted object). `name_in_study_code` is the name of the same candidate in possession.v29_final / possession.v29_lab and in data/work/v29; the study run wrote no CSV for `final` (verifier target w0.50 of possession.v29_lab on the frozen base) nor for `kickoff`, so their reference is the CSV scripts/reproduce_submission.py wrote.",
   "environment": {
     "python": "3.12.15",
     "platform": "macOS-27.0.1-arm64-arm-64bit",
@@ -127,6 +146,7 @@
       "bytes": 709357,
       "sha256": "5af5251e2a0f679c37fb869aae4a773217d0010d3fea6ad43030576cf831b5b6",
       "needed_by": [
+        "kickoff",
         "final",
         "prior70",
         "blend_hedge",
@@ -171,10 +191,11 @@
       "bytes": 163440,
       "sha256": "a4a2de98695f1f7be399b6ca9b687d3149e2844968b06620d7d4ba9d9bcf90d0",
       "needed_by": [
+        "kickoff",
         "final"
       ],
       "copied_from": "data/work/v29/verifiers/frozen_v27_w0.50.joblib",
-      "produced_by": "possession.v29_lab table + fit: spell verifier on the frozen base, target 0.5*consistent + 0.5*alternative (variant final, the submission). Section 6.4"
+      "produced_by": "possession.v29_lab table + fit: spell verifier on the frozen base, target 0.5*consistent + 0.5*alternative (variants kickoff, the submission, and final). Section 6.4"
     },
     {
       "path": "verifier/frozen_v27_w0.70.joblib",
@@ -191,6 +212,7 @@
       "bytes": 546953,
       "sha256": "80b7b4bf6ddc6a3520e722ddaf84b8d5c91adbd43287d2b6865889174ea31f5a",
       "needed_by": [
+        "kickoff",
         "final",
         "prior70",
         "blend_hedge",
@@ -205,6 +227,7 @@
       "bytes": 563603,
       "sha256": "1187338e7fe6f1f48207e21eac465af10c1f70984d064e88774ea317ef043445",
       "needed_by": [
+        "kickoff",
         "final",
         "prior70",
         "blend_hedge",
@@ -219,6 +242,7 @@
       "bytes": 601461,
       "sha256": "980746a4026cbb15bc2a4eaea01142ffedc2efdf1c485fae4c694812ccfbcf69",
       "needed_by": [
+        "kickoff",
         "final",
         "prior70",
         "blend_hedge",
@@ -233,6 +257,7 @@
       "bytes": 601461,
       "sha256": "a14ed0b65052992a594954883a07ebff69bab865436e2be402a10d914b5a1379",
       "needed_by": [
+        "kickoff",
         "final",
         "prior70",
         "blend_hedge",
@@ -247,6 +272,7 @@
       "bytes": 4096,
       "sha256": "33ecb5a94ac1e9a1d551ef81d4b3f0f01bb2d8bb74f7fe12f765af5553886776",
       "needed_by": [
+        "kickoff",
         "final",
         "prior70",
         "blend_hedge",
@@ -331,6 +357,7 @@
     "retrained_probabilities": "50fbe24a53d3884023ca30ceaca9f5e4e8d83056ccf7d36cd8bbcf3ad971177d",
     "fused_frozen": "886b1797d52249ce1ebacb66b8773511938714ee9496e18abedb8c3f379ae6ac",
     "fused_blend": "79c8d2c71a381c7db2e775cadcf5f306213c00a28d6cc76f8c0bc70cc857deef",
+    "csv_v29_kickoff": "c1ccf161b837790d50b0b3848cf9ee3a4a37a0b3919c725132dd322fba0aa35e",
     "csv_v29_final": "19cf15870dec4d7ae88a507128e23a8d04dec3e8d9cc5cc3dbcbf748be10203c",
     "csv_v29_prior70": "ed3e87d911e3070662b96550d3759a0801422790622c7a252998ab878dfaea7a",
     "csv_v29_blend_hedge": "2d1ac7a7063a6d83ca59e7b757f89b973a32ec0bcfbc1df9286181ca404b82ff",

@@ -1,13 +1,15 @@
-# Estado actual: candidato `v29_final`
+# Estado actual: candidato `v29_kickoff`
 
-El candidato que se entrega es `evaluation/results/v29_final.csv`
-(SHA-256 `19cf15870dec4d7ae88a507128e23a8d04dec3e8d9cc5cc3dbcbf748be10203c`, 199.319 filas).
+El candidato que se entrega es `evaluation/results/v29_kickoff.csv`
+(SHA-256 `c1ccf161b837790d50b0b3848cf9ee3a4a37a0b3919c725132dd322fba0aa35e`, 199.319 filas): el
+`v29_final.csv` del 16 de noviembre (SHA-256 `19cf1587...`) con la ley del saque inicial, que
+cambia 32 fotogramas.
 Un solo comando lo regenera desde el paquete de datos de la organización y los pesos de
 `artifacts/`:
 
 ```bash
 .venv/bin/python scripts/reproduce_submission.py
-.venv/bin/python evaluation/validate_submission.py evaluation/results/v29_final.csv
+.venv/bin/python evaluation/validate_submission.py evaluation/results/v29_kickoff.csv
 ```
 
 Con `--team-name NOMBRE` escribe además `evaluation/results/NOMBRE.csv` con los mismos bytes (la
@@ -28,11 +30,16 @@ cada peso: [REPRODUCE.md](../REPRODUCE.md). Método y resultados:
    tres partidos abiertos de Metrica. Objetivo con prior equiprobable: 0,5 × ganancia con la
    referencia «consistente» + 0,5 × ganancia con la «alternativa»; se elimina una posesión si la
    puntuación llega a 0.
+6. Ley del saque inicial (`possession/v31_law.py`, sin parámetros ajustados): la segunda parte la
+   empieza el equipo que no sacó en la primera. El decodificador daba los primeros 1,3 s de la
+   segunda parte al Athletic, que ya había sacado en la primera; el tracking confirma la ley
+   (jugador más cercano al punto central antes de cada saque) y esos 32 fotogramas pasan al
+   Barcelona (31) o a balón parado (el fotograma anterior al saque publicado).
 
 En el partido del reto el verificador elimina 65 posesiones cortas (18 absorbidas entre dos
 posesiones del rival, 44 pasan a balón parado y 3 al equipo anterior): de 373 posesiones quedan
-290 (media 11,8 s, mediana 7,4 s, 5,1 por minuto de juego, 19 % de menos de 3 s, ninguna de menos
-de 1 s) y cambia el 2,1 % de los fotogramas evaluados.
+290 y cambia el 2,1 % de los fotogramas evaluados; con la ley del saque inicial quedan 289 (media
+11,8 s, mediana 7,5 s, 5,1 por minuto de juego, 19 % de menos de 3 s, ninguna de menos de 1 s).
 
 ## El prior del verificador y el tramo público
 
@@ -42,12 +49,19 @@ tramo público de 5 minutos sí se usó durante el desarrollo, y la sección 6 d
 
 - **Puntuado.** Se puntuaron candidatos con el evaluador oficial varias veces para comprobar el
   pipeline; una de ellas, el 16 de noviembre, con todos los candidatos que existían entonces. El
-  fichero que se entrega (prior 0,5) no existía en ese momento y no se ha puntuado en el tramo
-  público.
+  fichero que se entrega (prior 0,5) no existía en ese momento. Se puntuó una sola vez, él solo,
+  el 17 de noviembre, ya fijado y con todas las decisiones tomadas: spellF1 0,709, macroF1 0,912,
+  18 posesiones, los valores del pipeline sin verificador, porque en esos cinco minutos el
+  verificador de prior 0,5 no elimina ninguna posesión. No se cambió nada después.
 - **Inspeccionado.** Se compararon los tramos de etiquetas del tramo público con las predicciones
   del candidato de entonces (desde la ronda V24, véase
   [V24_FUSION_CAMARAS.md](V24_FUSION_CAMARAS.md)). De ahí salieron las variables de cámara, dejar
   apagado el componente del silbato y la idea de un verificador de posesiones.
+- **Estudio de casos.** La noche del 16 de noviembre, con el fichero de prior 0,5 ya fijado, se
+  volvió a mirar el tramo (`possession/v30a_cases.py`): sus 20 transiciones y los tramos con un
+  rival cerca del balón, sobre el vídeo táctico, para describir cómo etiqueta la referencia. No se
+  ajustó, puntuó ni etiquetó nada. Apunta en los dos sentidos sobre la lectura y el prior siguió
+  en 0,5. La ley del saque inicial se escribió después; no lee ninguna etiqueta.
 - **Lo que no depende de él.** Ningún modelo, umbral, peso ni prior se ajustó con el tramo público
   ni se dedujo de él. El verificador se ajusta solo con los partidos abiertos de Metrica y su
   prior entre las dos lecturas es 0,5.
@@ -57,10 +71,13 @@ tramo público de 5 minutos sí se usó durante el desarrollo, y la sección 6 d
   posesiones más cortas, conocida por la inspección. `RULES.md` dice que el tramo público no es
   un conjunto de ajuste; la auditoría señaló esa dependencia y por eso la entrega pasó al prior
   equiprobable. Las puntuaciones de las otras variantes en el tramo ya se conocían al hacer el
-  cambio y el cambio no las sigue: los tres ficheros que más puntúan allí (0,709) no se entregan. Un
+  cambio; el fichero entregado no se había puntuado entonces, y los tres ficheros que más puntuaban
+  allí (0,709) no se entregan. Un
   hecho va en el otro sentido y se dice para que conste: el prior 0,5 elimina menos posesiones
   que el 0,7 (65 frente a 88), lo que acerca el fichero al pipeline sin verificador, la dirección
-  en la que los ficheros puntuados salen mejor en ese tramo. El candidato anterior sigue
+  en la que los ficheros puntuados salen mejor en ese tramo. La puntuación del 17 de noviembre lo
+  confirmó: en el tramo el fichero entregado tiene las mismas etiquetas que el pipeline sin
+  verificador y empata con esos tres en 0,709. El candidato anterior sigue
   disponible como `--variant prior70` (`evaluation/results/v29_prior70.csv`, SHA-256
   `ed3e87d911e3070662b96550d3759a0801422790622c7a252998ab878dfaea7a`).
 
@@ -87,12 +104,35 @@ nunca se validaron con un balón completado desde vídeo. Las cifras están en
 `docs/evidence/hedge.json` (copia de `data/work/v29/hedge.json`; fila base `frozen`, familia
 `v27`, objetivo `w0.50`). La puntuación en el partido del reto es desconocida.
 
-Las variantes `prior70`, `blend_hedge`, `blend_bet` y `safe` siguen disponibles con `--variant`,
+Las variantes `final` (la entrega sin la ley del saque inicial), `prior70`, `blend_hedge`,
+`blend_bet` y `safe` siguen disponibles con `--variant`,
 pero no son la entrega. En el código de estudio (`possession/v29_final.py`,
 `possession/v29_lab.py`) y en `data/work/v29` los candidatos se llaman `hedge_frozen`
 (= `prior70`), `hedge`, `bet` y `safe`; `evaluation/results/v29_hedge_frozen.csv` tiene los mismos
 bytes que `v29_prior70.csv`. La variante `final` corresponde al objetivo `w0.50` de
 `possession.v29_lab` sobre la base `frozen`; la ejecución de estudio no escribió un CSV para ella.
+
+## Rondas 4 y 5 (16–17 de noviembre): nada más que adoptar
+
+Tras fijar `v29_final` se intentó subir la nota externa de 0,70 hacia 0,80. Dos rondas seguidas,
+cada resultado repetido por una revisión interna separada, no dieron ninguna mejora que se sostenga
+bajo las dos lecturas de «posesión» (detalle y cifras en la sección 4 de
+[TECHNICAL_REPORT.md](TECHNICAL_REPORT.md)):
+
+- Presupuesto de error (`possession/v30b_budget.py`): la pérdida está en qué posesiones cortas
+  existen, no en los tiempos de los parones. Reajustar tiempos vale +0,007 / +0,008.
+- Sonido e imagen de las dos grabaciones (`possession/v30e_*.py`): silbato a dos tonos, marcador,
+  estadísticas de imagen. Redundantes con la fusión de cámaras; lo que se puede medir fuera vale
+  +0,005.
+- Redes entrenadas también con los partidos abiertos de Metrica (`possession/v30d_*.py`,
+  `v31c_*.py`): ganan con una lectura (0,764) y pierden con la otra (0,628); además aprendían un
+  artefacto de exportación de esos partidos (el balón falta justo cuando el juego está parado).
+- Objetivo de compromiso que puntúa ≥ 0,85 con las dos lecturas (`possession/v31a_*.py`,
+  `v31b_*.py`, `v31c_*.py`): verificador, segunda etapa y redes reentrenadas hacia él se mueven
+  todos por el mismo intercambio entre lecturas; ninguno gana con las dos.
+
+Lo único adoptado es la ley del saque inicial (32 fotogramas). Estimación externa sin cambios:
+0,702 con la lectura consistente y 0,699 con la alternativa.
 
 ## Estado anterior (V24)
 

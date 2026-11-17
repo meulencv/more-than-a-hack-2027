@@ -1,6 +1,6 @@
 # Environment of the reference runs of scripts/reproduce_submission.py (the runs that produced
-# evaluation/results/v29_final.csv, the submission: frozen ensemble + spell verifier with the
-# equal prior 0.5 / 0.5; and the variants that are not submitted): CPython 3.12.15, macOS arm64
+# evaluation/results/v29_kickoff.csv, the submission: frozen ensemble + spell verifier with the
+# equal prior 0.5 / 0.5 + kick-off law; and the variants that are not submitted): CPython 3.12.15, macOS arm64
 # (Apple Silicon).
 # Identical pins to requirements-local.lock.txt, which is the environment every model in
 # artifacts/ was trained in. Install:

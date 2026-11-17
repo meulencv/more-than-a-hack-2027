@@ -1,20 +1,24 @@
 """One command from the data bundle in data/ to the submission CSV.
 
-    .venv/bin/python scripts/reproduce_submission.py                        # evaluation/results/v29_final.csv
+    .venv/bin/python scripts/reproduce_submission.py                        # evaluation/results/v29_kickoff.csv
     .venv/bin/python scripts/reproduce_submission.py --team-name NAME       # ... and evaluation/results/NAME.csv
 
-The submission is the variant `final`. Four alternatives that were studied and not submitted
-stay available:
+The submission is the variant `kickoff`: the variant `final` followed by the kick-off law
+(possession/v31_law.py), which changes 32 frames at the start of the second half. Five
+alternatives that were studied and not submitted stay available:
 
+    .venv/bin/python scripts/reproduce_submission.py --variant final        # evaluation/results/v29_final.csv
     .venv/bin/python scripts/reproduce_submission.py --variant prior70      # evaluation/results/v29_prior70.csv
     .venv/bin/python scripts/reproduce_submission.py --variant blend_hedge  # evaluation/results/v29_blend_hedge.csv
     .venv/bin/python scripts/reproduce_submission.py --variant blend_bet    # evaluation/results/v29_blend_bet.csv
     .venv/bin/python scripts/reproduce_submission.py --variant safe         # evaluation/results/v29_safe.csv
-    .venv/bin/python scripts/reproduce_submission.py --variant final prior70 blend_hedge blend_bet safe
+    .venv/bin/python scripts/reproduce_submission.py --variant kickoff final prior70 blend_hedge blend_bet safe
 
 The spell verifier is fitted on the three Metrica open games to the target
 w * gain_consistent + (1 - w) * gain_alternative (two readings of the written definition):
 
+    kickoff      `final` + the kick-off law: the second half is started by the team that did not
+                 kick off the first half (no fitted parameter, no label; possession/v31_law.py)
     final        frozen four-network ensemble; w = 0.5, the equal prior between the two readings
     prior70      frozen four-network ensemble; w = 0.7 (the default of an earlier version of this script)
     blend_hedge  0.5 frozen + 0.5 retrained ensemble; w = 0.7
@@ -23,7 +27,7 @@ w * gain_consistent + (1 - w) * gain_alternative (two readings of the written de
 
 Only two things are read: the organisers' data bundle (data/tactical, data/broadcast, or
 MTAH_DATA_DIR) and the fitted objects in artifacts/ (network weights and the spell verifier,
-none of which is frame-level data of the match). `final`, `prior70` and `safe` read neither
+none of which is frame-level data of the match). `kickoff`, `final`, `prior70` and `safe` read neither
 artifacts/retrained/ nor the verifiers of the other variants. Every intermediate is rebuilt in
 --work-dir (default data/work/repro); no cache of an earlier run under data/work is read.
 
@@ -33,7 +37,7 @@ Steps (wall-clock on an Apple M5 Max in brackets; see REPRODUCE.md):
     3 detect      ball detector over the tactical video, MPS float16, 6 procs    [~10 min]
     4 link        detections -> ball track that fills the tracking's gaps        [~10 s]
     5 networks    frozen four-network ensemble, CPU (blend variants: + retrained) [~25 s; ~40 s]
-    6 decode      camera fusion, 25 Hz decoder, spell verifier, CSV              [~5 s]
+    6 decode      camera fusion, 25 Hz decoder, spell verifier, kick-off law, CSV [~5 s]
 
 Each intermediate is compared with the content digest recorded in artifacts/MANIFEST.json, so
 a run that does not end in the expected CSV says at which step it left the reference run. The
@@ -59,14 +63,17 @@ if str(REPO) not in sys.path:
     sys.path.insert(0, str(REPO))
 
 ARTIFACTS = Path("artifacts")
-SUBMISSION = "final"
+SUBMISSION = "kickoff"
 # name -> networks, verifier file, and the name the same candidate has in the study code
 # (possession.v29_final.CANDIDATES, possession.v29_lab, data/work/v29): the CSV that study wrote
 # is evaluation/results/v29_<lab>.csv and holds the bytes this script must reproduce.
 # `final` (w = 0.5) has lab=None: the study run fitted its verifier (target w0.50 of
 # possession.v29_lab) and scored it on the open games, but wrote no CSV for it. Its reference
 # is the CSV this script wrote, evaluation/results/v29_final.csv.
+# `kickoff` is `final` followed by possession.v31_law.kickoff_law (law=True); its reference is
+# likewise the CSV this script wrote, evaluation/results/v29_kickoff.csv.
 VARIANTS = {
+    "kickoff": dict(base="frozen", verifier="frozen_v27_w0.50.joblib", lab=None, law=True),
     "final": dict(base="frozen", verifier="frozen_v27_w0.50.joblib", lab=None),
     "prior70": dict(base="frozen", verifier="frozen_v27_w0.70.joblib", lab="hedge_frozen"),
     "blend_hedge": dict(base="blend", verifier="blend_v27_w0.70.joblib", lab="hedge"),
@@ -271,6 +278,7 @@ def step_networks(run, video_ball, alignment, names):
     torch.set_num_threads(6)
     match, fill = final.filled_match(run.work, video_ball=video_ball, alignment=alignment)
     run.report["ball_fill"] = fill
+    run.match = match                                                # player positions for the kick-off law (step 6)
     record = match_record(match)
     out = {}
     for name in names:
@@ -304,6 +312,12 @@ def step_decode(run, triples, alignment, variants, output_dir, team_name=None):
         if saved["features"] != k28.FEATURES or saved["base"] != base:
             raise SystemExit("The verifier in artifacts/ does not belong to this code")
         after, before, row = final.verify(*fused[base], saved)
+        law_report = None
+        if VARIANTS[name].get("law"):                                # label-free: published kick-offs + tracking + this decode
+            from possession import v31_law
+            from starter.load_smart_tagging import KICKOFF_VIDEO_FRAMES
+            after, law_report = v31_law.kickoff_law(after, run.match, fused[base][3], KICKOFF_VIDEO_FRAMES.values())
+            print("    kick-off law:", json.dumps(law_report), flush=True)
         path = Path(output_dir) / f"v29_{name}.csv"
         kept = None
         try:
@@ -316,7 +330,8 @@ def step_decode(run, triples, alignment, variants, output_dir, team_name=None):
         results[name] = dict(csv=str(path), sha256=sha, expected=expected, identical=expected is not None and sha == expected,
                              existing_file_with_other_bytes_kept=None if kept is None else str(kept),
                              rows=int(len(after)), counts={k: int((final.LABELS[after] == k).sum()) for k in "HADX"},
-                             spells_decoder=row["before"]["spells"], spells_final=row["after"]["spells"], removals=row["removals"])
+                             spells_decoder=row["before"]["spells"], spells_final=row["after"]["spells"], removals=row["removals"],
+                             kickoff_law=law_report)
         if team_name:                                                # the same bytes under the name the organisers ask for
             target = Path(output_dir) / f"{team_name}.csv"
             team = dict(csv=str(target), variant=name, written=False, reason=None)
@@ -405,7 +420,7 @@ SOURCES = [
      "possession.v29_lab table + fit: spell verifier on the frozen base, min(consistent, alternative) target (variant safe). Section 6.4"),
     ("verifier/frozen_v27_w0.50.joblib", "data/work/v29/verifiers/frozen_v27_w0.50.joblib",
      "possession.v29_lab table + fit: spell verifier on the frozen base, target 0.5*consistent + 0.5*alternative "
-     "(variant final, the submission). Section 6.4"),
+     "(variants kickoff, the submission, and final). Section 6.4"),
     ("verifier/frozen_v27_w0.70.joblib", "data/work/v29/verifiers/frozen_v27_w0.70.joblib",
      "possession.v29_lab table + fit: spell verifier on the frozen base, target 0.7*consistent + 0.3*alternative "
      "(variant prior70). Section 6.4"),
@@ -489,16 +504,17 @@ def collect(args):
     video = Path(asset_paths()["video"])
     inputs = {"tactical/" + video.name: dict(bytes=video.stat().st_size, sha256=file_digest(video))}
     manifest = dict(
-        note="Fitted objects needed to regenerate the submission and the four alternatives that were not submitted. None of "
+        note="Fitted objects needed to regenerate the submission and the five alternatives that were not submitted. None of "
              "them is frame-level data of the challenge match: network weights, gradient-boosting spell verifiers fitted on "
              "the open Metrica games, and two ensemble definitions.",
         submission=f"evaluation/results/v29_{SUBMISSION}.csv", submission_variant=SUBMISSION,
         submission_sha256=expected.get(f"csv_v29_{SUBMISSION}"), variants=variants,
-        variants_note="`artifacts` lists what each variant reads. The submission (`final`), `prior70` and `safe` do not read "
-                      "retrained/. `name_in_study_code` is the name of the same candidate in possession.v29_final / "
+        variants_note="`artifacts` lists what each variant reads. The submission (`kickoff`), `final`, `prior70` and `safe` "
+                      "do not read retrained/. `kickoff` is `final` followed by the kick-off law (possession/v31_law.py: no "
+                      "fitted object). `name_in_study_code` is the name of the same candidate in possession.v29_final / "
                       "possession.v29_lab and in data/work/v29; the study run wrote no CSV for `final` (verifier target w0.50 "
-                      "of possession.v29_lab on the frozen base), so its reference is the CSV scripts/reproduce_submission.py "
-                      "wrote.",
+                      "of possession.v29_lab on the frozen base) nor for `kickoff`, so their reference is the CSV "
+                      "scripts/reproduce_submission.py wrote.",
         environment=environment(), files=rows, inputs=inputs,
         inputs_note="the tactical video; the six tracking and homography files are fingerprinted in frozen/selection.json",
         expected=expected,
@@ -513,7 +529,7 @@ def collect(args):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--variant", nargs="+", choices=list(VARIANTS), default=[SUBMISSION],
-                        help="final (the submission, default); prior70, blend_hedge, blend_bet, safe (studied, not submitted)")
+                        help="kickoff (the submission, default); final, prior70, blend_hedge, blend_bet, safe (studied, not submitted)")
     parser.add_argument("--output-dir", type=Path, default=Path("evaluation/results"), help="CSV = <output-dir>/v29_<variant>.csv")
     parser.add_argument("--team-name", default=None, metavar="NAME",
                         help="also write <output-dir>/NAME.csv with the same bytes (the organisers ask for a CSV named after "

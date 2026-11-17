@@ -127,7 +127,7 @@ del 26 de noviembre. El formulario de entrega se enviará por correo.
 ## Ejecución local
 
 ```bash
-cd /Users/meulencv/development/projects/MoreThanAHack
+cd <repositorio>
 source .venv/bin/activate
 # En una instalación nueva: python3.12 -m venv .venv
 uv pip install --python .venv/bin/python -r requirements-local.lock.txt

@@ -3,7 +3,7 @@
 >
 > - **Install, run and regenerate the submitted CSV:** [REPRODUCE.md](REPRODUCE.md). One command,
 >   `.venv/bin/python scripts/reproduce_submission.py`, goes from the organisers' data bundle in
->   `data/` to `evaluation/results/v29_final.csv` and checks its sha256. Pinned dependencies:
+>   `data/` to `evaluation/results/v29_kickoff.csv` and checks its sha256. Pinned dependencies:
 >   [requirements-submission.lock.txt](requirements-submission.lock.txt). Fitted model files:
 >   [artifacts/](artifacts/MANIFEST.json).
 > - **Technical document** (approach, assets, training data, possession rules, limitations):
@@ -14,7 +14,9 @@
 >   frame-level data of the match): [docs/evidence/](docs/evidence/).
 >
 > The team added no match data and no submission CSV to this repository (the CSV is sent through
-> the form). The pipeline does not read the labels of the challenge match, public or private. The
+> the form). The pipeline does not read the labels of the challenge match, public or private (one study
+> script outside the pipeline, `possession/v30a_cases.py`, reads the public window for the case
+> study described in section 6 of the technical document). The
 > spell verifier is fitted only on the three Metrica open games, with an equal prior (0.5 / 0.5)
 > between the two readings of the written possession definition. How the public 5-minute window
 > was used during development (scored as a pipeline check, inspected, and an earlier 0.7 prior
